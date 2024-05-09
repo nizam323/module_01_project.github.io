@@ -48,13 +48,16 @@ html {
     padding: 0 35px;
 }
 
-.nav-1st {
+.nav-1st,
+.nav-2nd {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
 .nav-2nd ul,
+.amount-cart ul,
+.login ul,
 .anchors ul {
     display: flex;
     align-items: center;
@@ -69,11 +72,23 @@ html {
     text-decoration: none;  
 }
 
+.amount-cart ul li a,
+.login ul li a {
+    font-weight: lighter;
+    font-size: 1rem;
+    padding: 0px 11px;
+    color: white;
+    text-decoration: none;
+}
+
+.login ul li a {
+    padding: 0 0 0 10px;
+}
+
 .nav-2nd-span{
     font-size: 1.4rem;
     font-weight: 799;
 }
-
 
 .anchors ul li a {
     font-size: 1.1rem;
@@ -81,4 +96,21 @@ html {
     padding: 0 14px;
     color: white;
     text-decoration: none;
+}
+
+.nav-2nd i {
+    font-size: 1.45rem;
+    position: relative;
+}
+
+.product-count {
+    padding: 1px 3px;
+    position: absolute;
+    top: -14px;
+    right: -9px;
+    background-color: white;
+    border-radius: 7px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: black;
 }
