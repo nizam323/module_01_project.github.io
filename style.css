@@ -123,13 +123,14 @@ html {
 }
 
 .burger-icon {
-    width: 45px;
-    height: 45px;
+    width: 42px;
+    height: 40px;
     background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .burger-icon .b-i-1 {
@@ -141,4 +142,64 @@ html {
 
 .burger-icon-parent {
     display: none;
+}
+
+.bg-content {
+    height: calc(100% - 100px);
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    position: relative;
+}
+
+.bg-content-container {
+    color: white;
+    position: absolute;
+    top: 17%;
+    left: 7%;
+    font-weight: 600;
+}
+
+.bg-con-1 {
+    font-size: 4.77rem;
+    width: 43rem;
+    height: 13.2rem;
+}
+
+.bg-con-2 {
+    margin: 10px 0 20px;
+    font-size: 1.88rem;
+}
+
+.bg-btn {
+    width: 10.1rem;
+    height: 3.3rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition-property: all;
+    transition-duration: 0.6s;
+    cursor: pointer;
+}
+
+.bg-btn-1 {
+    margin-right: 17px;
+    color: #000000;
+    background-color: #f5f7f9;
+    border: none;
+}
+
+.bg-btn-2 {
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.bg-btn-1:hover {
+    background-color: #000000;
+    color: #f5f7f9;
+}
+
+.bg-btn-2:hover {
+    color: #000000;
+    background-color: white;
 }

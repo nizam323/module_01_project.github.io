@@ -3,7 +3,7 @@
 @media only screen and (min-width:0px) and (max-width:920px) {
     .nav {
         background-color: white;
-        height: 70px;
+        height: 60px;
         padding: 0 20px;
     }
 
@@ -33,7 +33,6 @@
     }
 
     .burger-icon {
-        height: 50px;
         margin-left: 8px;
     }
 
