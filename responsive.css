@@ -50,21 +50,24 @@
 
 @media only screen and (min-width:0px) and (max-width:766px) {
     .bg-con-1 {
-        font-size: 2.2rem;
-        width: 300px;
+        font-size: 2.1rem;
+        width: 100%;
+        padding: 0 3px 14px;
+        text-wrap: pretty;
         text-align: center;
-        height: 5.9rem;
+        /* height: 5.9rem; */
     }
 
     .bg-con-2 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+        margin: 7px 0 32px;
     }
 
     .bg-con-3 {
         display: flex;
         flex-direction: column;
         width: 90%;
-        height: 30%;
+        height: 109px;
         align-items: center;
         justify-content: space-between;
     }
@@ -81,5 +84,20 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 42px;
+    }
+}
+
+/*  */
+
+@media only screen and (min-width:545px) and (max-width:766px) {
+    .bg-con-1{
+        font-size: 3rem;
+        padding: 0 71px;
+    }
+
+    .bg-con-2 {
+        font-weight: lighter;
+        margin-top: 12px;
     }
 }
