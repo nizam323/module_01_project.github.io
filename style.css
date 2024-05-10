@@ -14,7 +14,7 @@ html {
 /* nav section */
 
 .bg-container {
-    background-color: #1f78a4;
+    background: linear-gradient(164deg, #235d80 47%, #00000000 117%, #000000);;
     width: 100%;
     height: 105vh;
     position: relative;
@@ -30,9 +30,8 @@ html {
     background-image: url(images/bg-file.png);
     position: absolute;
     background-repeat: no-repeat;
-    background-size: 690px 125%;    
-    background-position-x: 100%;
-    background-position-y: -60px;
+    background-size: contain;
+    background-position: right;
     z-index: -1;
     opacity: 0.7;
 }
@@ -201,4 +200,35 @@ html {
 .bg-btn-2:hover {
     color: #000000;
     background-color: white;
+}
+
+/* section 2 */
+
+.sec-2 {
+    margin: 0 120px;
+    padding: 80px 0 100px;
+    background-color: aqua;
+}
+
+.slider {
+    /* background-color: blue; */
+    height: 50px;
+    display: flex;
+
+}
+
+.func {
+    /* background-color: crimson; */
+    color: gray;   
+    font-size: 3rem;
+    width: 30px;
+    height: 100%;
+}
+
+.slider-imgs {
+    background-color: springgreen;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
 }

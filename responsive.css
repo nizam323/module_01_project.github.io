@@ -121,3 +121,10 @@
         font-size: 3.5rem;
     }
 }
+
+@media only screen and (min-width:0px) and (max-width:510px) {
+    .bg-container::before {
+        background-size: cover;
+        background-position: unset;
+    }
+}
