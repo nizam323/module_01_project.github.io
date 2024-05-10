@@ -44,6 +44,9 @@
         background-color: black;
         color: white;
     }
+    .bg-container {
+        height: 110vh;
+    }
 }
 
 /* bg content */
@@ -84,6 +87,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: unset;
+        margin: 0;
         margin-top: 42px;
     }
 }

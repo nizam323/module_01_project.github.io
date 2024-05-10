@@ -17,7 +17,7 @@ html {
     /* background-color: #008c9b; */
     background-color: #1f78a4;
     width: 100%;
-    height: 110vh;
+    /* height: 110vh; */
     position: relative;
     overflow: hidden;
     z-index: 0;
@@ -147,17 +147,17 @@ html {
 .bg-content {
     height: calc(100% - 100px);
     display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
-    position: relative;
+    justify-content: start;
 }
 
 .bg-content-container {
     color: white;
-    position: absolute;
-    top: 17%;
-    left: 7%;
     font-weight: 600;
+    margin: 99px 0 207px 78px;
+    height: 278px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .bg-con-1 {
