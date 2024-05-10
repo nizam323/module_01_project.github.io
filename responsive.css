@@ -43,9 +43,15 @@
     .product-count {
         background-color: black;
         color: white;
+        top: -12px;
+        right: -7px;
     }
     .bg-container {
         height: 110vh;
+    }
+
+    .bg-con-1 {
+        font-weight: unset;
     }
 }
 
@@ -104,5 +110,14 @@
     .bg-con-2 {
         font-weight: lighter;
         margin-top: 12px;
+    }
+}
+
+/*  */
+
+@media only screen and (min-width:767px) and (max-width:921px) {
+    .bg-con-1 {
+        width: 69%;
+        font-size: 3.5rem;
     }
 }
