@@ -14,7 +14,8 @@ html {
 /* nav section */
 
 .bg-container {
-    background: linear-gradient(164deg, #235d80 47%, #00000000 117%, #000000);;
+    background: linear-gradient(164deg, #235d80 47%, #00000000 117%, #000000);
+    ;
     width: 100%;
     height: 105vh;
     position: relative;
@@ -53,7 +54,7 @@ html {
     align-items: center;
 }
 
-.logo{
+.logo {
     background-image: url(images/dnk.jpg);
     background-size: 100%;
     width: 10rem;
@@ -74,7 +75,7 @@ html {
     font-size: 1rem;
     padding: 0 13px;
     color: white;
-    text-decoration: none;  
+    text-decoration: none;
 }
 
 .amount-cart ul li a,
@@ -90,7 +91,7 @@ html {
     padding: 0 0 0 10px;
 }
 
-.nav-2nd-span{
+.nav-2nd-span {
     font-size: 1.4rem;
     font-weight: 799;
 }
@@ -205,30 +206,65 @@ html {
 /* section 2 */
 
 .sec-2 {
-    margin: 0 120px;
-    padding: 80px 0 100px;
-    background-color: aqua;
+    /* height: 200px; */
+    padding: 100px 0 70px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .slider {
-    /* background-color: blue; */
-    height: 50px;
     display: flex;
-
+    align-items: center;
 }
 
-.func {
-    /* background-color: crimson; */
-    color: gray;   
-    font-size: 3rem;
+.slide-control {
+    font-size: 2.5rem;
+    color: #bab5b5;
+    font-weight: bolder;
     width: 30px;
-    height: 100%;
+    height: 50px;
+    cursor: pointer;
 }
 
-.slider-imgs {
-    background-color: springgreen;
-    height: 100%;
-    width: 100%;
+.slides-content {
+    /* background-color: yellowgreen; */
+    width: 85vw;
     display: flex;
     overflow: hidden;
+}
+
+.slides {
+    flex-shrink: 0;
+}
+
+.slides img {
+    width: 130px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.sc-r {
+    margin-left: 13px;
+}
+
+.first-cards {
+    margin: auto;
+    /* width: calc(85vw + 187px); */
+    width: 100%;
+}
+
+.cards-parent {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.cards {
+    background-size: cover;
+    width: 26%;
+    background-color: tomato;
+    height: 480px;
+    margin: 0 0 100px;
 }
