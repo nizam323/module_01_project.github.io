@@ -106,6 +106,24 @@
         margin-bottom: 20px;
         width: 90%;
     }
+
+    .txt-big {
+        font-size: 2.3rem;
+        text-align: center;
+        text-wrap: pretty;
+    }
+
+    .txt-sm {
+        text-align: center;
+        text-wrap: pretty;
+    }
+    .fcard-btn {
+        margin-bottom: -29px;
+    }
+    
+    .fcards{
+        width: 100%;
+    }
 }
 
 /*  */
@@ -129,6 +147,14 @@
     .bg-con-1 {
         width: 69%;
         font-size: 3.5rem;
+    }
+
+    .txt-big {
+        font-size: 1.6rem;
+    }
+
+    .txt-sm {
+        font-size: 1.4rem;
     }
 }
 
