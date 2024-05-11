@@ -97,6 +97,15 @@
         margin: 0;
         margin-top: 42px;
     }
+
+    .cards-parent {
+        flex-direction: column;
+    }
+    
+    .cards {
+        margin-bottom: 20px;
+        width: 90%;
+    }
 }
 
 /*  */
@@ -111,6 +120,7 @@
         font-weight: lighter;
         margin-top: 12px;
     }
+
 }
 
 /*  */

@@ -263,7 +263,8 @@ html {
 
 .cards {
     background-size: cover;
-    width: 26%;
+    background-position: center;
+    width: 30%;
     background-color: tomato;
     height: 480px;
     margin: 0 0 100px;
