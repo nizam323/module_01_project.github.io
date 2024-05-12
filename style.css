@@ -295,3 +295,46 @@ html {
     margin: 25px auto 60px;
     width: 90%;
 }
+
+/* sec 4 */
+
+.sec-4 {
+    background-color: #f5f7f9;
+}
+
+.hd {
+    padding-top: 110px;
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0 auto;
+    width: 372px;
+}
+
+.hd-border {
+    height: 4px;
+    background: #0084d6;
+    width: 40%;
+    margin: 25px auto 20px;
+}
+
+.pro-cards-sec {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 35px;
+}
+
+.pro-card {
+        height: auto;
+        background-color: tomato;
+        width: 19%;
+        margin: 20px 0;
+        padding-bottom: 30px;
+}
+
+.pro-img {
+    background-image: url(images/product-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+}
