@@ -140,7 +140,8 @@ products.map((items) => {
     let proPrice = document.createElement("div");
     let proColor = document.createElement("div");
     let proRating = document.createElement("div");
-    // let icon1 = document.createElement("i");
+    let imgAnchohr = document.createElement("a");
+    let nameAnchohr = document.createElement("a");
     // let icon2 = document.createElement("i");
     // let icon3 = document.createElement("i");
     // let icon4 = document.createElement("i");
@@ -157,6 +158,7 @@ products.map((items) => {
     proColor.classList.add("pro-color");
     proRating.classList.add("pro-rating");
     proRealPrice.style.display = "inline";
+    nameAnchohr.classList.add("anchor"),
     // icon1.classList.add("fa-solid", "fa-star");
     // icon2.classList.add("fa-solid", "fa-star");
     // icon3.classList.add("fa-solid", "fa-star-half-stroke");
@@ -168,6 +170,8 @@ products.map((items) => {
     img.setAttribute("src", items.proImg);
     img.setAttribute("width", "100%");
     img.setAttribute("height", "100%");
+    imgAnchohr.setAttribute("href","")
+    nameAnchohr.setAttribute("href","")
     proName.innerText = items.proName;
     proCategory.innerText = items.proCategory;
     proRealPrice.innerText = items.proPrice;
@@ -176,9 +180,11 @@ products.map((items) => {
 
     container.appendChild(proCard);
     proCard.appendChild(proImg);
-    proImg.appendChild(img);
+    proImg.appendChild(imgAnchohr);
+    imgAnchohr.appendChild(img);
     proCard.appendChild(proTxtParent);
-    proTxtParent.appendChild(proName);
+    proTxtParent.appendChild(nameAnchohr);
+    nameAnchohr.appendChild(proName);
     proTxtParent.appendChild(proCategory);
     proTxtParent.appendChild(proPrice);
     proPrice.appendChild(proRealPrice)
@@ -196,8 +202,11 @@ products.map((items) => {
         let proColorPicker2 = document.createElement("div");
         let proColorPicker3 = document.createElement("div");
         proColorPicker1.classList.add("pro-color-picker");
+        proColorPicker1.style.backgroundColor = "#f49922";
         proColorPicker2.classList.add("pro-color-picker");
+        proColorPicker2.style.backgroundColor = "#ce25e8";
         proColorPicker3.classList.add("pro-color-picker");
+        proColorPicker3.style.backgroundColor = "#1fb1c1";
         proColor.appendChild(proColorPicker1);
         proColor.appendChild(proColorPicker2);
         proColor.appendChild(proColorPicker3);
@@ -217,27 +226,21 @@ products.map((items) => {
         let icon3 = document.createElement("i");
         let icon4 = document.createElement("i");
         let icon5 = document.createElement("i");
-        
-        
+
         icon1.classList.add("fa-solid", "fa-star");
-        // icon2.classList.add("fa-solid", "fa-star");
-        // icon3.classList.add("fa-solid", "fa-star-half-stroke");
-        // icon4.classList.add("fa-regular", "fa-star");
         icon2.classList.add("fa-regular", "fa-star");
         icon3.classList.add("fa-regular", "fa-star");
         icon4.classList.add("fa-regular", "fa-star");
         icon5.classList.add("fa-regular", "fa-star");
-        
-        
+
         proRating.appendChild(icon1);
         proRating.appendChild(icon2);
         proRating.appendChild(icon3);
         proRating.appendChild(icon4);
         proRating.appendChild(icon5);
 
-
     }
-    
+
     if (items.proRating == 2) {
 
         let icon1 = document.createElement("i");
@@ -245,29 +248,22 @@ products.map((items) => {
         let icon3 = document.createElement("i");
         let icon4 = document.createElement("i");
         let icon5 = document.createElement("i");
-        
-        
+
         icon1.classList.add("fa-solid", "fa-star");
         icon2.classList.add("fa-solid", "fa-star");
-        // icon2.classList.add("fa-solid", "fa-star");
-        // icon3.classList.add("fa-solid", "fa-star-half-stroke");
-        // icon4.classList.add("fa-regular", "fa-star");
-        // icon2.classList.add("fa-regular", "fa-star");
         icon3.classList.add("fa-regular", "fa-star");
         icon4.classList.add("fa-regular", "fa-star");
         icon5.classList.add("fa-regular", "fa-star");
-        
-        
+
         proRating.appendChild(icon1);
         proRating.appendChild(icon2);
         proRating.appendChild(icon3);
         proRating.appendChild(icon4);
         proRating.appendChild(icon5);
 
-
     }
 
-    
+
     if (items.proRating == 3) {
 
         let icon1 = document.createElement("i");
@@ -275,30 +271,21 @@ products.map((items) => {
         let icon3 = document.createElement("i");
         let icon4 = document.createElement("i");
         let icon5 = document.createElement("i");
-        
-        
+
         icon1.classList.add("fa-solid", "fa-star");
         icon2.classList.add("fa-solid", "fa-star");
         icon3.classList.add("fa-solid", "fa-star");
-        // icon2.classList.add("fa-solid", "fa-star");
-        // icon3.classList.add("fa-solid", "fa-star-half-stroke");
-        // icon4.classList.add("fa-regular", "fa-star");
-        // icon2.classList.add("fa-regular", "fa-star");
-        // icon3.classList.add("fa-regular", "fa-star");
         icon4.classList.add("fa-regular", "fa-star");
         icon5.classList.add("fa-regular", "fa-star");
-        
-        
+
         proRating.appendChild(icon1);
         proRating.appendChild(icon2);
         proRating.appendChild(icon3);
         proRating.appendChild(icon4);
         proRating.appendChild(icon5);
 
-
     }
 
-    
     if (items.proRating == 4) {
 
         let icon1 = document.createElement("i");
@@ -306,30 +293,21 @@ products.map((items) => {
         let icon3 = document.createElement("i");
         let icon4 = document.createElement("i");
         let icon5 = document.createElement("i");
-        
-        
+
         icon1.classList.add("fa-solid", "fa-star");
         icon2.classList.add("fa-solid", "fa-star");
         icon3.classList.add("fa-solid", "fa-star");
-        // icon4.classList.add("fa-solid", "fa-star");
-        // icon2.classList.add("fa-solid", "fa-star");
         icon4.classList.add("fa-solid", "fa-star-half-stroke");
-        // icon4.classList.add("fa-regular", "fa-star");
-        // icon2.classList.add("fa-regular", "fa-star");
-        // icon3.classList.add("fa-regular", "fa-star");
-        // icon4.classList.add("fa-regular", "fa-star");
         icon5.classList.add("fa-regular", "fa-star");
-        
-        
+
         proRating.appendChild(icon1);
         proRating.appendChild(icon2);
         proRating.appendChild(icon3);
         proRating.appendChild(icon4);
         proRating.appendChild(icon5);
 
-
     }
-    
+
     if (items.proRating == 5) {
 
         let icon1 = document.createElement("i");
@@ -337,31 +315,24 @@ products.map((items) => {
         let icon3 = document.createElement("i");
         let icon4 = document.createElement("i");
         let icon5 = document.createElement("i");
-        
-        
+
         icon1.classList.add("fa-solid", "fa-star");
         icon2.classList.add("fa-solid", "fa-star");
         icon3.classList.add("fa-solid", "fa-star");
         icon4.classList.add("fa-solid", "fa-star");
         icon5.classList.add("fa-solid", "fa-star");
-        // icon2.classList.add("fa-solid", "fa-star");
-        // icon3.classList.add("fa-solid", "fa-star-half-stroke");
-        // icon4.classList.add("fa-regular", "fa-star");
-        // icon2.classList.add("fa-regular", "fa-star");
-        // icon3.classList.add("fa-regular", "fa-star");
-        // icon4.class/List.add("fa-regular", "fa-star");
-        // icon5.classList.add("fa-regular", "fa-star");
-        
-        
+
         proRating.appendChild(icon1);
         proRating.appendChild(icon2);
         proRating.appendChild(icon3);
         proRating.appendChild(icon4);
         proRating.appendChild(icon5);
 
-
     }
+    // console.log(proTxtParent.children[0].setAttribute("href","55"))
 
-    console.log(items.proRating)
-
+    
 });
+
+
+// console.log(products[3].proImg+products[3].proName)
