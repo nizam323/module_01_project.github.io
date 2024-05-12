@@ -326,7 +326,7 @@ html {
 
 .pro-card {
         height: auto;
-        background-color: tomato;
+        background-color: #dedede5c;
         width: 19%;
         margin: 20px 0;
         padding-bottom: 30px;
@@ -336,5 +336,41 @@ html {
     background-image: url(images/product-1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 250px;
+    height: 220px;
+    margin-bottom: 12px;
+}
+
+.pro-txt-parent {
+    width: 95%;
+    margin-left: auto;
+}
+
+.pro-name {
+    margin-bottom: 8px;
+    font-size: 2.29rem;
+}
+
+.pro-category {
+    font-size: 1.5rem;
+    color: #818182;
+    margin-bottom: 6px;
+}
+
+.pro-price {
+    margin-bottom: 7px;
+    font-size: 1.5rem;
+}
+
+.pro-color {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70px;
+}
+
+.pro-color-picker {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: springgreen;
 }
