@@ -1,31 +1,31 @@
-let randomNum1 = Math.random() * 5 + 1;
+let randomNum1 = Math.random() * 5;
 let pDR1 = randomNum1.toFixed(0);
 
-let randomNum2 = Math.random() * 5 + 1;
+let randomNum2 = Math.random() * 5;
 let pDR2 = randomNum2.toFixed(0);
 
-let randomNum3 = Math.random() * 5 + 1;
+let randomNum3 = Math.random() * 5;
 let pDR3 = randomNum3.toFixed(0);
 
-let randomNum4 = Math.random() * 5 + 1;
+let randomNum4 = Math.random() * 5;
 let pDR4 = randomNum4.toFixed(0);
 
-let randomNum5 = Math.random() * 5 + 1;
+let randomNum5 = Math.random() * 5;
 let pDR5 = randomNum5.toFixed(0);
 
-let randomNum6 = Math.random() * 5 + 1;
+let randomNum6 = Math.random() * 5;
 let pDR6 = randomNum6.toFixed(0);
 
-let randomNum7 = Math.random() * 5 + 1;
+let randomNum7 = Math.random() * 5;
 let pDR7 = randomNum7.toFixed(0);
 
-let randomNum8 = Math.random() * 5 + 1;
+let randomNum8 = Math.random() * 5;
 let pDR8 = randomNum8.toFixed(0);
 
-let randomNum9 = Math.random() * 5 + 1;
+let randomNum9 = Math.random() * 5;
 let pDR9 = randomNum9.toFixed(0);
 
-let randomNum10 = Math.random() * 5 + 1;
+let randomNum10 = Math.random() * 5;
 let pDR10 = randomNum10.toFixed(0);
 
 
@@ -124,9 +124,7 @@ let products = [
 
 let container = document.querySelector(".pro-cards-sec");
 
-products.map((items) => {
-
-
+products.map((items, index) => {
 
     //  creating cards through javascript
 
@@ -142,10 +140,6 @@ products.map((items) => {
     let proRating = document.createElement("div");
     let imgAnchohr = document.createElement("a");
     let nameAnchohr = document.createElement("a");
-    // let icon2 = document.createElement("i");
-    // let icon3 = document.createElement("i");
-    // let icon4 = document.createElement("i");
-    // let icon5 = document.createElement("i");
 
     // assigning css class to created elements
 
@@ -159,19 +153,12 @@ products.map((items) => {
     proRating.classList.add("pro-rating");
     proRealPrice.style.display = "inline";
     nameAnchohr.classList.add("anchor"),
-    // icon1.classList.add("fa-solid", "fa-star");
-    // icon2.classList.add("fa-solid", "fa-star");
-    // icon3.classList.add("fa-solid", "fa-star-half-stroke");
-    // icon4.classList.add("fa-regular", "fa-star");
-    // icon5.classList.add("fa-regular", "fa-star");
 
-    // assinging text 
+        // assinging text 
 
-    img.setAttribute("src", items.proImg);
+        img.setAttribute("src", items.proImg);
     img.setAttribute("width", "100%");
     img.setAttribute("height", "100%");
-    imgAnchohr.setAttribute("href","")
-    nameAnchohr.setAttribute("href","")
     proName.innerText = items.proName;
     proCategory.innerText = items.proCategory;
     proRealPrice.innerText = items.proPrice;
@@ -190,12 +177,6 @@ products.map((items) => {
     proPrice.appendChild(proRealPrice)
     proTxtParent.appendChild(proColor);
     proTxtParent.appendChild(proRating);
-    // proRating.appendChild(icon1);
-    // proRating.appendChild(icon2);
-    // proRating.appendChild(icon3);
-    // proRating.appendChild(icon4);
-    // proRating.appendChild(icon5);
-
 
     if (items.proColor == "yes") {
         let proColorPicker1 = document.createElement("div");
@@ -217,6 +198,28 @@ products.map((items) => {
         proSalePrice.innerText = items.proSalePrice;
         proRealPrice.style.paddingLeft = "10px";
         proPrice.insertAdjacentElement("afterbegin", proSalePrice)
+    }
+
+    if (items.proRating == 0) {
+
+        let icon1 = document.createElement("i");
+        let icon2 = document.createElement("i");
+        let icon3 = document.createElement("i");
+        let icon4 = document.createElement("i");
+        let icon5 = document.createElement("i");
+
+        icon1.classList.add("fa-regular", "fa-star");
+        icon2.classList.add("fa-regular", "fa-star");
+        icon3.classList.add("fa-regular", "fa-star");
+        icon4.classList.add("fa-regular", "fa-star");
+        icon5.classList.add("fa-regular", "fa-star");
+
+        proRating.appendChild(icon1);
+        proRating.appendChild(icon2);
+        proRating.appendChild(icon3);
+        proRating.appendChild(icon4);
+        proRating.appendChild(icon5);
+
     }
 
     if (items.proRating == 1) {
@@ -329,10 +332,28 @@ products.map((items) => {
         proRating.appendChild(icon5);
 
     }
-    // console.log(proTxtParent.children[0].setAttribute("href","55"))
 
-    
+    // Set href attribute for image anchor
+    imgAnchohr.setAttribute("href", "product-page-" + index + ".html");
+
+    // Set href attribute for name anchor
+    nameAnchohr.setAttribute("href", "product-page-" + index + ".html");
+
+    // Add event listener to each card
+    proCard.addEventListener("click", function () {
+        // Replace location with the URL of the clicked card
+        window.location.replace("product-page-" + index + ".html");
+    });
+
 });
 
-
-// console.log(products[3].proImg+products[3].proName)
+console.log(pDR1)
+console.log(pDR2)
+console.log(pDR3)
+console.log(pDR4)
+console.log(pDR5)
+console.log(pDR6)
+console.log(pDR7)
+console.log(pDR8)
+console.log(pDR9)
+console.log(pDR10)
