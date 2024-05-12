@@ -342,12 +342,13 @@ html {
 
 .pro-txt-parent {
     width: 95%;
+    text-transform: uppercase;
     margin-left: auto;
 }
 
 .pro-name {
     margin-bottom: 8px;
-    font-size: 2.29rem;
+    font-size: 1.67rem;
 }
 
 .pro-category {
@@ -366,6 +367,7 @@ html {
     justify-content: space-around;
     align-items: center;
     width: 70px;
+    margin-bottom: 10px;
 }
 
 .pro-color-picker {
@@ -373,4 +375,9 @@ html {
     height: 20px;
     border-radius: 50%;
     background-color: springgreen;
+}
+
+.pro-rating {
+    color: yellow;
+    font-size: 1.3rem;
 }

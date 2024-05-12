@@ -151,11 +151,15 @@
         background-size: 100% 100%;
     }
 
-    .pro-name {
-        font-size: 2rem;
-    }
-
 }
+
+
+@media only screen and (min-width:630px) and (max-width:766px) {
+    .pro-name {
+        font-size: 1.5rem;
+    }
+}
+
 
 /*  */
 
@@ -186,7 +190,7 @@
     }
 
     .pro-name {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -202,21 +206,6 @@
     .pro-img {
         background-size: contain;
     }
-}
-
-@media only screen and (min-width:0px) and (max-width:510px) {
-    .bg-container::before {
-        background-size: cover;
-        background-position: unset;
-    }
-    
-    .hd {
-        font-size: 2.1rem;
-        width: 100%;
-        text-align: center;
-        text-wrap: nowrap;
-    }
-
 }
 
 @media only screen and (min-width:0px) and (max-width:630px) {
@@ -251,4 +240,23 @@
         height: 15px;
         width: 15px;
     }
+}
+
+@media only screen and (min-width:0px) and (max-width:510px) {
+    .bg-container::before {
+        background-size: cover;
+        background-position: unset;
+    }
+    
+    .hd {
+        font-size: 2.1rem;
+        width: 100%;
+        text-align: center;
+        text-wrap: nowrap;
+    }
+
+    .pro-name {
+        font-size: 1rem;
+    }
+
 }
