@@ -207,7 +207,7 @@ html {
 
 .sec-2 {
     /* height: 200px; */
-    padding: 100px 0 70px; 
+    padding: 100px 0 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -325,12 +325,12 @@ html {
 }
 
 .pro-card {
-        height: auto;
-        background-color: #dedede5c;
-        width: 19%;
-        margin: 20px 0;
-        padding-bottom: 30px;
-        cursor: pointer;
+    height: auto;
+    background-color: #dedede5c;
+    width: 19%;
+    margin: 20px 0;
+    padding-bottom: 30px;
+    cursor: pointer;
 }
 
 .pro-img {
@@ -389,11 +389,13 @@ html {
 }
 
 .sec-5 {
-    background-color: aqua;
+    background: linear-gradient(154deg, #367cab, #4f7b9a, #6d6464);
     height: 500px;
-    margin: 0 30px;
     position: relative;
     z-index: 0;
+    display: flex;
+    align-items: center;
+    margin: 70px 30px;
 }
 
 .sec-5::before {
@@ -404,7 +406,32 @@ html {
     background-image: url(images/bg-2.jpg);
     position: absolute;
     background-repeat: no-repeat;
-    background-position:  90%;
+    background-position: 90%;
     background-size: contain;
     z-index: -1;
+}
+
+.sec-5-content {
+    margin-left: 54px;
+    color: white;
+    display: flex;
+    height: 310px;
+    width: 70%;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.sec5-txtsm {
+    font-size: 1.8rem;
+}
+
+.sec-5-lorem {
+    width: 610px;
+    font-size: 1.6rem;
+    line-height: 1.69;
+}
+
+.sec5-txtbig {
+    font-size: 3rem;
+    font-weight: bold;
 }

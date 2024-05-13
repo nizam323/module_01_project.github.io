@@ -46,6 +46,7 @@
         top: -12px;
         right: -7px;
     }
+
     .bg-container {
         height: 110vh;
     }
@@ -85,7 +86,7 @@
         width: 100%;
         margin: 0;
     }
-    
+
     .bg-content-container {
         position: unset;
         width: 100%;
@@ -101,7 +102,7 @@
     .cards-parent {
         flex-direction: column;
     }
-    
+
     .cards {
         margin-bottom: 20px;
         width: 90%;
@@ -117,19 +118,45 @@
         text-align: center;
         text-wrap: pretty;
     }
+
     .fcard-btn {
         margin-bottom: -29px;
     }
-    
-    .fcards{
+
+    .fcards {
         width: 100%;
+    }
+
+    .sec-5 {
+        margin: 50px 20px;
+        justify-content: center;
+    }
+
+    .sec-5-content {
+        text-align: center;
+        text-wrap: pretty;
+        height: 430px;
+        margin: 68px auto 0;
+    }
+
+    .sec5-txtsm {
+        font-size: 1.4rem;
+    }
+    
+    .sec-5-lorem {
+        font-size: 1rem;
+        width: unset;
+    }
+
+    .sec5-txtbig {
+        font-size: 1.9rem;
     }
 }
 
 /*  */
 
 @media only screen and (min-width:545px) and (max-width:766px) {
-    .bg-con-1{
+    .bg-con-1 {
         font-size: 3rem;
         padding: 0 71px;
     }
@@ -176,7 +203,7 @@
     .txt-sm {
         font-size: 1.4rem;
     }
-    
+
     .pro-cards-sec {
         padding: 0;
     }
@@ -247,7 +274,7 @@
         background-size: cover;
         background-position: unset;
     }
-    
+
     .hd {
         font-size: 2.1rem;
         width: 100%;
@@ -257,6 +284,10 @@
 
     .pro-name {
         font-size: 0.9rem;
+    }
+
+    .sec-5::before {
+        background-size: cover;
     }
 
 }
