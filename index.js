@@ -342,7 +342,7 @@ products.map((items, index) => {
     // Add event listener to each card
     proCard.addEventListener("click", function () {
         // Replace location with the URL of the clicked card
-        window.location.replace("product-page-" + index + ".html");
+        window.location.assign("product-page-" + index + ".html");
     });
 
 });

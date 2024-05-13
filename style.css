@@ -330,6 +330,7 @@ html {
         width: 19%;
         margin: 20px 0;
         padding-bottom: 30px;
+        cursor: pointer;
 }
 
 .pro-img {
@@ -385,4 +386,25 @@ html {
 .pro-rating {
     color: #979790;
     font-size: 1.3rem;
+}
+
+.sec-5 {
+    background-color: aqua;
+    height: 500px;
+    margin: 0 30px;
+    position: relative;
+    z-index: 0;
+}
+
+.sec-5::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    background-image: url(images/bg-2.jpg);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position:  90%;
+    background-size: contain;
+    z-index: -1;
 }
