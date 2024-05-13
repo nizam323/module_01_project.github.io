@@ -444,7 +444,7 @@ html {
     align-items: center;
     width: 90%;
     margin: auto;
-    padding: 50px 0 100px;
+    padding: 100px 0;
 }
 
 .sec6-content {
@@ -458,19 +458,92 @@ html {
     align-items: center;
 }
 
-.sec6-con-1{
-    background-image: url(images/slider-img1.png);
+.sec6-con-1 {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 80px;
-    height: 25px;
+    height: 60px;
 }
 
-.sec6-con-2{
+.sec6-con-2 {
     font-size: 20px;
 }
 
 .sec6-con-3 {
+    color: gray;
     font-size: 16px;
-    width: 70%;
+    width: 100%;
+}
+
+.sec-7 {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 55px;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.sec7-txt a {
+    color: black;
+    text-decoration: none;
+    transition: color .2s linear;
+}
+
+.sec7-txt a:hover {
+    color: #0075be;
+    cursor: pointer;
+}
+
+.sec-8 {
+    padding: 80px 160px 110px;
+    border-bottom: 1.5px solid #dddddd;
+    border-top: 1.5px solid #dddddd;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.sec8-content {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    /* background-color: chartreuse; */
+    margin: 5px;
+}
+
+.sec8-con-1{
+    margin: -10px;
+    font-size: 1.4rem;
+    font-weight: bolder;
+}
+
+.sec8-con-2 {
+    margin-bottom: 25px;
+}
+
+.sec8-content h2 {
+    font-size: 22px;
+    font-weight: lighter;
+    margin-bottom: 15px;
+}
+
+.sec8-content a {
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(0 0 0 / 51%);
+    margin: 8px 0;
+}
+
+.sec8-content a:hover {
+    color: #0075be;
+}
+
+.sec8-content input {
+    height: 40px;
+    width: 160%;
+    border: 1px solid #e2e2e2;
+    margin-bottom: 15px;
+    padding: 0 10px;
+    outline: none;
 }

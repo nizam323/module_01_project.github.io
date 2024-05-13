@@ -156,6 +156,7 @@
         height: auto;
         width: 90%;
         flex-wrap: wrap;
+        padding-top: 20px;
     }
 
     .sec6-con-3 {
@@ -315,6 +316,12 @@
 
     .sec-5::before {
         background-size: cover;
+    }
+    
+    .sec-7 {
+        text-align: center;
+        padding: 0 10px;
+        text-wrap: pretty;
     }
 
 }
