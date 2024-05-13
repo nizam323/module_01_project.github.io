@@ -142,7 +142,7 @@
     .sec5-txtsm {
         font-size: 1.4rem;
     }
-    
+
     .sec-5-lorem {
         font-size: 1rem;
         width: unset;
@@ -150,6 +150,16 @@
 
     .sec5-txtbig {
         font-size: 1.9rem;
+    }
+
+    .sec-6 {
+        height: auto;
+        width: 90%;
+        flex-wrap: wrap;
+    }
+
+    .sec6-con-3 {
+        width: 86%;
     }
 }
 
@@ -219,6 +229,15 @@
     .pro-name {
         font-size: 1.5rem;
     }
+
+    .sec-6 {
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .sec6-content {
+        width: 48%;
+    }
 }
 
 @media only screen and (min-width:921px) and (max-width:1024px) {
@@ -232,6 +251,14 @@
 
     .pro-img {
         background-size: contain;
+    }
+
+    .sec-6 {
+        flex-wrap: wrap;
+    }
+
+    .sec6-content {
+        width: 48%;
     }
 }
 

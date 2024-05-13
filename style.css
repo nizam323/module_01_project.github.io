@@ -395,7 +395,7 @@ html {
     z-index: 0;
     display: flex;
     align-items: center;
-    margin: 70px 30px;
+    margin: 70px 30px 0;
 }
 
 .sec-5::before {
@@ -409,6 +409,7 @@ html {
     background-position: 90%;
     background-size: contain;
     z-index: -1;
+    opacity: 0.9;
 }
 
 .sec-5-content {
@@ -434,4 +435,42 @@ html {
 .sec5-txtbig {
     font-size: 3rem;
     font-weight: bold;
+}
+
+.sec-6 {
+    /* height: 400px; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    padding: 50px 0 100px;
+}
+
+.sec6-content {
+    height: 250px;
+    margin: 5px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sec6-con-1{
+    background-image: url(images/slider-img1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 80px;
+    height: 25px;
+}
+
+.sec6-con-2{
+    font-size: 20px;
+}
+
+.sec6-con-3 {
+    font-size: 16px;
+    width: 70%;
 }
