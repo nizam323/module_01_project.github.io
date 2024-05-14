@@ -317,11 +317,71 @@
     .sec-5::before {
         background-size: cover;
     }
-    
+
     .sec-7 {
         text-align: center;
         padding: 0 10px;
         text-wrap: pretty;
+        font-size: 1.5rem;
+        font-weight: lighter;
+        line-height: 1.399;
     }
 
+    .sec-8 {
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sec8-content {
+        width: 95%;
+        padding: 30px 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sec8-con-1 {
+        margin: 50px 0 0;
+    }
+
+    .sec8-content input {
+        width: 95%;
+    }
+
+    .sec8-content button {
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (min-width:511px) and (max-width:1000px) {
+    .sec-8 {
+        padding: 80px 0 50px 24px;
+        justify-content: flex-end;
+    }
+
+    .sec8-content {
+        width: 30%;
+    }
+
+    .sec8-extra {
+        margin: 20px auto 0;
+        /* display: flex; */
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .sec8-con-3 {
+        text-wrap: pretty;
+        width: 81%;
+    }
+}
+
+@media only screen and (min-width:1000px) and (max-width:1200px) {
+    .sec-8 {
+        padding: 80px 55px 110px;
+    }
+
+    .sec8-content input {
+        width: 118%;
+    }
 }

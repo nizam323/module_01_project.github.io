@@ -525,7 +525,7 @@ html {
 .sec8-content h2 {
     font-size: 22px;
     font-weight: lighter;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .sec8-content a {
@@ -543,7 +543,21 @@ html {
     height: 40px;
     width: 160%;
     border: 1px solid #e2e2e2;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     padding: 0 10px;
     outline: none;
+}
+
+.sec8-content button {
+    padding: 16px 28px;
+    background-color: #0084d6;
+    color: white;
+    border: none;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.sec8-content button:hover {
+    background-color: #0075be;
+    cursor: pointer;
 }

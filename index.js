@@ -357,3 +357,8 @@ console.log(pDR7)
 console.log(pDR8)
 console.log(pDR9)
 console.log(pDR10)
+
+// let email = document.querySelector("#sec8Email").value;
+// let btn = document.querySelector("#sec8Btn")
+// btn.addEventListener("click",()=>{
+// })
