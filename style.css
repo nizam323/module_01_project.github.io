@@ -582,5 +582,6 @@ html {
 }
 
 .footer-icon i {
+    padding-left: 10px;
     color: black;
 }
