@@ -428,7 +428,7 @@ html {
 
 .sec-5-lorem {
     width: 610px;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     line-height: 1.69;
 }
 
@@ -512,7 +512,7 @@ html {
     margin: 5px;
 }
 
-.sec8-con-1{
+.sec8-con-1 {
     margin: -10px;
     font-size: 1.4rem;
     font-weight: bolder;
@@ -560,4 +560,27 @@ html {
 .sec8-content button:hover {
     background-color: #0075be;
     cursor: pointer;
+}
+
+.footer {
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.footer-txt {
+    margin-left: 30px;
+    font-size: 1.3rem;
+}
+
+.footer-icon {
+    font-size: 1.7rem;
+    margin-right: 30px;
+    padding: 0 0 10px;
+}
+
+.footer-icon i {
+    color: black;
 }

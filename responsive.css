@@ -162,6 +162,26 @@
     .sec6-con-3 {
         width: 86%;
     }
+
+    .footer {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .footer-icon {
+        margin: 0;
+    }
+
+    .footer-txt {
+        text-align: center;
+        text-wrap: balance;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    .footer-icon i {
+        padding: 0 10px;
+    }
 }
 
 /*  */
