@@ -54,6 +54,10 @@
     .bg-con-1 {
         font-weight: unset;
     }
+
+    .slider-container {
+        width: 40%;
+    }
 }
 
 /* bg content */
@@ -370,6 +374,20 @@
 
     .sec8-content button {
         margin-bottom: 50px;
+    }
+
+    @keyframes moveleft {
+
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(-90%);
+        }
+    }
+
+    .images img {
+        margin: 0px 70px;
     }
 }
 
