@@ -229,8 +229,8 @@ html {
 
 .slides-content {
     /* background-color: yellowgreen; */
-    width: 15vw;
-    display: flex;
+    width: 800px;
+    /* display: flex; */
     overflow: hidden;
 }
 
@@ -241,7 +241,7 @@ html {
 .slides img {
     width: 130px;
     height: 30px;
-    margin: 0 10px;
+    margin: 0 97px;
 }
 
 .sc-r {
@@ -585,3 +585,29 @@ html {
     padding-left: 10px;
     color: black;
 }
+
+
+.slider-container{
+    /* width: 800px; */
+    position: relative;
+    border: 3px solid yellowgreen;
+    overflow: hidden;
+    /* height: 400px; */
+}
+
+.slider1{
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    display: flex;
+}
+
+.slide{
+    /* height: 300px; */
+    flex: 0 0 28%;
+}
+
+.slide.active{
+    transform: translateX(0);
+}
+
