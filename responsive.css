@@ -319,6 +319,10 @@
         height: 15px;
         width: 15px;
     }
+
+    .cart-sidebar {
+        width: 100%;
+    }
 }
 
 @media only screen and (min-width:0px) and (max-width:510px) {

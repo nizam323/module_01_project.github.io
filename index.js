@@ -347,13 +347,29 @@ products.map((items, index) => {
 
 });
 
-console.log(pDR1)
-console.log(pDR2)
-console.log(pDR3)
-console.log(pDR4)
-console.log(pDR5)
-console.log(pDR6)
-console.log(pDR7)
-console.log(pDR8)
-console.log(pDR9)
-console.log(pDR10)
+
+// amount cart side bar 
+
+let addToCart = document.querySelector(".amount-cart");
+let cartSideBar = document.querySelector(".cart-sidebar");
+let addToCartCloseBtn = document.querySelector(".add-to-cart-btn");
+
+addToCart.addEventListener("click",()=>{
+    cartSideBar.classList.toggle("cart-sidebar-toggle")
+});
+addToCartCloseBtn.addEventListener("click",()=>{
+    cartSideBar.classList.remove("cart-sidebar-toggle")
+});
+
+// nav burger btn side bar 
+
+let navSideBarBtn = document.querySelector(".burger-icon-parent");
+let navSideBar = document.querySelector(".nav-sidebar");
+// let navSideBarCloseBtn = document.querySelector(".add-to-cart-btn");
+
+navSideBarBtn.addEventListener("click",()=>{
+    navSideBar.classList.toggle("nav-sidebar-toggle")
+});
+// .addEventListener("click",()=>{
+    // navSideBar.classList.remove("nav-sidebar-toggle")
+// });
