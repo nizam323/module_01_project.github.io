@@ -362,3 +362,31 @@ console.log(pDR10)
 // let btn = document.querySelector("#sec8Btn")
 // btn.addEventListener("click",()=>{
 // })
+
+
+
+let slider = document.querySelector(".slider1")
+let slides = document.querySelectorAll(".slide")
+let prevBtn = document.querySelector(".prev-slide")
+let nextBtn = document.querySelector(".next-slide")
+let slideIndex= 0;
+
+slides[slideIndex].classList.add("active")
+
+nextBtn.addEventListener("click",next)
+function next() {
+    slides[slideIndex].classList.remove("active");
+    slideIndex = (slideIndex == slides.length - 1) ? 0 : slideIndex + 1;
+    slides[slideIndex].classList.add("active");
+    slider.style.transform = `translateX(-${slideIndex * 70}%)`;
+}
+
+prevBtn.addEventListener("click",()=>{
+    slides[slideIndex].classList.remove("active");
+    slideIndex = (slideIndex == 0) ? slides.length - 1 : slideIndex - 1;
+    slides[slideIndex].classList.add("active");
+    slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+})
+
+
+setInterval(next,2000)
