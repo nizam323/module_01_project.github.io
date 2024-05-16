@@ -636,6 +636,9 @@ html {
 
 .cart-sidebar-toggle {
     width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .cart-sidebar-head {
@@ -664,6 +667,7 @@ html {
 .add-to-cart-shopbtn {
     display: flex;
     justify-content: center;
+    margin-bottom: 10px;
 }
 
 .add-to-cart-shopbtn button {
@@ -682,10 +686,10 @@ html {
 }
 
 .add-to-cart-msg-con {
-    height: 76%;
+    /* height: 76%; */
     display: flex;
     align-items: center;
-    font-weight: bold;
+    font-weight: lighter;
     font-size: 1.7rem;
     justify-content: center;
 }
@@ -707,6 +711,7 @@ html {
 
 .nav-sidebar-toggle {
     width: 80%;
+    overflow-y: scroll;
 }
 
 .nav-sidebar-close-btn {
@@ -727,7 +732,7 @@ html {
 }
 
 .nav-sidebar-anchors {
-    height: 55px;
+    height: 60px;
     font-weight: bolder;
     font-size: 1.1rem;
     display: flex;
