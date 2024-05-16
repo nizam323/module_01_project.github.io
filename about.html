@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1cb608260b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <title>Document</title>
+    <style>
+        .bg-container::before {
+            background-size: cover;
+            background-image: url(images/product-2.jpg);
+        }
+
+        @media only screen and (min-width: 767px) and (max-width: 921px) {
+            .bg-con-1 {
+                width: 100%;
+            }
+        }
+
+        .about-sec-2-container {
+            background-color: #f5f7f9;
+            padding: 60px 20px;
+        }
+
+        .ab-sec-2-first-parent {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 50%;
+            padding: 0px 30px;
+            height: 195px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nav and bg container -->
+    <div class="bg-container" style="height: 80vh;">
+        <nav class="nav">
+            <div class="nav-1st">
+                <div class="logo"> </div>
+                <div class="anchors">
+                    <ul>
+                        <li><a href="">EVERYTHING</a></li>
+                        <li><a href="">WOMEN</a></li>
+                        <li><a href="">MEN</a></li>
+                        <li><a href="">ACCESSORIES</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-2nd">
+                <ul class="abo-con">
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="">CONTACT US</a></li>
+                </ul>
+                <div class="amount-cart" style="cursor: pointer;">
+                    <ul>
+                        <li><a><span class="nav-2nd-span"><span>$</span>0.00</span></a></li>
+                        <li><a><i class="fa-solid fa-bag-shopping">
+                                    <div class="product-count">0</div>
+                                </i></a></li>
+                    </ul>
+                </div>
+                <div class="login">
+                    <ul>
+                        <li><a href=""><i class="fa-solid fa-user"></i></a></li>
+                    </ul>
+                </div>
+                <div class="burger-icon-parent">
+                    <div class="burger-icon">
+                        <div class="b-i-1"></div>
+                        <div class="b-i-1"></div>
+                        <div class="b-i-1"></div>
+                    </div>
+                </div>
+            </div>
+        </nav> <!--nav end -->
+        <!-- bg container content -->
+        <div class="bg-content" style="justify-content: center;align-items: center;">
+            <div class="bg-content-container" style="margin: 0;">
+                <div class="bg-con-1"
+                    style="color: white;font-weight: 600;height: 253px;display: flex;align-items: center;text-align: center;justify-content: center;">
+                    About Us</div>
+            </div>
+        </div> <!-- bg content end -->
+    </div> <!-- bg container end -->
+
+    <!-- amount cart side bar -->
+    <div class="cart-sidebar">
+        <div class="cart-sidebar-head">
+            <div class="add-to-cart-txt">Shopping Cart</div>
+            <div class="add-to-cart-btn">+</div>
+        </div>
+        <div class="add-to-cart-msg-con">
+            <div>No products in the cart.</div>
+        </div>
+        <div class="add-to-cart-shopbtn"><button>Continue Shopping</button></div>
+    </div><!-- amount cart end -->
+    <!-- navbar burger btn side bar -->
+    <div class="nav-sidebar">
+        <div style="height: 50px;">
+            <div class="nav-sidebar-close-btn">+</div>
+        </div>
+        <div class="nav-sidebar-login">
+            <a href=""><i class="fa-solid fa-user"></i></a>
+        </div>
+        <div class="nav-sidebar-anchors"><a href="">EVERYTHING</a></div>
+        <div class="nav-sidebar-anchors"><a href="">WOMEN</a></div>
+        <div class="nav-sidebar-anchors"><a href="">MEN</a></div>
+        <div class="nav-sidebar-anchors"><a href="">ACCESSORIES</a></div>
+        <div class="nav-sidebar-anchors-sepration" style="height: 50px;"></div>
+        <div class="nav-sidebar-anchors" style="font-weight: 100;"><a href="about.html">ABOUT</a></div>
+        <div class="nav-sidebar-anchors" style="font-weight: 100;"><a href="">CONTACT US</a></div>
+    </div>
+    </div> <!-- nav burger btn side bar end -->
+
+    <div class="about-sec-2-container">
+        <div class="ab-sec-2-first-parent">
+            <div class="ab-sec-2-line" style="background-color: #0084d6;height: 3px;width: 15%;"></div>
+            <div class="ab-sec-2-txt">
+                <h1 style="margin-bottom: 30px;">Who We Are</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
+                    mattis,
+                    pulvinar dapibus leo. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae
+                    erat
+                    consequat auctor eu in elit.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script>
+        // amount cart side bar 
+
+        let addToCart = document.querySelector(".amount-cart");
+        let cartSideBar = document.querySelector(".cart-sidebar");
+        let addToCartCloseBtn = document.querySelector(".add-to-cart-btn");
+
+        addToCart.addEventListener("click", () => {
+            cartSideBar.classList.toggle("cart-sidebar-toggle")
+        });
+        addToCartCloseBtn.addEventListener("click", () => {
+            cartSideBar.classList.remove("cart-sidebar-toggle")
+        });
+
+        // nav burger btn side bar 
+
+        let navSideBarBtn = document.querySelector(".burger-icon-parent");
+        let navSideBar = document.querySelector(".nav-sidebar");
+        let navSideBarCloseBtn = document.querySelector(".nav-sidebar-close-btn");
+
+        navSideBarBtn.addEventListener("click", () => {
+            navSideBar.classList.toggle("nav-sidebar-toggle")
+        });
+        navSideBarCloseBtn.addEventListener("click", () => {
+            navSideBar.classList.remove("nav-sidebar-toggle")
+        });
+
+    </script>
+</body>
+
+</html>
