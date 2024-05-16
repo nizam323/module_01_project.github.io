@@ -630,7 +630,7 @@ html {
     right: 0;
     overflow: hidden;
     transition-property: all;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
     transition-timing-function: ease-in-out;
 }
 
@@ -654,6 +654,7 @@ html {
 }
 
 .add-to-cart-btn {
+    transform: rotate(45deg);
     font-size: 4rem;
     width: 50px;
     font-weight: 100;
@@ -690,7 +691,7 @@ html {
 }
 
 .nav-sidebar{
-    background-color: palegreen;
+    background-color: white;
     color: black;
     height: 100vh;
     width: 0%;
@@ -704,7 +705,40 @@ html {
     transition-timing-function: ease-in-out;   
 }
 
-
 .nav-sidebar-toggle {
     width: 80%;
+}
+
+.nav-sidebar-close-btn {
+    position: absolute;
+    right: 0;
+    transform: rotate(45deg);
+    font-size: 4rem;
+    width: 50px;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.nav-sidebar-login a {
+    font-size: 2rem;
+    padding-left: 40px;
+    color: black;
+
+}
+
+.nav-sidebar-anchors {
+    height: 55px;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    display: flex;
+    background-color: #f5f7f9;
+    align-items: center;
+    padding-left: 35px;
+    border-top: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.nav-sidebar-anchors a {
+    text-decoration: none;
+    color: black;
 }

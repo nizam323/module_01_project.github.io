@@ -365,11 +365,11 @@ addToCartCloseBtn.addEventListener("click",()=>{
 
 let navSideBarBtn = document.querySelector(".burger-icon-parent");
 let navSideBar = document.querySelector(".nav-sidebar");
-// let navSideBarCloseBtn = document.querySelector(".add-to-cart-btn");
+let navSideBarCloseBtn = document.querySelector(".nav-sidebar-close-btn");
 
 navSideBarBtn.addEventListener("click",()=>{
     navSideBar.classList.toggle("nav-sidebar-toggle")
 });
-// .addEventListener("click",()=>{
-    // navSideBar.classList.remove("nav-sidebar-toggle")
-// });
+navSideBarCloseBtn.addEventListener("click",()=>{
+    navSideBar.classList.remove("nav-sidebar-toggle")
+});
