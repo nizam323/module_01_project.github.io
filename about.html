@@ -32,6 +32,7 @@
 
         .about-bg-con {
             height: 80vh;
+            background: linear-gradient(180deg, #0084d6 -50%, #000000 100%);
         }
 
         .ab-sec-2-txt h1 {
@@ -105,6 +106,56 @@
             width: 100px;
         }
 
+        .followus-parent {
+            height: 450px;
+            position: relative;
+            background: linear-gradient(#0a0a0a75, #090909ab);
+        }
+
+        .followus-parent::before {
+            content: "";
+            z-index: -1;
+            height: 100%;
+            width: 100%;
+            background-attachment: fixed;
+            position: absolute;
+            background-image: url(images/about-sec-last.jpg);
+            background-size: 100% 114%;
+            background-position-y: top;
+        }
+
+        .followus-content-con {
+            height: 100%;
+            width: 40%;
+            background-color: #f5f7f9;
+            margin: 0px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .followus-con-1 {
+            height: 5px;
+            width: 80px;
+            background-color: #0084d6;
+        }
+
+        .followus-con-2 {
+            margin: 50px 0 70px;
+            font-size: 30px;
+        }
+
+        .followus-con-3 i {
+            color: black;
+            font-size: 30px;
+            padding: 0 20px;
+        }
+
+        .followus-con-3 i:hover {
+            color: #1882c4;
+        }
+
         @media only screen and (min-width: 0px) and (max-width: 766px) {
             .about-bg-con {
                 height: 60vh;
@@ -164,6 +215,26 @@
                 width: 85%;
             }
 
+            .followus-parent {
+                height: 400px;
+                display: flex;
+                align-items: center;
+            }
+
+            .followus-content-con {
+                height: 70%;
+                width: 80%;
+            }
+
+            .followus-con-2 {
+                margin: 25px 0 35px;
+                font-size: 18px;
+            }
+
+            .followus-con-3 i {
+                font-size: 22px;
+                padding: 0px 9px;
+            }
         }
 
         @media only screen and (min-width: 767px) and (max-width: 921px) {
@@ -378,28 +449,98 @@
                 <div class="ot-pro-profession">Intern Designer</div>
             </div>
         </div>
+    </div> <!-- our team sec end -->
+    <!-- follow us section -->
+    
+    <div class="followus-parent">
+        <div class="followus-content-con">
+            <div class="followus-con-1"></div>
+            <div class="followus-con-2">
+                <h2>Follow Us</h2>
+            </div>
+            <div class="followus-con-3">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-google-plus-g"></i></a>
+            </div>
+        </div>
     </div>
-
-
-    <!-- ffffffffffff -->
-    <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident voluptas quia error dignissimos amet iure
-        est expedita, numquam aperiam corrupti, ab ipsum? Praesentium quis fuga saepe itaque ratione, a beatae quibusdam
-        omnis eius asperiores dolore, molestiae perferendis odit qui, quo at sint recusandae error magnam harum sapiente
-        repellat. Quos, distinctio deserunt nam at tempora non cumque delectus facere nostrum alias repudiandae
-        dignissimos enim ipsum mollitia esse fugiat ipsa sequi quae nulla aspernatur sed inventore necessitatibus nobis.
-        Eaque excepturi fugit vitae tempora autem cupiditate, id accusamus ducimus, repellendus dolores voluptas
-        perferendis voluptate aliquam quis exercitationem? Eius non sint rem laudantium libero facilis vitae ullam.
-        Laudantium, labore excepturi, ducimus facilis neque pariatur laborum cupiditate explicabo deleniti quo
-        voluptates debitis fuga officiis aut sint quidem voluptas nisi quasi dolore blanditiis reprehenderit saepe
-        assumenda deserunt! Incidunt nam, recusandae ullam asperiores, nisi dolores, iusto molestias impedit quasi sunt
-        neque. Sit eos, omnis corrupti tenetur vero distinctio enim. Delectus rerum ab recusandae modi quae magni
-        inventore vero, reiciendis facilis accusantium nostrum itaque dolore totam aliquid reprehenderit nam architecto
-        perferendis obcaecati! Repudiandae reiciendis veritatis iusto nesciunt distinctio blanditiis deleniti numquam
-        labore, consequatur ducimus aspernatur quod veniam atque eos perspiciatis corrupti repellat iste voluptate error
-        doloribus neque aliquam. Adipisci quisquam possimus reiciendis, asperiores repellendus inventore fugit dolores
-        commodi. Animi, eius delectus fuga minus voluptas aspernatur assumenda repellat expedita! Rerum, praesentium.
-    </h1>
-    <!-- ffffffffffff -->
+    <!-- follow us sec end -->
+    <div class="a11" style="background-color: #f5f7f9;">
+    <div class="sec-6">
+        <div class="sec6-content">
+            <div class="sec6-con-1" style="background-image: url(images/sec6-1.png);"></div>
+            <div class="sec6-con-2">Worldwide Shipping</div>
+            <div class="sec6-con-3">It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</div>
+        </div>
+        <div class="sec6-content">
+            <div class="sec6-con-1" style="background-image: url(images/sec6-2.png);"></div>
+            <div class="sec6-con-2">Best Quality</div>
+            <div class="sec6-con-3">It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</div>
+        </div>
+        <div class="sec6-content">
+            <div class="sec6-con-1" style="background-image: url(images/sec6-3.png);"></div>
+            <div class="sec6-con-2">Best Offers</div>
+            <div class="sec6-con-3">It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</div>
+        </div>
+        <div class="sec6-content">
+            <div class="sec6-con-1" style="background-image: url(images/sec6-4.png);"></div>
+            <div class="sec6-con-2">Secure Payments</div>
+            <div class="sec6-con-3">It elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</div>
+        </div>
+    </div>
+</div></div> <!-- sec 4 end -->
+<!-- section 7 -->
+<div class="sec-7">
+    <div class="sec7-txt">
+        <a href="">SALE UP TO 70% OFF FOR ALL CLOTHES & FASHION ITEMS, ON ALL BRANDS.</a>
+    </div>
+</div><!-- sec 7 end -->
+<!-- section 8 -->
+<div class="sec-8">
+    <div class="sec8-content">
+        <div class="sec8-con-1">
+            <div class="sec8-con-2"><img src="images/logo-dark.jpg" width="90" height="30" alt=""></div>
+            <div class="sec8-con-3">The best look anytime, anywhere.</div>
+        </div>
+    </div>
+    <div class="sec8-content">
+        <h2>For Her</h2>
+        <a href="">Women Jeans</a>
+        <a href="">Tops and Shirts</a>
+        <a href="">Women Jackets</a>
+        <a href="">Heels and Flats</a>
+        <a href="">Women Accessories</a>
+    </div>
+    <div class="sec8-content">
+        <h2>For Him</h2>
+        <a href="">Men Jeans</a>
+        <a href="">Men Shirts</a>
+        <a href="">Men Shoes</a>
+        <a href="">Men Accessories</a>
+        <a href="">Men Jackets</a>
+    </div>
+    <div class="sec8-content sec8-extra">
+        <h2>Subscribe</h2>
+        <form action="" style="display: contents;">
+            <input type="email" placeholder="Your email address..." id="sec8Email" required>
+            <button id="sec8Btn">Subscribe</button>
+        </form>
+    </div>
+</div>
+<!-- footer -->
+<div class="footer">
+    <div class="footer-txt">Copyright © 2024 Brandstore. Powered by Brandstore.</div>
+    <div class="footer-icon">
+        <a href="" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <a href="" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="" target="_blank"><i class="fa-brands fa-google"></i></a>
+        <a href="" target="_blank"><i class="fa-brands fa-yelp"></i></a>
+    </div>
+</div> <!-- footer end -->
 
 
     <script>

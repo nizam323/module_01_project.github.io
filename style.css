@@ -671,7 +671,7 @@ html {
 .add-to-cart-shopbtn {
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
 }
 
 .add-to-cart-shopbtn button {
