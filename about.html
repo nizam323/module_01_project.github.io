@@ -46,6 +46,65 @@
             border-radius: 5px;
         }
 
+        .ab-sec-3 {
+            padding: 100px 0;
+            margin: 0 120px;
+        }
+
+        .sec-3-content-parent {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .ab-sec-3-txt1 {
+            font-size: 20px;
+        }
+
+        .ab-sec-3-txt2 {
+            font-size: 25px;
+            margin: 25px 0px;
+        }
+
+        .ab-sec-3-txt3 {
+            line-height: 1.8;
+            width: 60%;
+            text-align: center;
+        }
+
+        .ot-profiles-con {
+            margin-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .ot-pro {
+            background: #f5f7f9;
+            height: 250px;
+            width: 30%;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ot-pro-name {
+            margin: 20px 0px 12px;
+            font-size: 20px;
+        }
+
+        .ot-pro-profession {
+            font-size: 16px;
+            color: #0c01018c;
+        }
+
+        .ot-pro-img img {
+            width: 100px;
+        }
+
         @media only screen and (min-width: 0px) and (max-width: 766px) {
             .about-bg-con {
                 height: 60vh;
@@ -83,6 +142,28 @@
                 width: 90px;
             }
 
+            .ab-sec-3-txt1 {
+                font-size: 16px;
+            }
+
+            .ab-sec-3-txt2 {
+                font-size: 20px;
+            }
+
+            .ab-sec-3-txt3 {
+                text-align: justify;
+                line-height: 1.7;
+            }
+
+            .ab-sec-3 {
+                margin: 0;
+                padding: 60px 0;
+            }
+
+            .ot-pro {
+                width: 85%;
+            }
+
         }
 
         @media only screen and (min-width: 767px) and (max-width: 921px) {
@@ -101,6 +182,24 @@
 
             .ab-sec-2-first-parent-img {
                 height: 341px;
+            }
+
+            .ab-sec-3-txt1 {
+                font-size: 16px;
+            }
+
+            .ab-sec-3-txt2 {
+                font-size: 20px;
+            }
+
+            .ab-sec-3-txt3 {
+                text-align: justify;
+                line-height: 1.7;
+            }
+
+            .ab-sec-3 {
+                margin: 0;
+                padding: 60px 0;
             }
 
         }
@@ -221,7 +320,65 @@
             style="background-image: url(images/about-2.jpg);background-size: 100% 100%;">
         </div>
     </div>
-
+    <!-- sec 3 our team -->
+    <div class="ab-sec-3">
+        <div class="sec-3-content-parent">
+            <div class="ab-sec-2-line" style="width: 100px;margin-bottom: 40px;"></div>
+            <div class="ab-sec-3-txt1">
+                <h2>A Few Words About</h2>
+            </div>
+            <div class="ab-sec-3-txt2">
+                <h2>Our Team</h2>
+            </div>
+            <div class="ab-sec-3-txt3">Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat
+                consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra</div>
+        </div>
+        <!-- our teams profiles -->
+        <div class="ot-profiles-con">
+            <div class="ot-pro">
+                <div class="ot-pro-img"><img src="images/ourteam-1.jpg" alt=""></div>
+                <div class="ot-pro-name">
+                    <h4>Harvey Spector</h4>
+                </div>
+                <div class="ot-pro-profession">Founder - CEO</div>
+            </div>
+            <div class="ot-pro">
+                <div class="ot-pro-img"><img src="images/ourteam-2.jpg" alt=""></div>
+                <div class="ot-pro-name">
+                    <h4>Jessica Pearson</h4>
+                </div>
+                <div class="ot-pro-profession">COO</div>
+            </div>
+            <div class="ot-pro">
+                <div class="ot-pro-img"><img src="images/ourteam-3.jpg" alt=""></div>
+                <div class="ot-pro-name">
+                    <h4>Rachel Zain</h4>
+                </div>
+                <div class="ot-pro-profession">Marketing Head</div>
+            </div>
+            <div class="ot-pro">
+                <div class="ot-pro-img"><img src="images/ourteam-4.jpg" alt=""></div>
+                <div class="ot-pro-name">
+                    <h4>Luise Litt</h4>
+                </div>
+                <div class="ot-pro-profession">Lead Developer</div>
+            </div>
+            <div class="ot-pro">
+                <div class="ot-pro-img"><img src="images/ourteam-5.jpg" alt=""></div>
+                <div class="ot-pro-name">
+                    <h4>Katrina Bennett</h4>
+                </div>
+                <div class="ot-pro-profession">Intern Designer</div>
+            </div>
+            <div class="ot-pro">
+                <div class="ot-pro-img"><img src="images/ourteam-6.jpg" alt=""></div>
+                <div class="ot-pro-name">
+                    <h4>Mike Ross</h4>
+                </div>
+                <div class="ot-pro-profession">Intern Designer</div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- ffffffffffff -->
