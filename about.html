@@ -15,12 +15,6 @@
             background-image: url(images/about-bg.jpg);
         }
 
-        @media only screen and (min-width: 767px) and (max-width: 921px) {
-            .bg-con-1 {
-                width: 100%;
-            }
-        }
-
         .about-sec-2-container {
             background-color: #f5f7f9;
             padding: 60px;
@@ -35,12 +29,102 @@
             width: 50%;
             padding: 65px 55px;
         }
+
+        .about-bg-con {
+            height: 80vh;
+        }
+
+        .ab-sec-2-txt h1 {
+            margin: 25px 0;
+            font-size: 42px;
+        }
+
+        .ab-sec-2-line {
+            background-color: #0084d6;
+            height: 5px;
+            width: 18%;
+            border-radius: 5px;
+        }
+
+        @media only screen and (min-width: 0px) and (max-width: 766px) {
+            .about-bg-con {
+                height: 60vh;
+            }
+
+            .about-sec-2-container {
+                padding: 30px 20px;
+            }
+
+            .bg-container::before {
+                background-size: 100% 60%;
+                background-position: top;
+            }
+
+            .about-sec-2-container {
+                flex-direction: column;
+            }
+
+            .ab-sec-2-first-parent {
+                width: 100%;
+                align-items: center;
+                text-align: center;
+                padding: 30px 20px;
+            }
+
+            .ab-sec-2-first-parent-img {
+                height: 50vmin;
+            }
+
+            .ab-sec-2-txt h1 {
+                font-size: 30px;
+            }
+
+            .ab-sec-2-line {
+                width: 90px;
+            }
+
+        }
+
+        @media only screen and (min-width: 767px) and (max-width: 921px) {
+            .bg-con-1 {
+                width: 100%;
+            }
+
+            .about-sec-2-container {
+                flex-direction: column;
+            }
+
+
+            .ab-sec-2-first-parent {
+                width: 100%;
+            }
+
+            .ab-sec-2-first-parent-img {
+                height: 341px;
+            }
+
+        }
+
+        @media only screen and (min-width:922px) and (max-width:1024px) {
+            .about-sec-2-container {
+                flex-direction: column;
+            }
+
+            .ab-sec-2-first-parent {
+                width: 100%;
+            }
+
+            .ab-sec-2-first-parent-img {
+                height: 341px;
+            }
+
+        }
     </style>
 </head>
 
 <body>
     <!-- nav and bg container -->
-    <div class="bg-container" style="height: 80vh;">
+    <div class="bg-container about-bg-con">
         <nav class="nav">
             <div class="nav-1st">
                 <div class="logo"> </div>
@@ -121,10 +205,10 @@
 
     <div class="about-sec-2-container">
         <div class="ab-sec-2-first-parent">
-            <div class="ab-sec-2-line" style="background-color: #0084d6;height: 5px;width: 18%;border-radius: 5px;">
+            <div class="ab-sec-2-line">
             </div>
             <div class="ab-sec-2-txt">
-                <h1 style="margin: 25px 0;font-size: 42px;">Who We Are</h1>
+                <h1>Who We Are</h1>
                 <p style="text-align: justify;text-align: justify;font-size: 18px;line-height: 2;">Lorem ipsum dolor sit
                     amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
                     mattis,
@@ -133,7 +217,8 @@
                     consequat auctor eu in elit.</p>
             </div>
         </div>
-        <div class="ab-sec-2-first-parent" style="background-image: url(images/about-2.jpg);background-size: cover;">
+        <div class="ab-sec-2-first-parent ab-sec-2-first-parent-img"
+            style="background-image: url(images/about-2.jpg);background-size: 100% 100%;">
         </div>
     </div>
 
