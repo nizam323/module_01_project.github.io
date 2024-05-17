@@ -551,6 +551,10 @@ html {
     color: black;
 }
 
+.footer-icon i:hover {
+    color: #0075be;
+}
+
 .slider {
     width: 80%;
     display: flex;
