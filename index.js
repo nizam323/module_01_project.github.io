@@ -128,6 +128,7 @@ products.map((items, index) => {
 
     //  creating cards through javascript
 
+    let hoverAddToCart = document.createElement("div");
     let proCard = document.createElement("div");
     let proImg = document.createElement("div");
     let img = document.createElement("img");
@@ -153,21 +154,24 @@ products.map((items, index) => {
     proRating.classList.add("pro-rating");
     proRealPrice.style.display = "inline";
     nameAnchohr.classList.add("anchor"),
+        hoverAddToCart.classList.add("addtocart-hover");
 
-        // assinging text 
+    // assinging text 
 
-        img.setAttribute("src", items.proImg);
+    img.setAttribute("src", items.proImg);
     img.setAttribute("width", "100%");
     img.setAttribute("height", "100%");
     proName.innerText = items.proName;
     proCategory.innerText = items.proCategory;
     proRealPrice.innerText = items.proPrice;
+    hoverAddToCart.innerText = "icon";
 
     // making cards through javascript
 
     container.appendChild(proCard);
     proCard.appendChild(proImg);
     proImg.appendChild(imgAnchohr);
+    imgAnchohr.appendChild(hoverAddToCart);
     imgAnchohr.appendChild(img);
     proCard.appendChild(proTxtParent);
     proTxtParent.appendChild(nameAnchohr);
@@ -345,6 +349,24 @@ products.map((items, index) => {
         window.location.assign("product-page-" + index + ".html");
     });
 
+
+    // cards hover addtocart btn
+
+    let proImgHoverBtn = document.querySelectorAll(".pro-img");
+    let hoverBtn = document.querySelectorAll(".addtocart-hover");
+
+    proImgHoverBtn[index].addEventListener("mouseover", () => {
+        hoverBtn[index].style.display = "block";
+    });
+
+    proImgHoverBtn[index].addEventListener("mouseout", () => {
+        hoverBtn[index].style.display = "none";
+    });
+
+    hoverBtn[index].addEventListener("click",()=>{
+        window.alert("hi");
+        
+    })
 });
 
 
@@ -354,10 +376,10 @@ let addToCart = document.querySelector(".amount-cart");
 let cartSideBar = document.querySelector(".cart-sidebar");
 let addToCartCloseBtn = document.querySelector(".add-to-cart-btn");
 
-addToCart.addEventListener("click",()=>{
+addToCart.addEventListener("click", () => {
     cartSideBar.classList.toggle("cart-sidebar-toggle")
 });
-addToCartCloseBtn.addEventListener("click",()=>{
+addToCartCloseBtn.addEventListener("click", () => {
     cartSideBar.classList.remove("cart-sidebar-toggle")
 });
 
@@ -367,9 +389,9 @@ let navSideBarBtn = document.querySelector(".burger-icon-parent");
 let navSideBar = document.querySelector(".nav-sidebar");
 let navSideBarCloseBtn = document.querySelector(".nav-sidebar-close-btn");
 
-navSideBarBtn.addEventListener("click",()=>{
+navSideBarBtn.addEventListener("click", () => {
     navSideBar.classList.toggle("nav-sidebar-toggle")
 });
-navSideBarCloseBtn.addEventListener("click",()=>{
+navSideBarCloseBtn.addEventListener("click", () => {
     navSideBar.classList.remove("nav-sidebar-toggle")
 });

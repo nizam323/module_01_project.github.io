@@ -304,6 +304,15 @@ html {
     background-repeat: no-repeat;
     height: 220px;
     margin-bottom: 12px;
+    position: relative;
+}
+
+.addtocart-hover {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: black;
 }
 
 .pro-txt-parent {
@@ -698,7 +707,7 @@ html {
     justify-content: center;
 }
 
-.nav-sidebar{
+.nav-sidebar {
     background-color: white;
     color: black;
     height: 100vh;
@@ -710,7 +719,7 @@ html {
     overflow: hidden;
     transition-property: all;
     transition-duration: 0.5s;
-    transition-timing-function: ease-in-out;   
+    transition-timing-function: ease-in-out;
 }
 
 .nav-sidebar-toggle {
