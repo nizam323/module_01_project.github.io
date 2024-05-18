@@ -364,19 +364,28 @@ products.map((items, index) => {
     });
 
     let add = document.querySelector(".addtocart-products-parent");
+    // Get the computed width of the element
+    // let height = window.getComputedStyle(add).getPropertyValue("height");
 
-    function addtocartfunction(addImg,addName,addPrice) {
+    // // Remove "px" from the width string and convert it to a number
+    // height = parseFloat(height);
 
-       let addProductCon = document.createElement("div");
-       let addProductImgDiv = document.createElement("div");
-       let addProductImg = document.createElement("img");
-       let addProductNameDiv = document.createElement("div");
-       let addProductName = document.createElement("h2");
-       let addProductPriceDiv = document.createElement("div");
-       let addProductPrice = document.createElement("h3");
-       let addProductQuantityDiv = document.createElement("div");
-       let addProductQuantity = document.createElement("p");
-       let qua = 1;
+    // if (height > 1) {
+    //     alert("dd");
+    // }
+
+    function addtocartfunction(addImg, addName, addPrice) {
+
+        let addProductCon = document.createElement("div");
+        let addProductImgDiv = document.createElement("div");
+        let addProductImg = document.createElement("img");
+        let addProductNameDiv = document.createElement("div");
+        let addProductName = document.createElement("h2");
+        let addProductPriceDiv = document.createElement("div");
+        let addProductPrice = document.createElement("h3");
+        let addProductQuantityDiv = document.createElement("div");
+        let addProductQuantity = document.createElement("p");
+        let qua = 1;
 
         addProductCon.classList.add("addtocart-products");
         addProductImgDiv.classList.add("addtocart-products-img");
@@ -384,25 +393,26 @@ products.map((items, index) => {
         addProductPrice.classList.add("addtocart-products-price");
         addProductQuantity.classList.add("addtocart-products-quantity");
 
-       addProductImg.setAttribute("src",addImg)
-       addProductImg.setAttribute("width","100")
-       addProductName.innerText=addName
-       addProductPrice.innerText=addPrice
-       addProductQuantity.innerText = "x" + qua++; // Display quantity
+        addProductImg.setAttribute("src", addImg)
+        addProductImg.setAttribute("width", "100")
+        addProductName.innerText = addName
+        addProductPrice.innerText = addPrice
+        addProductQuantity.innerText = "x" + qua++; // Display quantity
 
-       add.appendChild(addProductCon);
-       addProductCon.appendChild(addProductImgDiv);
-       addProductImgDiv.appendChild(addProductImg);
-       addProductCon.appendChild(addProductNameDiv);
-       addProductNameDiv.appendChild(addProductName);
-       addProductNameDiv.appendChild(addProductPriceDiv);
-       addProductPriceDiv.appendChild(addProductPrice);
-       addProductNameDiv.appendChild(addProductQuantityDiv);
-       addProductQuantityDiv.appendChild(addProductQuantity);
+        add.appendChild(addProductCon);
+        addProductCon.appendChild(addProductImgDiv);
+        addProductImgDiv.appendChild(addProductImg);
+        addProductCon.appendChild(addProductNameDiv);
+        addProductNameDiv.appendChild(addProductName);
+        addProductNameDiv.appendChild(addProductPriceDiv);
+        addProductPriceDiv.appendChild(addProductPrice);
+        addProductNameDiv.appendChild(addProductQuantityDiv);
+        addProductQuantityDiv.appendChild(addProductQuantity);
 
     };
 
-    hoverBtn[index].addEventListener("click",() => addtocartfunction(items.proImg,items.proName,items.proPrice))});
+    hoverBtn[index].addEventListener("click", () => addtocartfunction(items.proImg, items.proName, items.proPrice))
+});
 
 
 // amount cart side bar 
@@ -430,3 +440,16 @@ navSideBarBtn.addEventListener("click", () => {
 navSideBarCloseBtn.addEventListener("click", () => {
     navSideBar.classList.remove("nav-sidebar-toggle")
 });
+
+
+sdsdsds = document.querySelector(".addtocart-products-parent");
+// Get the computed width of the element
+let height = window.getComputedStyle(sdsdsds).getPropertyValue("height");
+
+// Remove "px" from the width string and convert it to a number
+height = parseFloat(height);
+
+if (height > 110) {
+    let hideaddmsg = document.querySelector(".add-to-cart-msg-con");
+    hideaddmsg.style.display= "none"
+}
