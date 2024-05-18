@@ -338,7 +338,7 @@ products.map((items, index) => {
     }
 
     // Set href attribute for image anchor
-    imgAnchohr.setAttribute("href", "product-page-" + index + ".html");
+    // imgAnchohr.setAttribute("href", "product-page-" + index + ".html");
 
     // Set href attribute for name anchor
     nameAnchohr.setAttribute("href", "product-page-" + index + ".html");
@@ -346,7 +346,7 @@ products.map((items, index) => {
     // Add event listener to each card
     proCard.addEventListener("click", function () {
         // Replace location with the URL of the clicked card
-        window.location.assign("product-page-" + index + ".html");
+        // window.location.assign("product-page-" + index + ".html");
     });
 
 
@@ -363,11 +363,24 @@ products.map((items, index) => {
         hoverBtn[index].style.display = "none";
     });
 
-    hoverBtn[index].addEventListener("click",()=>{
-        window.alert("hi");
-        
-    })
-});
+    let add = document.querySelector(".add-to-cart-msg-con");
+
+    function addtocartfunction(addImg,addName,addPrice) {
+       let a = document.createElement("img")
+       let b = document.createElement("h1")
+       let c = document.createElement("h3")
+       add.appendChild(a)
+       add.appendChild(b)
+       add.appendChild(c)
+       a.setAttribute("src",addImg)
+       a.setAttribute("width","100")
+       a.setAttribute("src",addImg)
+       b.innerText=addName
+       c.innerText=addPrice
+
+    }
+
+    hoverBtn[index].addEventListener("click",() => addtocartfunction(items.proImg,items.proName,items.proPrice))});
 
 
 // amount cart side bar 
