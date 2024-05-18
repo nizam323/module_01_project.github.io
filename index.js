@@ -363,22 +363,44 @@ products.map((items, index) => {
         hoverBtn[index].style.display = "none";
     });
 
-    let add = document.querySelector(".add-to-cart-msg-con");
+    let add = document.querySelector(".addtocart-products-parent");
 
     function addtocartfunction(addImg,addName,addPrice) {
-       let a = document.createElement("img")
-       let b = document.createElement("h1")
-       let c = document.createElement("h3")
-       add.appendChild(a)
-       add.appendChild(b)
-       add.appendChild(c)
-       a.setAttribute("src",addImg)
-       a.setAttribute("width","100")
-       a.setAttribute("src",addImg)
-       b.innerText=addName
-       c.innerText=addPrice
 
-    }
+       let addProductCon = document.createElement("div");
+       let addProductImgDiv = document.createElement("div");
+       let addProductImg = document.createElement("img");
+       let addProductNameDiv = document.createElement("div");
+       let addProductName = document.createElement("h2");
+       let addProductPriceDiv = document.createElement("div");
+       let addProductPrice = document.createElement("h3");
+       let addProductQuantityDiv = document.createElement("div");
+       let addProductQuantity = document.createElement("p");
+       let qua = 1;
+
+        addProductCon.classList.add("addtocart-products");
+        addProductImgDiv.classList.add("addtocart-products-img");
+        addProductNameDiv.classList.add("addtocart-products-name");
+        addProductPrice.classList.add("addtocart-products-price");
+        addProductQuantity.classList.add("addtocart-products-quantity");
+
+       addProductImg.setAttribute("src",addImg)
+       addProductImg.setAttribute("width","100")
+       addProductName.innerText=addName
+       addProductPrice.innerText=addPrice
+       addProductQuantity.innerText = "x" + qua++; // Display quantity
+
+       add.appendChild(addProductCon);
+       addProductCon.appendChild(addProductImgDiv);
+       addProductImgDiv.appendChild(addProductImg);
+       addProductCon.appendChild(addProductNameDiv);
+       addProductNameDiv.appendChild(addProductName);
+       addProductNameDiv.appendChild(addProductPriceDiv);
+       addProductPriceDiv.appendChild(addProductPrice);
+       addProductNameDiv.appendChild(addProductQuantityDiv);
+       addProductQuantityDiv.appendChild(addProductQuantity);
+
+    };
 
     hoverBtn[index].addEventListener("click",() => addtocartfunction(items.proImg,items.proName,items.proPrice))});
 

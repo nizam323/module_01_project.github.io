@@ -760,3 +760,23 @@ html {
     text-decoration: none;
     color: black;
 }
+
+.addtocart-products {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.addtocart-products-name {
+    padding: 0 0 0 15px;
+    font-size: 13px;
+}
+
+.addtocart-products-price {
+    margin: 10px 0;
+}
+
+.addtocart-products-parent {
+    overflow-y: scroll;
+    height: 100%;
+}
