@@ -765,6 +765,7 @@ html {
     padding: 15px;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .addtocart-products-name {
@@ -779,4 +780,12 @@ html {
 .addtocart-products-parent {
     overflow-y: scroll;
     height: 100%;
+    display: none;
+}
+
+.addtocart-delete-btn {
+    position: absolute;
+    right: 30px;
+    transform: rotate(45deg);
+    font-size: 45px;
 }

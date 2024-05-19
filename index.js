@@ -385,6 +385,7 @@ products.map((items, index) => {
         let addProductPrice = document.createElement("h3");
         let addProductQuantityDiv = document.createElement("div");
         let addProductQuantity = document.createElement("p");
+        let addProductDeleteBtn = document.createElement("div");
         let qua = 1;
 
         addProductCon.classList.add("addtocart-products");
@@ -392,12 +393,14 @@ products.map((items, index) => {
         addProductNameDiv.classList.add("addtocart-products-name");
         addProductPrice.classList.add("addtocart-products-price");
         addProductQuantity.classList.add("addtocart-products-quantity");
+        addProductDeleteBtn.classList.add("addtocart-delete-btn");
 
         addProductImg.setAttribute("src", addImg)
         addProductImg.setAttribute("width", "100")
         addProductName.innerText = addName
         addProductPrice.innerText = addPrice
         addProductQuantity.innerText = "x" + qua++; // Display quantity
+        addProductDeleteBtn.innerText = "+"; // Display quantity
 
         add.appendChild(addProductCon);
         addProductCon.appendChild(addProductImgDiv);
@@ -408,11 +411,50 @@ products.map((items, index) => {
         addProductPriceDiv.appendChild(addProductPrice);
         addProductNameDiv.appendChild(addProductQuantityDiv);
         addProductQuantityDiv.appendChild(addProductQuantity);
+        addProductCon.appendChild(addProductDeleteBtn)
 
+
+
+
+        let asa = document.querySelector(".addtocart-products-parent");
+        let hideaddmsg = document.querySelector(".add-to-cart-msg-con");
+        
+        let asd = asa.children.length;
+        
+        console.log(asd)
+
+        
+        
+        if (asd != 0) {
+            hideaddmsg.style.display = "none";
+            asa.style.display = "block";
+        }
+    
+        
+        
+    let deleteBtn = document.querySelectorAll(".addtocart-delete-btn");
+    let deleteItem = document.querySelector(".addtocart-products");
+    deleteBtn[index].addEventListener("click",()=>{
+        // document.querySelector(".addtocart-products-parent").remove()
+     console.log("Delete button clicked for product at index:", index);
+        deleteItem[index].remove();
+    })
+        
     };
-
+    
     hoverBtn[index].addEventListener("click", () => addtocartfunction(items.proImg, items.proName, items.proPrice))
+    
+    
+    
 });
+
+let asa = document.querySelector(".addtocart-products-parent");
+let asd = asa.children.length;
+let hideaddmsg = document.querySelector(".add-to-cart-msg-con");
+if (asd == 0) {
+    hideaddmsg.style.display = "block";
+    asa.style.display = "none";
+}
 
 
 // amount cart side bar 
@@ -440,16 +482,3 @@ navSideBarBtn.addEventListener("click", () => {
 navSideBarCloseBtn.addEventListener("click", () => {
     navSideBar.classList.remove("nav-sidebar-toggle")
 });
-
-
-sdsdsds = document.querySelector(".addtocart-products-parent");
-// Get the computed width of the element
-let height = window.getComputedStyle(sdsdsds).getPropertyValue("height");
-
-// Remove "px" from the width string and convert it to a number
-height = parseFloat(height);
-
-if (height > 110) {
-    let hideaddmsg = document.querySelector(".add-to-cart-msg-con");
-    hideaddmsg.style.display= "none"
-}
