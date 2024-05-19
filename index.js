@@ -416,11 +416,21 @@ products.map((items, index) => {
 
 
 
+        let priceCounter = document.querySelector(".nav-2nd-span");
         let asa = document.querySelector(".addtocart-products-parent");
         let hideaddmsg = document.querySelector(".add-to-cart-msg-con");
+        let proCounter = document.querySelector(".product-count");
         
         let asd = asa.children.length;
+        proCounter.innerText=asd;
         
+        let aaaaaaa = parseInt(addPrice.slice(1,4));
+        // let aaaaaaazz =aaaaaaa + parseInt(addPrice.slice(1,4));
+         let gg= priceCounter.innerHTML++;
+         let ddd = aaaaaaa+gg;
+
+        console.log(gg)
+        // console.log(aaaaaaazz)
         console.log(asd)
 
         
