@@ -1,3 +1,5 @@
+let priceTotalArray = [];
+
 let randomNum1 = Math.random() * 5;
 let pDR1 = randomNum1.toFixed(0);
 
@@ -372,19 +374,12 @@ products.map((items, index) => {
 
     // if (height > 1) {
     //     alert("dd");
+    
+        // let priceCounter = document.querySelector(".nav-2nd-span");
+        
     // }
 
     function addtocartfunction(addImg, addName, addPrice) {
-
-        let priceCounter = document.querySelector(".nav-2nd-span");
-
-        
-        let totalprice = priceCounter.innerText = parseInt(addPrice.slice(1,4));
-        let res = totalprice + parseInt(items.proPrice.slice(1,4));
-        console.log(res) 
-        priceCounter.innerText= res
-
-        
 
 
         let addProductCon = document.createElement("div");
@@ -424,7 +419,13 @@ products.map((items, index) => {
         addProductQuantityDiv.appendChild(addProductQuantity);
         addProductCon.appendChild(addProductDeleteBtn)
 
-
+// 
+priceTotalArray.push(addPrice.slice(1,4))
+        let total = priceTotalArray.reduce((accum,curval)=>{
+            return console.log(accum + curval)
+        }) 
+        console.log(total)
+// 
 
         let hideaddmsg = document.querySelector(".add-to-cart-msg-con");
       
