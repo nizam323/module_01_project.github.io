@@ -376,6 +376,17 @@ products.map((items, index) => {
 
     function addtocartfunction(addImg, addName, addPrice) {
 
+        let priceCounter = document.querySelector(".nav-2nd-span");
+
+        
+        let totalprice = priceCounter.innerText = parseInt(addPrice.slice(1,4));
+        let res = totalprice + parseInt(items.proPrice.slice(1,4));
+        console.log(res) 
+        priceCounter.innerText= res
+
+        
+
+
         let addProductCon = document.createElement("div");
         let addProductImgDiv = document.createElement("div");
         let addProductImg = document.createElement("img");
@@ -415,56 +426,44 @@ products.map((items, index) => {
 
 
 
-
-        let priceCounter = document.querySelector(".nav-2nd-span");
-        let asa = document.querySelector(".addtocart-products-parent");
         let hideaddmsg = document.querySelector(".add-to-cart-msg-con");
+      
+
+        let asa = document.querySelector(".addtocart-products-parent");
         let proCounter = document.querySelector(".product-count");
-        
+
         let asd = asa.children.length;
-        proCounter.innerText=asd;
-        
-        let aaaaaaa = parseInt(addPrice.slice(1,4));
-        // let aaaaaaazz =aaaaaaa + parseInt(addPrice.slice(1,4));
-         let gg= priceCounter.innerHTML++;
-         let ddd = aaaaaaa+gg;
+        proCounter.innerText = asd;
+        addProductDeleteBtn.addEventListener("click", () => {
+            addProductCon.remove();
 
-        console.log(gg)
-        // console.log(aaaaaaazz)
-        console.log(asd)
+            proCounter.innerText--;
 
-        
-        
+            let asa = document.querySelector(".addtocart-products-parent");
+            let asd = asa.children.length;
+            let hideaddmsg = document.querySelector(".add-to-cart-msg-con");
+            if (asd == 0) {
+                hideaddmsg.style.display = "flex";
+                asa.style.display = "none";
+            }
+
+        });
         if (asd != 0) {
             hideaddmsg.style.display = "none";
             asa.style.display = "block";
         }
-    
-        
-        
-    let deleteBtn = document.querySelectorAll(".addtocart-delete-btn");
-    let deleteItem = document.querySelector(".addtocart-products");
-    deleteBtn[index].addEventListener("click",()=>{
-        // document.querySelector(".addtocart-products-parent").remove()
-     console.log("Delete button clicked for product at index:", index);
-        deleteItem[index].remove();
-    })
-        
-    };
-    
-    hoverBtn[index].addEventListener("click", () => addtocartfunction(items.proImg, items.proName, items.proPrice))
-    
-    
-    
-});
 
-let asa = document.querySelector(".addtocart-products-parent");
-let asd = asa.children.length;
-let hideaddmsg = document.querySelector(".add-to-cart-msg-con");
-if (asd == 0) {
-    hideaddmsg.style.display = "block";
-    asa.style.display = "none";
-}
+
+
+
+
+    };
+
+    hoverBtn[index].addEventListener("click", () => addtocartfunction(items.proImg, items.proName, items.proPrice))
+
+
+
+});
 
 
 // amount cart side bar 
