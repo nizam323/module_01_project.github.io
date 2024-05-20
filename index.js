@@ -479,15 +479,19 @@ products.map((items, index) => {
             let asa = document.querySelector(".addtocart-products-parent");
             let asd = asa.children.length;
             let hideaddmsg = document.querySelector(".add-to-cart-msg-con");
+            let checkOutBtn = document.querySelector("#checkout");
             if (asd == 0) {
                 hideaddmsg.style.display = "flex";
                 asa.style.display = "none";
+                checkOutBtn.style.display = "none";
             };
         });
-
+        
         // empty cart msg hide  
-
+        
         if (asd != 0) {
+            let checkOutBtn = document.querySelector("#checkout");
+            checkOutBtn.style.display = "block";
             hideaddmsg.style.display = "none";
             asa.style.display = "block";
         }

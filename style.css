@@ -679,8 +679,31 @@ html {
 
 .add-to-cart-shopbtn {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     margin-bottom: 50px;
+}
+
+#checkout {
+    margin-bottom: 10px;
+    display: none;
+}
+
+.subtotal {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    border-bottom: 1px solid #e2e2e2;
+    border-top: 1px solid #e2e2e2;
+    margin-bottom: 10px;
+}
+
+.subtotal p {
+    padding: 0 10%;
+    font-size: 1.4rem;
 }
 
 .add-to-cart-shopbtn button {
