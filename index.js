@@ -366,18 +366,6 @@ products.map((items, index) => {
     });
 
     let add = document.querySelector(".addtocart-products-parent");
-    // Get the computed width of the element
-    // let height = window.getComputedStyle(add).getPropertyValue("height");
-
-    // // Remove "px" from the width string and convert it to a number
-    // height = parseFloat(height);
-
-    // if (height > 1) {
-    //     alert("dd");
-    
-        // let priceCounter = document.querySelector(".nav-2nd-span");
-        
-    // }
 
     function addtocartfunction(addImg, addName, addPrice) {
 
@@ -405,8 +393,8 @@ products.map((items, index) => {
         addProductImg.setAttribute("width", "100")
         addProductName.innerText = addName
         addProductPrice.innerText = addPrice
-        addProductQuantity.innerText = "x" + qua++; // Display quantity
-        addProductDeleteBtn.innerText = "+"; // Display quantity
+        addProductQuantity.innerText = "x" + qua++; 
+        addProductDeleteBtn.innerText = "+"; 
 
         add.appendChild(addProductCon);
         addProductCon.appendChild(addProductImgDiv);
@@ -419,16 +407,18 @@ products.map((items, index) => {
         addProductQuantityDiv.appendChild(addProductQuantity);
         addProductCon.appendChild(addProductDeleteBtn)
 
-// 
-priceTotalArray.push(addPrice.slice(1,4))
-        let total = priceTotalArray.reduce((accum,curval)=>{
-            return console.log(accum + curval)
-        }) 
-        console.log(total)
-// 
+        let priceCounter = document.querySelector(".nav-2nd-span");
+
+        priceTotalArray.push(parseInt(addPrice.slice(1, 4)));
+        let total = priceTotalArray.reduce((accum, curval) => {
+            return accum + curval
+        });
+
+        let rr = priceCounter.innerText = `$${total}.00`;
+        console.log(rr)
 
         let hideaddmsg = document.querySelector(".add-to-cart-msg-con");
-      
+
 
         let asa = document.querySelector(".addtocart-products-parent");
         let proCounter = document.querySelector(".product-count");
@@ -436,6 +426,26 @@ priceTotalArray.push(addPrice.slice(1,4))
         let asd = asa.children.length;
         proCounter.innerText = asd;
         addProductDeleteBtn.addEventListener("click", () => {
+
+            //
+            let removedItem = addProductCon;
+            let removedPriceText = removedItem.querySelector(".addtocart-products-price").innerText;
+            let removedPrice = parseInt(removedPriceText.slice(1));
+            let newTotal = 0;
+            let cartItems = document.querySelectorAll(".addtocart-products");
+            cartItems.forEach(item => {
+                let itemPriceText = item.querySelector(".addtocart-products-price").innerText;
+                let itemPrice = parseInt(itemPriceText.slice(1));
+                newTotal += itemPrice;
+            });
+
+            priceCounter.innerText = `$${newTotal}.00`;
+            console.log(removedPriceText)
+            console.log(removedPrice)
+            console.log(newTotal)
+
+            //
+
             addProductCon.remove();
 
             proCounter.innerText--;
@@ -446,7 +456,9 @@ priceTotalArray.push(addPrice.slice(1,4))
             if (asd == 0) {
                 hideaddmsg.style.display = "flex";
                 asa.style.display = "none";
-            }
+            };
+
+
 
         });
         if (asd != 0) {
