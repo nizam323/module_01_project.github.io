@@ -692,7 +692,7 @@ html {
 
 .subtotal {
     width: 100%;
-    display: flex;
+    display: none;
     justify-content: space-between;
     align-items: center;
     height: 50px;

@@ -433,6 +433,8 @@ products.map((items, index) => {
         });
 
         let priceTotalArraysPrice = priceCounter.innerText = `$${total}.00`;
+        let subTotalPrice = document.querySelector(".subtotal").children[1];
+        subTotalPrice.innerText = priceTotalArraysPrice;
 
         // product counter logic
 
@@ -462,6 +464,7 @@ products.map((items, index) => {
 
             let newTotalOfArray = priceCounter.innerText = `$${newTotal - removedPrice}.00`;
             priceTotalArraysPrice = newTotalOfArray;
+            subTotalPrice.innerText = newTotalOfArray;
             if (priceTotalArraysPrice == "$0.00") {
                 priceTotalArray.splice(0, priceTotalArray.length);
             };
@@ -480,18 +483,22 @@ products.map((items, index) => {
             let asd = asa.children.length;
             let hideaddmsg = document.querySelector(".add-to-cart-msg-con");
             let checkOutBtn = document.querySelector("#checkout");
+            let subtotalDiv = document.querySelector(".subtotal");
             if (asd == 0) {
                 hideaddmsg.style.display = "flex";
                 asa.style.display = "none";
                 checkOutBtn.style.display = "none";
+                subtotalDiv.style.display = "none";
             };
         });
         
         // empty cart msg hide  
         
         if (asd != 0) {
+            let subtotalDiv = document.querySelector(".subtotal");
             let checkOutBtn = document.querySelector("#checkout");
             checkOutBtn.style.display = "block";
+            subtotalDiv.style.display = "flex";
             hideaddmsg.style.display = "none";
             asa.style.display = "block";
         }
