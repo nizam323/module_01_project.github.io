@@ -1,5 +1,7 @@
+// price counter prices will store in this array
 let priceTotalArray = [];
 
+// product rating stars will generate through the random number 
 let randomNum1 = Math.random() * 5;
 let pDR1 = randomNum1.toFixed(0);
 
@@ -30,6 +32,7 @@ let pDR9 = randomNum9.toFixed(0);
 let randomNum10 = Math.random() * 5;
 let pDR10 = randomNum10.toFixed(0);
 
+// products cards array
 
 let products = [
     {
@@ -124,6 +127,8 @@ let products = [
     }
 ];
 
+// making cards section
+
 let container = document.querySelector(".pro-cards-sec");
 
 products.map((items, index) => {
@@ -205,6 +210,8 @@ products.map((items, index) => {
         proRealPrice.style.paddingLeft = "10px";
         proPrice.insertAdjacentElement("afterbegin", proSalePrice)
     }
+
+    // cards rating generator
 
     if (items.proRating == 0) {
 
@@ -365,10 +372,13 @@ products.map((items, index) => {
         hoverBtn[index].style.display = "none";
     });
 
+    // addtocart logic
+
     let add = document.querySelector(".addtocart-products-parent");
 
     function addtocartfunction(addImg, addName, addPrice) {
 
+        // creating elements
 
         let addProductCon = document.createElement("div");
         let addProductImgDiv = document.createElement("div");
@@ -382,6 +392,8 @@ products.map((items, index) => {
         let addProductDeleteBtn = document.createElement("div");
         let qua = 1;
 
+        // adding classes
+
         addProductCon.classList.add("addtocart-products");
         addProductImgDiv.classList.add("addtocart-products-img");
         addProductNameDiv.classList.add("addtocart-products-name");
@@ -389,12 +401,16 @@ products.map((items, index) => {
         addProductQuantity.classList.add("addtocart-products-quantity");
         addProductDeleteBtn.classList.add("addtocart-delete-btn");
 
+        // setting attributes and innertext
+
         addProductImg.setAttribute("src", addImg)
         addProductImg.setAttribute("width", "100")
         addProductName.innerText = addName
         addProductPrice.innerText = addPrice
-        addProductQuantity.innerText = "x" + qua++; 
-        addProductDeleteBtn.innerText = "+"; 
+        addProductQuantity.innerText = "x" + qua++;
+        addProductDeleteBtn.innerText = "+";
+
+        // appending elements
 
         add.appendChild(addProductCon);
         addProductCon.appendChild(addProductImgDiv);
@@ -407,6 +423,8 @@ products.map((items, index) => {
         addProductQuantityDiv.appendChild(addProductQuantity);
         addProductCon.appendChild(addProductDeleteBtn)
 
+        // product price counter logic
+
         let priceCounter = document.querySelector(".nav-2nd-span");
 
         priceTotalArray.push(parseInt(addPrice.slice(1, 4)));
@@ -414,20 +432,21 @@ products.map((items, index) => {
             return accum + curval
         });
 
-        let rr = priceCounter.innerText = `$${total}.00`;
-        console.log(rr)
+        let priceTotalArraysPrice = priceCounter.innerText = `$${total}.00`;
+
+        // product counter logic
 
         let hideaddmsg = document.querySelector(".add-to-cart-msg-con");
-
-
         let asa = document.querySelector(".addtocart-products-parent");
         let proCounter = document.querySelector(".product-count");
-
         let asd = asa.children.length;
         proCounter.innerText = asd;
+
+        // addtocart delete btn
+
         addProductDeleteBtn.addEventListener("click", () => {
 
-            //
+            // product price minus logic
             let removedItem = addProductCon;
             let removedPriceText = removedItem.querySelector(".addtocart-products-price").innerText;
             let removedPrice = parseInt(removedPriceText.slice(1));
@@ -439,16 +458,23 @@ products.map((items, index) => {
                 newTotal += itemPrice;
             });
 
-            priceCounter.innerText = `$${newTotal}.00`;
-            console.log(removedPriceText)
-            console.log(removedPrice)
-            console.log(newTotal)
+            // deleting pricetotalarray 
 
-            //
+            let newTotalOfArray = priceCounter.innerText = `$${newTotal - removedPrice}.00`;
+            priceTotalArraysPrice = newTotalOfArray;
+            if (priceTotalArraysPrice == "$0.00") {
+                priceTotalArray.splice(0, priceTotalArray.length);
+            };
+
+            // delete btn logic
 
             addProductCon.remove();
 
+            // product counter minus 
+
             proCounter.innerText--;
+
+            // empty cart msg unhide
 
             let asa = document.querySelector(".addtocart-products-parent");
             let asd = asa.children.length;
@@ -457,27 +483,21 @@ products.map((items, index) => {
                 hideaddmsg.style.display = "flex";
                 asa.style.display = "none";
             };
-
-
-
         });
+
+        // empty cart msg hide  
+
         if (asd != 0) {
             hideaddmsg.style.display = "none";
             asa.style.display = "block";
         }
-
-
-
-
-
     };
+
+    // addtocart function eventlistner
 
     hoverBtn[index].addEventListener("click", () => addtocartfunction(items.proImg, items.proName, items.proPrice))
 
-
-
 });
-
 
 // amount cart side bar 
 
