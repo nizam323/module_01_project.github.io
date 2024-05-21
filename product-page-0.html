@@ -86,12 +86,38 @@
             margin: 5px 0;
         }
 
+        .product-desc-content-con-4 {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .product-desc-content-con-4 h4 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .product-desc-content-con-4 p {
+            font-size: 16px;
+            text-align: justify;
+            line-height: 1.7;
+        }
+
         .product-desc-content-con-2-img {
             height: 56vmin;
             width: 50%;
             background-repeat: no-repeat;
             background-size: 100% 100%;
             margin: 0 2px;
+        }
+
+        .product-desc-txt-4-con {
+            width: 65%;
+            margin: auto;
+        }
+
+        .product-desc-txt-4-con-2nd {
+            width: 80%;
+            margin: auto;
         }
 
         .product-desc-txt-4-con h5 {
@@ -124,6 +150,15 @@
                 height: auto;
                 padding: 30px 20px;
                 width: 100%;
+            }
+
+            .product-desc-content-con-4 {
+                flex-direction: column-reverse;
+            }
+
+            .product-desc-txt-4-con {
+                width: auto;
+                margin: 0;
             }
         }
 
@@ -251,7 +286,7 @@
                 <div class="product-desc-content-con-3">
                     <div class="product-desc-content-con-2-img"
                         style="background-image: url(images/product-page-3.jpg);"></div>
-                    <div class="product-desc-content-con-2-img spec" style="padding: 10% 10% 0;display: flex;align-items: center;">
+                    <div class="product-desc-content-con-2-img spec" style="display: flex;align-items: center;">
                         <div class="product-desc-txt-4-con">
                             <div class="product-desc-txt-4">
                                 <h5>Ut enim ad minim</h5>
@@ -265,12 +300,14 @@
                         </div>
                     </div>
                 </div> <!-- product-desc-content-con-3-->
-                <div class="product-desc-content-con-3">
+                <div class="product-desc-content-con-4">
                     <div class="product-desc-content-con-2-img"
                         style="background-image: url(images/product-page-4.jpg);"></div>
-                    <div class="product-desc-content-con-2-img">
-                        <h5>More about the product</h5>
+                    <div class="product-desc-content-con-2-img spec" style="display: flex;align-items: center;">
+                        <div class="product-desc-txt-4-con-2nd">
+                        <h4>More about the product</h4>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.</p>
+                        </div>
                     </div>
                 </div> <!-- product-desc-content-con-3/4-->
 
