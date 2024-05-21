@@ -24,33 +24,137 @@
 
         .product-main-container {
             padding: 0px 20px;
-            margin: 0 100px;
+            margin: 0 7%;
         }
 
         .product-show {
-            padding: 60px 0 0;
+            padding: 60px 0;
             display: flex;
+            border-bottom: 1px solid #e5e5e5;
         }
 
         .show-txt-con {
             height: 550px;
             width: 50%;
-            background-color: bisque;
         }
 
         .show-img {
             background-image: url(images/product-1.jpg);
             width: 50%;
-            height: 550px;
+            height: 43vmax;
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: 118% 100%;
             background-position-x: center;
         }
 
+        .show-txt {
+            margin: 50px 35px 0;
+        }
+
         .show-txt h1 {
-            margin-bottom: 15px;
+            margin-bottom: 30px;
             font-size: 30px;
             font-weight: lighter;
+        }
+
+        .show-txt p {
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        #addtocartproductpage {
+            background-color: #0084d6;
+            width: 80%;
+            height: 50px;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-weight: bolder;
+        }
+
+        #addtocartproductpage:hover {
+            background-color: #0075be;
+        }
+
+        .product-desc-content-con-2 {
+            display: flex;
+        }
+
+        .product-desc-content-con-3 {
+            display: flex;
+            margin: 5px 0;
+        }
+
+        .product-desc-content-con-2-img {
+            height: 56vmin;
+            width: 50%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin: 0 2px;
+        }
+
+        .product-desc-txt-4-con h5 {
+            font-size: 18px;
+        }
+
+        .product-desc-txt-4-con p {
+            font-size: 16px;
+            margin: 5px 0px 25px;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        @media only screen and (min-width:0px) and (max-width:767px) {
+            .product-desc-content-con-2 {
+                flex-direction: column;
+            }
+
+            .product-desc-content-con-3 {
+                margin: 0;
+                flex-direction: column-reverse;
+            }
+
+            .product-desc-content-con-2-img {
+                width: 80%;
+                margin: 2px auto;
+            }
+
+            .spec {
+                height: auto;
+                padding: 30px 20px;
+                width: 100%;
+            }
+        }
+
+        @media only screen and (min-width:0px) and (max-width:921px) {
+            #addtocartproductpage {
+                width: 100%;
+            }
+
+            .product-show {
+                flex-direction: column;
+            }
+
+            .show-img {
+                width: 100%;
+                background-size: 100% 142%;
+                background-position-y: center;
+            }
+
+            .show-txt {
+                margin: 50px 0 0;
+            }
+
+            .show-txt-con {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (min-width:0px) and (max-width:1000px) {
+            .product-main-container {
+                margin: 0;
+            }
         }
     </style>
 </head>
@@ -105,12 +209,86 @@
                 <div class="show-txt-con">
                     <div class="show-txt">
                         <h1>DNK Yellow Shoes</h1>
+                        <p><strike>$150.00</strike> - $120.00 <span style="font-size: 16px;">+ Free Shipping</span></p>
+                        <p style="font-size: 16px;line-height: 1.7;text-align: justify;">Nam nec tellus a odio tincidunt
+                            auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent
+                            taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in
+                            erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit
+                            sed.</p>
+                        <button id="addtocartproductpage">ADD TO CART</button>
+                        <span style="display: block; margin-top: 20px;font-size: 16px;">Category: Men</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+            <!-- product description -->
+            <div class="product-desc-parent">
+                <div class="product-desc-content-con">
+                    <div class="product-desc-txt-1">
+                        <h3 style="font-size: 26px;">Product description</h3>
+                    </div>
+                    <div class="product-desc-txt-2">
+                        <p style="text-align: justify;margin: 30px 0 45px;font-size: 16px;line-height: 1.7;">Since it’s
+                            creation lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                            laborum.</p>
+                    </div>
+                    <div class="product-desc-txt-3">
+                        <p style="margin-bottom: 40px;font-size: 16px;text-align: justify;line-height: 1.7;">Duis aute
+                            irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                            occaecat cupidatat non proident.</p>
+                    </div>
+                </div> <!-- product-desc-content con end -->
+                <div class="product-desc-content-con-2">
+                    <div class="product-desc-content-con-2-img"
+                        style="background-image: url(images/product-page-1.jpg);"></div>
+                    <div class="product-desc-content-con-2-img"
+                        style="background-image: url(images/product-page-2.jpg);"></div>
+                </div> <!-- product-desc-content-con-2-->
+                <div class="product-desc-content-con-3">
+                    <div class="product-desc-content-con-2-img"
+                        style="background-image: url(images/product-page-3.jpg);"></div>
+                    <div class="product-desc-content-con-2-img spec" style="padding: 10% 10% 0;display: flex;align-items: center;">
+                        <div class="product-desc-txt-4-con">
+                            <div class="product-desc-txt-4">
+                                <h5>Ut enim ad minim</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt.</p>
+                            </div>
+                            <div class="product-desc-txt-5">
+                                <h5>Quis nostrud</h5>
+                                <p>Sed do eiusmod tempor incididunt ut labore.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- product-desc-content-con-3-->
+                <div class="product-desc-content-con-3">
+                    <div class="product-desc-content-con-2-img"
+                        style="background-image: url(images/product-page-4.jpg);"></div>
+                    <div class="product-desc-content-con-2-img">
+                        <h5>More about the product</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.</p>
+                    </div>
+                </div> <!-- product-desc-content-con-3/4-->
 
+            </div> <!-- product-desc parent end -->
+        </div> <!-- product main container end -->
+    </div> <!-- product main content end -->
+
+
+    <!--  -->
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti, dicta itaque ipsum officia totam labore error
+    deserunt laborum voluptates distinctio maxime alias dolor ullam, quidem nam consectetur reiciendis libero quae.
+    Magnam quas quod aliquam mollitia quasi, soluta, ullam provident sequi rem, deleniti repellat vero cumque nam modi.
+    Alias laboriosam culpa eum? Praesentium dolorum voluptate dolores molestiae corporis ipsum! Molestias deserunt
+    dolorem officiis eos ut maiores incidunt unde, explicabo, necessitatibus cupiditate sapiente minima soluta
+    recusandae eum iure eligendi ipsa velit dicta. Tenetur quia ipsa molestias nostrum quae voluptatibus similique iste
+    ipsum culpa deleniti, qui nobis voluptate ut? Quaerat temporibus earum, id dolorem alias molestiae! Et molestiae
+    quidem ex doloribus quisquam repellendus ea?
+    <!--  -->
 </body>
 
 </html>
