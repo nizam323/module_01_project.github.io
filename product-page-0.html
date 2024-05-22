@@ -261,7 +261,7 @@
                 </div>
             </div>
             <!-- product description -->
-            <div class="product-desc-parent">
+            <div class="product-desc-parent" style="padding-top: 30px;">
                 <div class="product-desc-content-con">
                     <div class="product-desc-txt-1">
                         <h3 style="font-size: 26px;">Product description</h3>
@@ -385,18 +385,57 @@
         <div class="nav-sidebar-anchors" style="font-weight: 100;"><a href="">CONTACT US</a></div>
     </div>
     </div> <!-- nav burger btn side bar end -->
+    <!-- section 7 -->
+    <div class="sec-7" style="border-top: 1px solid #dddddd;">
+        <div class="sec7-txt">
+            <a href="">SALE UP TO 70% OFF FOR ALL CLOTHES & FASHION ITEMS, ON ALL BRANDS.</a>
+        </div>
+    </div><!-- sec 7 end -->
+    <!-- section 8 -->
+    <div class="sec-8">
+        <div class="sec8-content">
+            <div class="sec8-con-1">
+                <div class="sec8-con-2"><img src="images/logo-dark.jpg" width="90" height="30" alt=""></div>
+                <div class="sec8-con-3">The best look anytime, anywhere.</div>
+            </div>
+        </div>
+        <div class="sec8-content">
+            <h2>For Her</h2>
+            <a href="">Women Jeans</a>
+            <a href="">Tops and Shirts</a>
+            <a href="">Women Jackets</a>
+            <a href="">Heels and Flats</a>
+            <a href="">Women Accessories</a>
+        </div>
+        <div class="sec8-content">
+            <h2>For Him</h2>
+            <a href="">Men Jeans</a>
+            <a href="">Men Shirts</a>
+            <a href="">Men Shoes</a>
+            <a href="">Men Accessories</a>
+            <a href="">Men Jackets</a>
+        </div>
+        <div class="sec8-content sec8-extra">
+            <h2>Subscribe</h2>
+            <form action="" style="display: contents;">
+                <input type="email" placeholder="Your email address..." id="sec8Email" required>
+                <button id="sec8Btn">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+        <div class="footer-txt">Copyright © 2024 Brandstore. Powered by Brandstore.</div>
+        <div class="footer-icon">
+            <a href="" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-google"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-yelp"></i></a>
+        </div>
+    </div> <!-- footer end -->
 
-
-    <!--  -->
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti, dicta itaque ipsum officia totam labore error
-    deserunt laborum voluptates distinctio maxime alias dolor ullam, quidem nam consectetur reiciendis libero quae.
-    Magnam quas quod aliquam mollitia quasi, soluta, ullam provident sequi rem, deleniti repellat vero cumque nam modi.
-    Alias laboriosam culpa eum? Praesentium dolorum voluptate dolores molestiae corporis ipsum! Molestias deserunt
-    dolorem officiis eos ut maiores incidunt unde, explicabo, necessitatibus cupiditate sapiente minima soluta
-    recusandae eum iure eligendi ipsa velit dicta. Tenetur quia ipsa molestias nostrum quae voluptatibus similique iste
-    ipsum culpa deleniti, qui nobis voluptate ut? Quaerat temporibus earum, id dolorem alias molestiae! Et molestiae
-    quidem ex doloribus quisquam repellendus ea?
-    <!--  -->
     <script>
         // price counter prices will store in this array
         let priceTotalArray = [];
@@ -849,51 +888,47 @@
 
                     addProductDeleteBtn.addEventListener("click", () => {
 
-                        // let hh = true
-
                         // product price minus logic
+
                         let removedItem = addProductCon;
                         let removedPriceText = removedItem.querySelector(".addtocart-products-price").innerText;
                         let removedPrice = parseInt(removedPriceText.slice(1));
-                        let newTotal = 0;
-                        let cartItems = document.querySelectorAll(".addtocart-products");
-                        cartItems.forEach(item => {
-                            let itemPriceText = item.querySelector(".addtocart-products-price").innerText;
-                            let itemPrice = parseInt(itemPriceText.slice(1));
-                            newTotal += itemPrice;
-                        });
 
-                        // deleting pricetotalarray 
+                        // minus removedprice from priceTotalArray 
 
-                        let newTotalOfArray = priceCounter.innerText = `$${newTotal - removedPrice}.00`;
-                        priceTotalArraysPrice = newTotalOfArray;
+                        let removedPriceIndex = priceTotalArray.indexOf(removedPrice);
+                        if (removedPriceIndex !== -1) {
+                            priceTotalArray.splice(removedPriceIndex, 1);
+                        }
+
+                        let newTotal = priceTotalArray.reduce((accum, curval) => accum + curval, 0);
+                        let newTotalOfArray = priceCounter.innerText = `$${newTotal}.00`;
                         subTotalPrice.innerText = newTotalOfArray;
-                        if (priceTotalArraysPrice == "$0.00") {
-                            priceTotalArray.splice(0, priceTotalArray.length);
-                        };
 
                         // delete btn logic
 
                         addProductCon.remove();
 
-                        // product counter minus 
+                        //  product counter minus
 
                         proCounter.innerText--;
 
-                        // empty cart msg unhide
+                        // unhide empty cart message
 
                         let asa = document.querySelector(".addtocart-products-parent");
                         let asd = asa.children.length;
                         let hideaddmsg = document.querySelector(".add-to-cart-msg-con");
                         let checkOutBtn = document.querySelector("#checkout");
                         let subtotalDiv = document.querySelector(".subtotal");
+
                         if (asd == 0) {
                             hideaddmsg.style.display = "flex";
                             asa.style.display = "none";
                             checkOutBtn.style.display = "none";
                             subtotalDiv.style.display = "none";
-                        };
+                        }
                     });
+
 
                     // empty cart msg hide  
 
@@ -917,6 +952,7 @@
         // addtocart product page 0 product
 
         function addtocartproduct(addImg, addName, addPrice) {
+
             let add = document.querySelector(".addtocart-products-parent");
 
             // creating elements
@@ -990,47 +1026,44 @@
             addProductDeleteBtn.addEventListener("click", () => {
 
                 // product price minus logic
+
                 let removedItem = addProductCon;
                 let removedPriceText = removedItem.querySelector(".addtocart-products-price").innerText;
                 let removedPrice = parseInt(removedPriceText.slice(1));
-                let newTotal = 0;
-                let cartItems = document.querySelectorAll(".addtocart-products");
-                cartItems.forEach(item => {
-                    let itemPriceText = item.querySelector(".addtocart-products-price").innerText;
-                    let itemPrice = parseInt(itemPriceText.slice(1));
-                    newTotal += itemPrice;
-                });
 
-                // deleting pricetotalarray 
+                // minus removedprice from priceTotalArray 
 
-                let newTotalOfArray = priceCounter.innerText = `$${newTotal - removedPrice}.00`;
-                priceTotalArraysPrice = newTotalOfArray;
+                let removedPriceIndex = priceTotalArray.indexOf(removedPrice);
+                if (removedPriceIndex !== -1) {
+                    priceTotalArray.splice(removedPriceIndex, 1);
+                }
+
+                let newTotal = priceTotalArray.reduce((accum, curval) => accum + curval, 0);
+                let newTotalOfArray = priceCounter.innerText = `$${newTotal}.00`;
                 subTotalPrice.innerText = newTotalOfArray;
-                if (priceTotalArraysPrice == "$0.00") {
-                    priceTotalArray.splice(0, priceTotalArray.length);
-                };
 
                 // delete btn logic
 
                 addProductCon.remove();
 
-                // product counter minus 
+                //  product counter minus
 
                 proCounter.innerText--;
 
-                // empty cart msg unhide
+                // unhide empty cart message
 
                 let asa = document.querySelector(".addtocart-products-parent");
                 let asd = asa.children.length;
                 let hideaddmsg = document.querySelector(".add-to-cart-msg-con");
                 let checkOutBtn = document.querySelector("#checkout");
                 let subtotalDiv = document.querySelector(".subtotal");
+
                 if (asd == 0) {
                     hideaddmsg.style.display = "flex";
                     asa.style.display = "none";
                     checkOutBtn.style.display = "none";
                     subtotalDiv.style.display = "none";
-                };
+                }
             });
 
             // empty cart msg hide  

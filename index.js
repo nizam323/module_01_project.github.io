@@ -449,51 +449,48 @@ products.map((items, index) => {
         addProductDeleteBtn.addEventListener("click", () => {
 
             // product price minus logic
+
             let removedItem = addProductCon;
             let removedPriceText = removedItem.querySelector(".addtocart-products-price").innerText;
             let removedPrice = parseInt(removedPriceText.slice(1));
-            let newTotal = 0;
-            let cartItems = document.querySelectorAll(".addtocart-products");
-            cartItems.forEach(item => {
-                let itemPriceText = item.querySelector(".addtocart-products-price").innerText;
-                let itemPrice = parseInt(itemPriceText.slice(1));
-                newTotal += itemPrice;
-            });
 
-            // deleting pricetotalarray 
+            // minus removedprice from priceTotalArray 
 
-            let newTotalOfArray = priceCounter.innerText = `$${newTotal - removedPrice}.00`;
-            priceTotalArraysPrice = newTotalOfArray;
+            let removedPriceIndex = priceTotalArray.indexOf(removedPrice);
+            if (removedPriceIndex !== -1) {
+                priceTotalArray.splice(removedPriceIndex, 1);
+            }
+
+            let newTotal = priceTotalArray.reduce((accum, curval) => accum + curval, 0);
+            let newTotalOfArray = priceCounter.innerText = `$${newTotal}.00`;
             subTotalPrice.innerText = newTotalOfArray;
-            if (priceTotalArraysPrice == "$0.00") {
-                priceTotalArray.splice(0, priceTotalArray.length);
-            };
 
             // delete btn logic
 
             addProductCon.remove();
 
-            // product counter minus 
+            //  product counter minus
 
             proCounter.innerText--;
 
-            // empty cart msg unhide
+            // unhide empty cart message
 
             let asa = document.querySelector(".addtocart-products-parent");
             let asd = asa.children.length;
             let hideaddmsg = document.querySelector(".add-to-cart-msg-con");
             let checkOutBtn = document.querySelector("#checkout");
             let subtotalDiv = document.querySelector(".subtotal");
+
             if (asd == 0) {
                 hideaddmsg.style.display = "flex";
                 asa.style.display = "none";
                 checkOutBtn.style.display = "none";
                 subtotalDiv.style.display = "none";
-            };
+            }
         });
-        
+
         // empty cart msg hide  
-        
+
         if (asd != 0) {
             let subtotalDiv = document.querySelector(".subtotal");
             let checkOutBtn = document.querySelector("#checkout");

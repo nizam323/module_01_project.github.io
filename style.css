@@ -295,7 +295,6 @@ html {
     width: 19%;
     margin: 20px 0;
     padding-bottom: 30px;
-    cursor: pointer;
 }
 
 .pro-img {
@@ -305,6 +304,7 @@ html {
     height: 220px;
     margin-bottom: 12px;
     position: relative;
+    cursor: auto;
 }
 
 .addtocart-hover {
@@ -313,6 +313,7 @@ html {
     top: 15px;
     right: 15px;
     color: black;
+    cursor: pointer;
 }
 
 .pro-txt-parent {
@@ -811,4 +812,5 @@ html {
     right: 30px;
     transform: rotate(45deg);
     font-size: 45px;
+    cursor: pointer;
 }
