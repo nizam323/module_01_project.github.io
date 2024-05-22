@@ -399,6 +399,10 @@
     .addtocart-products-name {
         font-size: 9px;
     }
+
+    .addtocart-hover {
+        display: block;
+    }
 }
 
 @media only screen and (min-width:511px) and (max-width:1000px) {

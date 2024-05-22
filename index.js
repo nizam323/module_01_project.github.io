@@ -161,7 +161,7 @@ products.map((items, index) => {
     proRating.classList.add("pro-rating");
     proRealPrice.style.display = "inline";
     nameAnchohr.classList.add("anchor"),
-        hoverAddToCart.classList.add("addtocart-hover");
+    hoverAddToCart.classList.add("addtocart-hover","fa-solid","fa-bag-shopping");
 
     // assinging text 
 
@@ -171,7 +171,7 @@ products.map((items, index) => {
     proName.innerText = items.proName;
     proCategory.innerText = items.proCategory;
     proRealPrice.innerText = items.proPrice;
-    hoverAddToCart.innerText = "icon";
+    hoverAddToCart.innerHTML = "<i></i>";
 
     // making cards through javascript
 
