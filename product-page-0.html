@@ -38,9 +38,16 @@
             width: 50%;
         }
 
+        #productCard {
+            width: 50%;
+            overflow: hidden;
+            height: 43vmax;
+            cursor: zoom-in;
+        }
+
         .show-img {
             background-image: url(images/product-1.jpg);
-            width: 50%;
+            width: 100%;
             height: 43vmax;
             background-repeat: no-repeat;
             background-size: 118% 100%;
@@ -176,6 +183,10 @@
                 flex-direction: column;
             }
 
+            #productCard {
+                width: 100%;
+            }
+
             .show-img {
                 width: 100%;
                 background-size: 100% 142%;
@@ -245,7 +256,9 @@
     <div class="product-main-parent">
         <div class="product-main-container">
             <div class="product-show">
-                <div class="show-img"></div>
+                <span id="productCard">
+                    <div class="show-img"></div>
+                </span>
                 <div class="show-txt-con">
                     <div class="show-txt">
                         <h1>DNK Yellow Shoes</h1>
@@ -601,8 +614,8 @@
                 proRating.classList.add("pro-rating");
                 proRealPrice.style.display = "inline";
                 nameAnchohr.classList.add("anchor"),
-                hoverAddToCart.classList.add("addtocart-hover","fa-solid","fa-bag-shopping");
-                
+                    hoverAddToCart.classList.add("addtocart-hover", "fa-solid", "fa-bag-shopping");
+
 
                 // assinging text 
 
@@ -1105,7 +1118,27 @@
         });
         navSideBarCloseBtn.addEventListener("click", () => {
             navSideBar.classList.remove("nav-sidebar-toggle")
-        });        
+        });
+
+        // product image zooming effect logic
+
+        const productCard = document.getElementById('productCard');
+        const productImage = document.querySelector('.show-img');
+
+        productCard.addEventListener('mousemove', function (event) {
+            const mouseX = event.offsetX / productCard.clientWidth;
+            const mouseY = event.offsetY / productCard.clientHeight;
+
+            const translateX = (mouseX - 0.5) * 300;
+            const translateY = (mouseY - 0.5) * 300;
+
+            productImage.style.transform = `translate(${translateX}px, ${translateY}px) scale(1.4)`;
+        });
+
+        productCard.addEventListener('mouseleave', function () {
+            productImage.style.transform = 'translate(0, 0) scale(1)';
+        });
+
     </script>
 </body>
 
