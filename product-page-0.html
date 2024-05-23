@@ -832,6 +832,10 @@
 
                 function addtocartfunction(addImg, addName, addPrice) {
 
+                    // alert "Product added to cart"
+
+                    window.alert("Product added to cart");
+
                     // creating elements
 
                     let addProductCon = document.createElement("div");
@@ -966,6 +970,10 @@
         // addtocart product page 0 product
 
         function addtocartproduct(addImg, addName, addPrice) {
+
+            // alert "Product added to cart"
+
+            window.alert("Product added to cart");
 
             let add = document.querySelector(".addtocart-products-parent");
 
@@ -1138,6 +1146,13 @@
         productCard.addEventListener('mouseleave', function () {
             productImage.style.transform = 'translate(0, 0) scale(1)';
         });
+
+        // home page btn 
+
+        let homePageBtn = document.querySelector(".logo");
+        homePageBtn.addEventListener("click", () => {
+            location.assign("index.html")
+        })
 
     </script>
 </body>

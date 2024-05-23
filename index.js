@@ -161,7 +161,7 @@ products.map((items, index) => {
     proRating.classList.add("pro-rating");
     proRealPrice.style.display = "inline";
     nameAnchohr.classList.add("anchor"),
-    hoverAddToCart.classList.add("addtocart-hover","fa-solid","fa-bag-shopping");
+        hoverAddToCart.classList.add("addtocart-hover", "fa-solid", "fa-bag-shopping");
 
     // assinging text 
 
@@ -378,6 +378,10 @@ products.map((items, index) => {
 
     function addtocartfunction(addImg, addName, addPrice) {
 
+        // alert "Product added to cart"
+
+        window.alert("Product added to cart");
+
         // creating elements
 
         let addProductCon = document.createElement("div");
@@ -532,3 +536,10 @@ navSideBarBtn.addEventListener("click", () => {
 navSideBarCloseBtn.addEventListener("click", () => {
     navSideBar.classList.remove("nav-sidebar-toggle")
 });
+
+// home page btn 
+
+let homePageBtn = document.querySelector(".logo");
+homePageBtn.addEventListener("click", () => {
+    location.assign("index.html")
+}) 
