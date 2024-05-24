@@ -59,6 +59,10 @@
             cursor: pointer;
         }
 
+        .funs-1-inp button:hover {
+            background-color: #0075be;
+        }
+
         .funs-2 {
             margin-bottom: 35px;
         }
@@ -69,22 +73,28 @@
             margin-bottom: 15px;
         }
 
+        .funs-2 button {
+            width: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            color: white;
+            background-color: #0084d6;
+            margin-top: 15px;
+            font-weight: bold;
+            padding: 15px 0;
+            border: none;
+            letter-spacing: 4px;
+        }
+
+        .funs-2 button:hover {
+            background-color: #0075be;
+        }
+
         .funs-2 select {
+            border: 1px solid #808080a8;
             width: 50%;
             height: 40px;
-        }
-
-        .select-h4-con {
-            position: relative;
-        }
-
-        .funs-2 h4 {
-            font-size: 25px;
-            position: absolute;
-            z-index: 1;
-            top: 5px;
-            left: 38px;
-            font-weight: lighter;
+            cursor: pointer;
         }
 
         .funs-3 h2 {
@@ -105,6 +115,50 @@
             color: black;
             text-decoration: none;
             font-size: 18px;
+        }
+
+        @media only screen and (min-width:0px) and (max-width:510px) {
+            .main-content-con {
+                flex-direction: column-reverse;
+                margin: 0;
+            }
+
+            .funs {
+                width: 100%;
+            }
+
+            .funs-1-inp input {
+                width: 100%;
+            }
+
+            .funs-2,
+            .funs-3 {
+                text-align: center;
+            }
+
+            .funs-2 button,
+            .funs-2 select {
+                width: 100%;
+            }
+        }
+
+        @media only screen and (min-width:511px) and (max-width:921px) {
+            .main-content-con {
+                flex-direction: column-reverse;
+            }
+
+            .funs {
+                width: 100%;
+            }
+
+            .funs-1-inp input {
+                width: 100%;
+            }
+
+            .funs-2,
+            .funs-3 {
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -212,17 +266,16 @@
                 </div>
                 <div class="funs-2">
                     <h2>Filter by Price</h2>
-                    <div class="select-h4-con">
-                        <h4>Prices</h4>
-                        <select name="" id="">
-                            <option value=""></option>
-                            <option value="100">$100.00</option>
-                            <option value="120">$120.00</option>
-                            <option value="130">$130.00</option>
-                            <option value="150">$150.00</option>
-                            <option value="200">$200.00</option>
-                        </select>
-                    </div>
+                    <select name="" id="priceSelector" title="Select Price">
+                        <option value=""></option>
+                        <option value="100">$100.00</option>
+                        <option value="120">$120.00</option>
+                        <option value="130">$130.00</option>
+                        <option value="150">$150.00</option>
+                        <option value="200">$200.00</option>
+                    </select>
+                    <br>
+                    <button type="button" onclick="filter()">FILTER</button>
                 </div>
                 <div class="funs-3">
                     <h2>Categories</h2>
@@ -241,6 +294,16 @@
 
 
     <script>
+        function filter() {
+            let selectElement = document.getElementById("priceSelector").value;
+
+            if (selectElement !== "") {
+                console.log("Filtering products by price: $" + selectElement);
+            }
+
+            event.preventDefault();
+        }
+
         // home page btn 
 
         let homePageBtn = document.querySelector(".logo");
