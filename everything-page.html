@@ -17,6 +17,95 @@
             background-color: black;
             color: white;
         }
+
+        .main-content-con-parent {
+            background-color: #f5f7f9;
+        }
+
+        .main-content-con {
+            margin: 0 40px;
+            padding: 20px;
+            display: flex;
+        }
+
+        .funs {
+            width: 25%;
+        }
+
+        .page-content {
+            background-color: thistle;
+            width: 75%;
+        }
+
+        .funs-1-inp {
+            height: 100px;
+            display: flex;
+        }
+
+        .funs-1-inp input {
+            padding: 6px 8px;
+            width: 75%;
+            height: 50px;
+            margin-right: 5px;
+            font-size: 17px;
+            border: 1px solid #e2e2e2;
+        }
+
+        .funs-1-inp button {
+            background-color: #0084d6;
+            border: 1px solid #0084d6;
+            height: 50px;
+            width: 40px;
+            cursor: pointer;
+        }
+
+        .funs-2 {
+            margin-bottom: 35px;
+        }
+
+        .funs-2 h2 {
+            font-size: 32px;
+            font-weight: lighter;
+            margin-bottom: 15px;
+        }
+
+        .funs-2 select {
+            width: 50%;
+            height: 40px;
+        }
+
+        .select-h4-con {
+            position: relative;
+        }
+
+        .funs-2 h4 {
+            font-size: 25px;
+            position: absolute;
+            z-index: 1;
+            top: 5px;
+            left: 38px;
+            font-weight: lighter;
+        }
+
+        .funs-3 h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            font-weight: lighter;
+        }
+
+        .funs-3 ul {
+            list-style: none;
+        }
+
+        .funs-3 li {
+            margin: 15px 0;
+        }
+
+        .funs-3 a {
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+        }
     </style>
 </head>
 
@@ -60,11 +149,132 @@
             </div>
         </div>
     </nav> <!--nav end -->
+    <!-- amount cart side bar -->
+    <div class="cart-sidebar">
+        <div class="cart-sidebar-head">
+            <div class="add-to-cart-txt">Shopping Cart</div>
+            <div class="add-to-cart-btn">+</div>
+        </div>
+        <div class="addtocart-products-parent">
+            <!-- <div class="addtocart-products">
+                <div class="addtocart-products-img"><img src="images/product-9.jpg" width="100" alt=""></div>
+                <div class="addtocart-products-name">
+                    <h2>dnk black shoes</h2>
+                    <div class="addtocart-products-price">
+                        <h3>$150.00</h3>
+                    </div>
+                    <div class="addtocart-products-quantity">
+                        <p>1</p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="add-to-cart-msg-con">
+            <div>No products in the cart.</div>
+        </div>
+        <div class="add-to-cart-shopbtn">
+            <div class="subtotal">
+                <p>Subtotal</p>
+                <p>$0.00</p>
+            </div>
+            <button id="checkout">CHECKOUT</button>
+            <button>Continue Shopping</button>
+        </div>
+    </div><!-- amount cart end -->
+    <!-- navbar burger btn side bar -->
+    <div class="nav-sidebar">
+        <div style="height: 50px;">
+            <div class="nav-sidebar-close-btn">+</div>
+        </div>
+        <div class="nav-sidebar-login">
+            <a href=""><i class="fa-solid fa-user"></i></a>
+        </div>
+        <div class="nav-sidebar-anchors"><a href="everything-page.html">EVERYTHING</a></div>
+        <div class="nav-sidebar-anchors"><a href="">WOMEN</a></div>
+        <div class="nav-sidebar-anchors"><a href="">MEN</a></div>
+        <div class="nav-sidebar-anchors"><a href="">ACCESSORIES</a></div>
+        <div class="nav-sidebar-anchors-sepration" style="height: 50px;"></div>
+        <div class="nav-sidebar-anchors" style="font-weight: 100;"><a href="about.html">ABOUT</a></div>
+        <div class="nav-sidebar-anchors" style="font-weight: 100;"><a href="">CONTACT US</a></div>
+    </div>
+    </div> <!-- nav burger btn side bar end -->
+    <!-- main container of this page content -->
+    <div class="main-content-con-parent">
+        <div class="main-content-con">
+            <div class="funs">
+                <div class="funs-1-inp">
+                    <input type="text" placeholder="Search Products...">
+                    <button><svg aria-hidden="true" role="img" focusable="false"
+                            class="dashicon dashicons-arrow-right-alt2" xmlns="http://www.w3.org/2000/svg" width="20"
+                            height="20" viewBox="0 0 20 20">
+                            <path d="M6 15l5-5-5-5 1-2 7 7-7 7z" fill="white"></path>
+                        </svg></button>
+                </div>
+                <div class="funs-2">
+                    <h2>Filter by Price</h2>
+                    <div class="select-h4-con">
+                        <h4>Prices</h4>
+                        <select name="" id="">
+                            <option value=""></option>
+                            <option value="100">$100.00</option>
+                            <option value="120">$120.00</option>
+                            <option value="130">$130.00</option>
+                            <option value="150">$150.00</option>
+                            <option value="200">$200.00</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="funs-3">
+                    <h2>Categories</h2>
+                    <ul>
+                        <li><a href="">WOMEN</a></li>
+                        <li><a href="">MEN</a></li>
+                        <li><a href="">ACCESSORIES</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page-content"></div>
+        </div>
+    </div>
+
 
 
 
     <script>
+        // home page btn 
+
+        let homePageBtn = document.querySelector(".logo");
+        homePageBtn.addEventListener("click", () => {
+            location.assign("index.html")
+        })
+
+        // amount cart side bar 
+
+        let addToCart = document.querySelector(".amount-cart");
+        let cartSideBar = document.querySelector(".cart-sidebar");
+        let addToCartCloseBtn = document.querySelector(".add-to-cart-btn");
+
+        addToCart.addEventListener("click", () => {
+            cartSideBar.classList.toggle("cart-sidebar-toggle")
+        });
+        addToCartCloseBtn.addEventListener("click", () => {
+            cartSideBar.classList.remove("cart-sidebar-toggle")
+        });
+
+        // nav burger btn side bar 
+
+        let navSideBarBtn = document.querySelector(".burger-icon-parent");
+        let navSideBar = document.querySelector(".nav-sidebar");
+        let navSideBarCloseBtn = document.querySelector(".nav-sidebar-close-btn");
+
+        navSideBarBtn.addEventListener("click", () => {
+            navSideBar.classList.toggle("nav-sidebar-toggle")
+        });
+        navSideBarCloseBtn.addEventListener("click", () => {
+            navSideBar.classList.remove("nav-sidebar-toggle")
+        });
+
     </script>
 </body>
-    
+
 </html>
