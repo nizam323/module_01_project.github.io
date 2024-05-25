@@ -145,6 +145,7 @@
             display: none;
             text-align: center;
             font-size: 20px;
+            margin-top: 100px;
         }
 
         @media only screen and (min-width:0px) and (max-width:510px) {
@@ -187,6 +188,10 @@
             .home-store {
                 text-align: center;
             }
+
+            .msg {
+                margin: 0;
+            }
         }
 
         @media only screen and (min-width:511px) and (max-width:921px) {
@@ -215,6 +220,10 @@
                 width: 100%;
                 margin-bottom: 30px;
                 padding: 20px;
+            }
+            
+            .msg {
+                margin: 0;
             }
         }
     </style>
@@ -345,10 +354,10 @@
             </div>
             <div class="page-content">
                 <div class="home-store"><a href="index.html">Home</a> / Store</div>
+                <div class="msg">
+                    No Result Found
+                </div>
                 <div class="search-result">
-                    <div class="msg">
-                        No Result Found
-                    </div>
                 </div>
                 <div class="pro-cards-sec">
                 </div>
@@ -362,10 +371,13 @@
     <script>
         function filter() {
 
-            // let del = document.querySelector(".search-result").children
-            // let r = del.length
-            // r.remove();
-            // console.log(del)
+            // previous search delete logic
+
+            let del = document.querySelector(".search-result").children;
+            let delChildrensLength = del.length
+            for (let i = 0; i < delChildrensLength; i++) {
+                del[0].remove();
+            }
 
             let hideCon = document.querySelector(".pro-cards-sec");
             hideCon.style.display = "none";
@@ -700,6 +712,12 @@
                         // Replace location with the URL of the clicked card
                         // window.location.assign("product-page-" + index + ".html");
                     });
+
+                    // no result found msg
+
+                    let msg = document.querySelector(".msg");
+                    msg.style.display = "none";
+       
                 } else if (selectElement == "") {
                     let msg = document.querySelector(".msg");
                     msg.style.display = "block";
