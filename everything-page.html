@@ -24,16 +24,20 @@
 
         .main-content-con {
             margin: 0 40px;
-            padding: 20px;
+            padding: 50px 20px;
             display: flex;
         }
 
         .funs {
             width: 25%;
+            position: sticky;
+            top: 30px;
+            height: 460px;
         }
 
         .page-content {
-            background-color: thistle;
+            padding: 60px 50px;
+            background-color: white;
             width: 75%;
         }
 
@@ -117,13 +121,42 @@
             font-size: 18px;
         }
 
+        .home-store {
+            color: #777;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .home-store a {
+            color: #777;
+            text-decoration: none;
+        }
+
+        .pro-cards-sec {
+            padding: 0;
+        }
+
+        .pro-card {
+            overflow: hidden;
+            width: 31%;
+        }
+
+        .msg {
+            display: none;
+            text-align: center;
+            font-size: 20px;
+        }
+
         @media only screen and (min-width:0px) and (max-width:510px) {
             .main-content-con {
                 flex-direction: column-reverse;
                 margin: 0;
+                padding: 20px 10px;
             }
 
             .funs {
+                position: static;
+                height: auto;
                 width: 100%;
             }
 
@@ -140,15 +173,33 @@
             .funs-2 select {
                 width: 100%;
             }
+
+            .page-content {
+                width: 100%;
+                padding: 30px 10px;
+                margin-bottom: 30px;
+            }
+
+            .pro-card {
+                width: 48%;
+            }
+
+            .home-store {
+                text-align: center;
+            }
         }
 
         @media only screen and (min-width:511px) and (max-width:921px) {
             .main-content-con {
                 flex-direction: column-reverse;
+                margin: 0;
+                padding: 30px 20px;
             }
 
             .funs {
                 width: 100%;
+                position: static;
+                height: auto;
             }
 
             .funs-1-inp input {
@@ -158,6 +209,12 @@
             .funs-2,
             .funs-3 {
                 text-align: center;
+            }
+
+            .page-content {
+                width: 100%;
+                margin-bottom: 30px;
+                padding: 20px;
             }
         }
     </style>
@@ -286,56 +343,405 @@
                     </ul>
                 </div>
             </div>
-            <div class="page-content"></div>
+            <div class="page-content">
+                <div class="home-store"><a href="index.html">Home</a> / Store</div>
+                <div class="search-result">
+                    <div class="msg">
+                        No Result Found
+                    </div>
+                </div>
+                <div class="pro-cards-sec">
+                </div>
+            </div>
         </div>
     </div>
 
 
 
-
+    <script src="index.js"></script>
     <script>
         function filter() {
+
+            // let del = document.querySelector(".search-result").children
+            // let r = del.length
+            // r.remove();
+            // console.log(del)
+
+            let hideCon = document.querySelector(".pro-cards-sec");
+            hideCon.style.display = "none";
+
             let selectElement = document.getElementById("priceSelector").value;
 
-            if (selectElement !== "") {
-                console.log("Filtering products by price: $" + selectElement);
-            }
+            // products cards array
 
-            event.preventDefault();
+            let products = [
+                {
+                    proName: "DNK Yellow Shoes",
+                    proImg: "images/product-1.jpg",
+                    proCategory: "Men",
+                    proSalePrice: "$150.00",
+                    proPrice: "$120.00",
+                    proColor: "yes",
+                    proRating: pDR1,
+                },
+                {
+                    proName: "DNK Blue Shoes",
+                    proImg: "images/product-2.jpg",
+                    proCategory: "Men",
+                    proSalePrice: "$240.00",
+                    proPrice: "$200.00",
+                    proColor: "",
+                    proRating: pDR2,
+                },
+                {
+                    proName: "Dark Brown Jeans",
+                    proImg: "images/product-3.jpg",
+                    proCategory: "Men",
+                    proSalePrice: "no",
+                    proPrice: "$150.00",
+                    proColor: "",
+                    proRating: pDR3,
+                },
+                {
+                    proName: "Blue Denim Jeans",
+                    proImg: "images/product-4.jpg",
+                    proCategory: "Women",
+                    proSalePrice: "no",
+                    proPrice: "$150.00",
+                    proColor: "",
+                    proRating: pDR4,
+                },
+                {
+                    proName: "Basic Gray Jeans",
+                    proImg: "images/product-5.jpg",
+                    proCategory: "Women",
+                    proSalePrice: "no",
+                    proPrice: "$150.00",
+                    proColor: "",
+                    proRating: pDR5,
+                },
+                {
+                    proName: "Blue Denim Shorts",
+                    proImg: "images/product-6.jpg",
+                    proCategory: "Women",
+                    proSalePrice: "$150.00",
+                    proPrice: "$130.00",
+                    proColor: "",
+                    proRating: pDR6,
+                },
+                {
+                    proName: "Anchor Bracelet",
+                    proImg: "images/product-7.jpg",
+                    proCategory: "Accessories",
+                    proSalePrice: "$180.00",
+                    proPrice: "$150.00",
+                    proColor: "yes",
+                    proRating: pDR7,
+                },
+                {
+                    proName: "Boho Bangle Bracelet",
+                    proImg: "images/product-8.jpg",
+                    proCategory: "Accessories",
+                    proSalePrice: "$170.00",
+                    proPrice: "$150.00",
+                    proColor: "yes",
+                    proRating: pDR8,
+                },
+                {
+                    proName: "Light Brown Purse",
+                    proImg: "images/product-9.jpg",
+                    proCategory: "Accessories",
+                    proSalePrice: "no",
+                    proPrice: "$150.00",
+                    proColor: "",
+                    proRating: pDR9,
+                },
+                {
+                    proName: "Bright Red Bag",
+                    proImg: "images/product-10.jpg",
+                    proCategory: "Accessories",
+                    proSalePrice: "$140.00",
+                    proPrice: "$100.00",
+                    proColor: "yes",
+                    proRating: pDR10,
+                }
+            ];
+
+            // making cards section
+
+            let container = document.querySelector(".search-result");
+
+            products.map((items, index) => {
+
+                if (selectElement == items.proPrice.slice(1, 4)) {
+
+
+                    //  creating cards through javascript
+
+                    let hoverAddToCart = document.createElement("div");
+                    let proCard = document.createElement("div");
+                    let proImg = document.createElement("div");
+                    let img = document.createElement("img");
+                    let proTxtParent = document.createElement("div");
+                    let proName = document.createElement("div");
+                    let proCategory = document.createElement("div");
+                    let proRealPrice = document.createElement("div");
+                    let proPrice = document.createElement("div");
+                    let proColor = document.createElement("div");
+                    let proRating = document.createElement("div");
+                    let imgAnchohr = document.createElement("a");
+                    let nameAnchohr = document.createElement("a");
+
+                    // assigning css class to created elements
+
+                    proCard.classList.add("pro-card");
+                    proImg.classList.add("pro-img");
+                    proTxtParent.classList.add("pro-txt-parent");
+                    proName.classList.add("pro-name");
+                    proCategory.classList.add("pro-category");
+                    proPrice.classList.add("pro-price");
+                    proColor.classList.add("pro-color");
+                    proRating.classList.add("pro-rating");
+                    proRealPrice.style.display = "inline";
+                    nameAnchohr.classList.add("anchor"),
+                        hoverAddToCart.classList.add("addtocart-hover", "fa-solid", "fa-bag-shopping");
+
+                    // assinging text 
+
+                    img.setAttribute("src", items.proImg);
+                    img.setAttribute("width", "100%");
+                    img.setAttribute("height", "100%");
+                    proName.innerText = items.proName;
+                    proCategory.innerText = items.proCategory;
+                    proRealPrice.innerText = items.proPrice;
+                    hoverAddToCart.innerHTML = "<i></i>";
+
+                    // making cards through javascript
+
+                    container.appendChild(proCard);
+                    proCard.appendChild(proImg);
+                    proImg.appendChild(imgAnchohr);
+                    imgAnchohr.appendChild(hoverAddToCart);
+                    imgAnchohr.appendChild(img);
+                    proCard.appendChild(proTxtParent);
+                    proTxtParent.appendChild(nameAnchohr);
+                    nameAnchohr.appendChild(proName);
+                    proTxtParent.appendChild(proCategory);
+                    proTxtParent.appendChild(proPrice);
+                    proPrice.appendChild(proRealPrice)
+                    proTxtParent.appendChild(proColor);
+                    proTxtParent.appendChild(proRating);
+
+                    if (items.proColor == "yes") {
+                        let proColorPicker1 = document.createElement("div");
+                        let proColorPicker2 = document.createElement("div");
+                        let proColorPicker3 = document.createElement("div");
+                        proColorPicker1.classList.add("pro-color-picker");
+                        proColorPicker1.style.backgroundColor = "#f49922";
+                        proColorPicker2.classList.add("pro-color-picker");
+                        proColorPicker2.style.backgroundColor = "#ce25e8";
+                        proColorPicker3.classList.add("pro-color-picker");
+                        proColorPicker3.style.backgroundColor = "#1fb1c1";
+                        proColor.appendChild(proColorPicker1);
+                        proColor.appendChild(proColorPicker2);
+                        proColor.appendChild(proColorPicker3);
+                    }
+
+                    if (items.proSalePrice !== "no") {
+                        let proSalePrice = document.createElement("strike");
+                        proSalePrice.innerText = items.proSalePrice;
+                        proRealPrice.style.paddingLeft = "10px";
+                        proPrice.insertAdjacentElement("afterbegin", proSalePrice)
+                    }
+
+                    // cards rating generator
+
+                    if (items.proRating == 0) {
+
+                        let icon1 = document.createElement("i");
+                        let icon2 = document.createElement("i");
+                        let icon3 = document.createElement("i");
+                        let icon4 = document.createElement("i");
+                        let icon5 = document.createElement("i");
+
+                        icon1.classList.add("fa-regular", "fa-star");
+                        icon2.classList.add("fa-regular", "fa-star");
+                        icon3.classList.add("fa-regular", "fa-star");
+                        icon4.classList.add("fa-regular", "fa-star");
+                        icon5.classList.add("fa-regular", "fa-star");
+
+                        proRating.appendChild(icon1);
+                        proRating.appendChild(icon2);
+                        proRating.appendChild(icon3);
+                        proRating.appendChild(icon4);
+                        proRating.appendChild(icon5);
+
+                    }
+
+                    if (items.proRating == 1) {
+
+                        let icon1 = document.createElement("i");
+                        let icon2 = document.createElement("i");
+                        let icon3 = document.createElement("i");
+                        let icon4 = document.createElement("i");
+                        let icon5 = document.createElement("i");
+
+                        icon1.classList.add("fa-solid", "fa-star");
+                        icon2.classList.add("fa-regular", "fa-star");
+                        icon3.classList.add("fa-regular", "fa-star");
+                        icon4.classList.add("fa-regular", "fa-star");
+                        icon5.classList.add("fa-regular", "fa-star");
+
+                        proRating.appendChild(icon1);
+                        proRating.appendChild(icon2);
+                        proRating.appendChild(icon3);
+                        proRating.appendChild(icon4);
+                        proRating.appendChild(icon5);
+
+                    }
+
+                    if (items.proRating == 2) {
+
+                        let icon1 = document.createElement("i");
+                        let icon2 = document.createElement("i");
+                        let icon3 = document.createElement("i");
+                        let icon4 = document.createElement("i");
+                        let icon5 = document.createElement("i");
+
+                        icon1.classList.add("fa-solid", "fa-star");
+                        icon2.classList.add("fa-solid", "fa-star");
+                        icon3.classList.add("fa-regular", "fa-star");
+                        icon4.classList.add("fa-regular", "fa-star");
+                        icon5.classList.add("fa-regular", "fa-star");
+
+                        proRating.appendChild(icon1);
+                        proRating.appendChild(icon2);
+                        proRating.appendChild(icon3);
+                        proRating.appendChild(icon4);
+                        proRating.appendChild(icon5);
+
+                    }
+
+
+                    if (items.proRating == 3) {
+
+                        let icon1 = document.createElement("i");
+                        let icon2 = document.createElement("i");
+                        let icon3 = document.createElement("i");
+                        let icon4 = document.createElement("i");
+                        let icon5 = document.createElement("i");
+
+                        icon1.classList.add("fa-solid", "fa-star");
+                        icon2.classList.add("fa-solid", "fa-star");
+                        icon3.classList.add("fa-solid", "fa-star");
+                        icon4.classList.add("fa-regular", "fa-star");
+                        icon5.classList.add("fa-regular", "fa-star");
+
+                        proRating.appendChild(icon1);
+                        proRating.appendChild(icon2);
+                        proRating.appendChild(icon3);
+                        proRating.appendChild(icon4);
+                        proRating.appendChild(icon5);
+
+                    }
+
+                    if (items.proRating == 4) {
+
+                        let icon1 = document.createElement("i");
+                        let icon2 = document.createElement("i");
+                        let icon3 = document.createElement("i");
+                        let icon4 = document.createElement("i");
+                        let icon5 = document.createElement("i");
+
+                        icon1.classList.add("fa-solid", "fa-star");
+                        icon2.classList.add("fa-solid", "fa-star");
+                        icon3.classList.add("fa-solid", "fa-star");
+                        icon4.classList.add("fa-solid", "fa-star-half-stroke");
+                        icon5.classList.add("fa-regular", "fa-star");
+
+                        proRating.appendChild(icon1);
+                        proRating.appendChild(icon2);
+                        proRating.appendChild(icon3);
+                        proRating.appendChild(icon4);
+                        proRating.appendChild(icon5);
+
+                    }
+
+                    if (items.proRating == 5) {
+
+                        let icon1 = document.createElement("i");
+                        let icon2 = document.createElement("i");
+                        let icon3 = document.createElement("i");
+                        let icon4 = document.createElement("i");
+                        let icon5 = document.createElement("i");
+
+                        icon1.classList.add("fa-solid", "fa-star");
+                        icon2.classList.add("fa-solid", "fa-star");
+                        icon3.classList.add("fa-solid", "fa-star");
+                        icon4.classList.add("fa-solid", "fa-star");
+                        icon5.classList.add("fa-solid", "fa-star");
+
+                        proRating.appendChild(icon1);
+                        proRating.appendChild(icon2);
+                        proRating.appendChild(icon3);
+                        proRating.appendChild(icon4);
+                        proRating.appendChild(icon5);
+
+                    }
+
+                    // Set href attribute for image anchor
+                    // imgAnchohr.setAttribute("href", "product-page-" + index + ".html");
+
+                    // Set href attribute for name anchor
+                    nameAnchohr.setAttribute("href", "product-page-" + index + ".html");
+
+                    // Add event listener to each card
+                    proCard.addEventListener("click", function () {
+                        // Replace location with the URL of the clicked card
+                        // window.location.assign("product-page-" + index + ".html");
+                    });
+                } else if (selectElement == "") {
+                    let msg = document.querySelector(".msg");
+                    msg.style.display = "block";
+                }
+
+
+            })
         }
 
-        // home page btn 
 
-        let homePageBtn = document.querySelector(".logo");
-        homePageBtn.addEventListener("click", () => {
-            location.assign("index.html")
-        })
+        // // // home page btn 
 
-        // amount cart side bar 
+        // // let homePageBtn = document.querySelector(".logo");
+        // // homePageBtn.addEventListener("click", () => {
+        // //     location.assign("index.html")
+        // // })
 
-        let addToCart = document.querySelector(".amount-cart");
-        let cartSideBar = document.querySelector(".cart-sidebar");
-        let addToCartCloseBtn = document.querySelector(".add-to-cart-btn");
+        // // amount cart side bar
 
-        addToCart.addEventListener("click", () => {
-            cartSideBar.classList.toggle("cart-sidebar-toggle")
-        });
-        addToCartCloseBtn.addEventListener("click", () => {
-            cartSideBar.classList.remove("cart-sidebar-toggle")
-        });
+        // let addToCart = document.querySelector(".amount-cart");
+        // let cartSideBar = document.querySelector(".cart-sidebar");
+        // let addToCartCloseBtn = document.querySelector(".add-to-cart-btn");
 
-        // nav burger btn side bar 
+        // addToCart.addEventListener("click", () => {
+        //     cartSideBar.classList.toggle("cart-sidebar-toggle")
+        // });
+        // addToCartCloseBtn.addEventListener("click", () => {
+        //     cartSideBar.classList.remove("cart-sidebar-toggle")
+        // });
 
-        let navSideBarBtn = document.querySelector(".burger-icon-parent");
-        let navSideBar = document.querySelector(".nav-sidebar");
-        let navSideBarCloseBtn = document.querySelector(".nav-sidebar-close-btn");
+        // // nav burger btn side bar
 
-        navSideBarBtn.addEventListener("click", () => {
-            navSideBar.classList.toggle("nav-sidebar-toggle")
-        });
-        navSideBarCloseBtn.addEventListener("click", () => {
-            navSideBar.classList.remove("nav-sidebar-toggle")
-        });
+        // let navSideBarBtn = document.querySelector(".burger-icon-parent");
+        // let navSideBar = document.querySelector(".nav-sidebar");
+        // let navSideBarCloseBtn = document.querySelector(".nav-sidebar-close-btn");
+
+        // navSideBarBtn.addEventListener("click", () => {
+        //     navSideBar.classList.toggle("nav-sidebar-toggle")
+        // });
+        // navSideBarCloseBtn.addEventListener("click", () => {
+        //     navSideBar.classList.remove("nav-sidebar-toggle")
+        // });
 
     </script>
 </body>
