@@ -148,6 +148,12 @@
             margin-top: 100px;
         }
 
+        .search-result {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
         @media only screen and (min-width:0px) and (max-width:510px) {
             .main-content-con {
                 flex-direction: column-reverse;
@@ -221,7 +227,7 @@
                 margin-bottom: 30px;
                 padding: 20px;
             }
-            
+
             .msg {
                 margin: 0;
             }
@@ -374,10 +380,10 @@
             // previous search delete logic
 
             let del = document.querySelector(".search-result").children;
-            let delChildrensLength = del.length
+            let delChildrensLength = del.length;
             for (let i = 0; i < delChildrensLength; i++) {
                 del[0].remove();
-            }
+            };
 
             let hideCon = document.querySelector(".pro-cards-sec");
             hideCon.style.display = "none";
@@ -717,7 +723,159 @@
 
                     let msg = document.querySelector(".msg");
                     msg.style.display = "none";
-       
+
+
+                    // cards hover addtocart btn
+
+                    let proImgHoverBtn = document.querySelectorAll(".pro-img");
+                    let hoverBtn = document.querySelectorAll(".addtocart-hover");
+
+                    proImgHoverBtn[index].addEventListener("mouseover", () => {
+                        hoverBtn[index].style.display = "block";
+                    });
+
+                    proImgHoverBtn[index].addEventListener("mouseout", () => {
+                        hoverBtn[index].style.display = "none";
+                    });
+
+                    // addtocart logic
+
+                    let add = document.querySelector(".addtocart-products-parent");
+
+                    function addtocartfunction(addImg, addName, addPrice) {
+
+                        // alert "Product added to cart"
+
+                        window.alert("Product added to cart");
+
+                        // creating elements
+
+                        let addProductCon = document.createElement("div");
+                        let addProductImgDiv = document.createElement("div");
+                        let addProductImg = document.createElement("img");
+                        let addProductNameDiv = document.createElement("div");
+                        let addProductName = document.createElement("h2");
+                        let addProductPriceDiv = document.createElement("div");
+                        let addProductPrice = document.createElement("h3");
+                        let addProductQuantityDiv = document.createElement("div");
+                        let addProductQuantity = document.createElement("p");
+                        let addProductDeleteBtn = document.createElement("div");
+                        let qua = 1;
+
+                        // adding classes
+
+                        addProductCon.classList.add("addtocart-products");
+                        addProductImgDiv.classList.add("addtocart-products-img");
+                        addProductNameDiv.classList.add("addtocart-products-name");
+                        addProductPrice.classList.add("addtocart-products-price");
+                        addProductQuantity.classList.add("addtocart-products-quantity");
+                        addProductDeleteBtn.classList.add("addtocart-delete-btn");
+
+                        // setting attributes and innertext
+
+                        addProductImg.setAttribute("src", addImg)
+                        addProductImg.setAttribute("width", "100")
+                        addProductName.innerText = addName
+                        addProductPrice.innerText = addPrice
+                        addProductQuantity.innerText = "x" + qua++;
+                        addProductDeleteBtn.innerText = "+";
+
+                        // appending elements
+
+                        add.appendChild(addProductCon);
+                        addProductCon.appendChild(addProductImgDiv);
+                        addProductImgDiv.appendChild(addProductImg);
+                        addProductCon.appendChild(addProductNameDiv);
+                        addProductNameDiv.appendChild(addProductName);
+                        addProductNameDiv.appendChild(addProductPriceDiv);
+                        addProductPriceDiv.appendChild(addProductPrice);
+                        addProductNameDiv.appendChild(addProductQuantityDiv);
+                        addProductQuantityDiv.appendChild(addProductQuantity);
+                        addProductCon.appendChild(addProductDeleteBtn)
+
+                        // product price counter logic
+
+                        let priceCounter = document.querySelector(".nav-2nd-span");
+
+                        priceTotalArray.push(parseInt(addPrice.slice(1, 4)));
+                        let total = priceTotalArray.reduce((accum, curval) => {
+                            return accum + curval
+                        });
+
+                        let priceTotalArraysPrice = priceCounter.innerText = `$${total}.00`;
+                        let subTotalPrice = document.querySelector(".subtotal").children[1];
+                        subTotalPrice.innerText = priceTotalArraysPrice;
+
+                        // product counter logic
+
+                        let hideaddmsg = document.querySelector(".add-to-cart-msg-con");
+                        let asa = document.querySelector(".addtocart-products-parent");
+                        let proCounter = document.querySelector(".product-count");
+                        let asd = asa.children.length;
+                        proCounter.innerText = asd;
+
+                        // addtocart delete btn
+
+                        addProductDeleteBtn.addEventListener("click", () => {
+
+                            // product price minus logic
+
+                            let removedItem = addProductCon;
+                            let removedPriceText = removedItem.querySelector(".addtocart-products-price").innerText;
+                            let removedPrice = parseInt(removedPriceText.slice(1));
+
+                            // minus removedprice from priceTotalArray 
+
+                            let removedPriceIndex = priceTotalArray.indexOf(removedPrice);
+                            if (removedPriceIndex !== -1) {
+                                priceTotalArray.splice(removedPriceIndex, 1);
+                            }
+
+                            let newTotal = priceTotalArray.reduce((accum, curval) => accum + curval, 0);
+                            let newTotalOfArray = priceCounter.innerText = `$${newTotal}.00`;
+                            subTotalPrice.innerText = newTotalOfArray;
+
+                            // delete btn logic
+
+                            addProductCon.remove();
+
+                            //  product counter minus
+
+                            proCounter.innerText--;
+
+                            // unhide empty cart message
+
+                            let asa = document.querySelector(".addtocart-products-parent");
+                            let asd = asa.children.length;
+                            let hideaddmsg = document.querySelector(".add-to-cart-msg-con");
+                            let checkOutBtn = document.querySelector("#checkout");
+                            let subtotalDiv = document.querySelector(".subtotal");
+
+                            if (asd == 0) {
+                                hideaddmsg.style.display = "flex";
+                                asa.style.display = "none";
+                                checkOutBtn.style.display = "none";
+                                subtotalDiv.style.display = "none";
+                            }
+                        });
+
+                        // empty cart msg hide  
+
+                        if (asd != 0) {
+                            let subtotalDiv = document.querySelector(".subtotal");
+                            let checkOutBtn = document.querySelector("#checkout");
+                            checkOutBtn.style.display = "block";
+                            subtotalDiv.style.display = "flex";
+                            hideaddmsg.style.display = "none";
+                            asa.style.display = "block";
+                        }
+                    };
+
+                    // addtocart function eventlistner
+
+                    hoverBtn[index].addEventListener("click", () => addtocartfunction(items.proImg, items.proName, items.proPrice))
+
+
                 } else if (selectElement == "") {
                     let msg = document.querySelector(".msg");
                     msg.style.display = "block";
@@ -725,41 +883,7 @@
 
 
             })
-        }
-
-
-        // // // home page btn 
-
-        // // let homePageBtn = document.querySelector(".logo");
-        // // homePageBtn.addEventListener("click", () => {
-        // //     location.assign("index.html")
-        // // })
-
-        // // amount cart side bar
-
-        // let addToCart = document.querySelector(".amount-cart");
-        // let cartSideBar = document.querySelector(".cart-sidebar");
-        // let addToCartCloseBtn = document.querySelector(".add-to-cart-btn");
-
-        // addToCart.addEventListener("click", () => {
-        //     cartSideBar.classList.toggle("cart-sidebar-toggle")
-        // });
-        // addToCartCloseBtn.addEventListener("click", () => {
-        //     cartSideBar.classList.remove("cart-sidebar-toggle")
-        // });
-
-        // // nav burger btn side bar
-
-        // let navSideBarBtn = document.querySelector(".burger-icon-parent");
-        // let navSideBar = document.querySelector(".nav-sidebar");
-        // let navSideBarCloseBtn = document.querySelector(".nav-sidebar-close-btn");
-
-        // navSideBarBtn.addEventListener("click", () => {
-        //     navSideBar.classList.toggle("nav-sidebar-toggle")
-        // });
-        // navSideBarCloseBtn.addEventListener("click", () => {
-        //     navSideBar.classList.remove("nav-sidebar-toggle")
-        // });
+        };
 
     </script>
 </body>
