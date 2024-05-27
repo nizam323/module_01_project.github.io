@@ -46,7 +46,7 @@
         }
 
         .show-img {
-            background-image: url(images/product-1.jpg);
+            background-image: url(images/product-5.jpg);
             width: 100%;
             height: 43vmax;
             background-repeat: no-repeat;
@@ -261,15 +261,15 @@
                 </span>
                 <div class="show-txt-con">
                     <div class="show-txt">
-                        <h1>DNK Yellow Shoes</h1>
-                        <p><strike>$150.00</strike> - $120.00 <span style="font-size: 16px;">+ Free Shipping</span></p>
+                        <h1>Basic Gray Jeans</h1>
+                        <p>$150.00 <span style="font-size: 16px;">+ Free Shipping</span></p>
                         <p style="font-size: 16px;line-height: 1.7;text-align: justify;">Nam nec tellus a odio tincidunt
                             auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent
                             taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in
                             erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit
                             sed.</p>
                         <button id="addtocartproductpage">ADD TO CART</button>
-                        <span style="display: block; margin-top: 20px;font-size: 16px;">Category: Men</span>
+                        <span style="display: block; margin-top: 20px;font-size: 16px;">Category: Women</span>
                     </div>
                 </div>
             </div>
@@ -487,33 +487,33 @@
         // products cards array
 
         let products = [
-            {
-                proName: "DNK Yellow Shoes",
-                proImg: "images/product-1.jpg",
-                proCategory: "Men",
-                proSalePrice: "$150.00",
-                proPrice: "$120.00",
-                proColor: "yes",
-                proRating: pDR1,
-            },
-            {
-                proName: "DNK Blue Shoes",
-                proImg: "images/product-2.jpg",
-                proCategory: "Men",
-                proSalePrice: "$240.00",
-                proPrice: "$200.00",
-                proColor: "",
-                proRating: pDR2,
-            },
-            {
-                proName: "Dark Brown Jeans",
-                proImg: "images/product-3.jpg",
-                proCategory: "Men",
-                proSalePrice: "no",
-                proPrice: "$150.00",
-                proColor: "",
-                proRating: pDR3,
-            },
+            // {
+            //     proName: "DNK Yellow Shoes",
+            //     proImg: "images/product-1.jpg",
+            //     proCategory: "Men",
+            //     proSalePrice: "$150.00",
+            //     proPrice: "$120.00",
+            //     proColor: "yes",
+            //     proRating: pDR1,
+            // },
+            // {
+            //     proName: "DNK Blue Shoes",
+            //     proImg: "images/product-2.jpg",
+            //     proCategory: "Men",
+            //     proSalePrice: "$240.00",
+            //     proPrice: "$200.00",
+            //     proColor: "",
+            //     proRating: pDR2,
+            // },
+            // {
+            //     proName: "Dark Brown Jeans",
+            //     proImg: "images/product-3.jpg",
+            //     proCategory: "Men",
+            //     proSalePrice: "no",
+            //     proPrice: "$150.00",
+            //     proColor: "",
+            //     proRating: pDR3,
+            // },
             {
                 proName: "Blue Denim Jeans",
                 proImg: "images/product-4.jpg",
@@ -585,7 +585,7 @@
 
         products.map((items, index) => {
 
-            if (items.proCategory == "Men") {
+            if (items.proCategory == "Women") {
                 //  creating cards through javascript
 
                 let hoverAddToCart = document.createElement("div");
@@ -804,7 +804,15 @@
                 // imgAnchohr.setAttribute("href", "product-page-" + index + ".html");
 
                 // Set href attribute for name anchor
-                nameAnchohr.setAttribute("href", "product-page-" + index + ".html");
+                if(index == 0){
+                    nameAnchohr.setAttribute("href", "product-page-3.html");
+                }
+                if(index == 1){
+                    nameAnchohr.setAttribute("href", "product-page-4.html");
+                }
+                if(index == 2){
+                    nameAnchohr.setAttribute("href", "product-page-5.html");
+                }
 
                 // Add event listener to each card
                 proCard.addEventListener("click", function () {
@@ -1100,7 +1108,7 @@
             }
         };
 
-        document.querySelector("#addtocartproductpage").addEventListener("click", () => addtocartproduct(products[0].proImg, products[0].proName, products[0].proPrice));
+        document.querySelector("#addtocartproductpage").addEventListener("click", () => addtocartproduct(products[1].proImg, products[1].proName, products[1].proPrice));
 
         // amount cart side bar 
 

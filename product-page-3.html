@@ -217,16 +217,16 @@
             <div class="anchors">
                 <ul>
                     <li><a href="everything-page.html">EVERYTHING</a></li>
-                    <li><a href="">WOMEN</a></li>
-                    <li><a href="">MEN</a></li>
-                    <li><a href="">ACCESSORIES</a></li>
+                    <li><a href="women-page.html">WOMEN</a></li>
+                    <li><a href="men-page.html">MEN</a></li>
+                    <li><a href="accessories-page.html">ACCESSORIES</a></li>
                 </ul>
             </div>
         </div>
         <div class="nav-2nd">
             <ul class="abo-con">
                 <li><a href="about.html">ABOUT</a></li>
-                <li><a href="">CONTACT US</a></li>
+                <li><a href="contact-us.html">CONTACT US</a></li>
             </ul>
             <div class="amount-cart" style="cursor: pointer;">
                 <ul>
@@ -238,7 +238,7 @@
             </div>
             <div class="login">
                 <ul>
-                    <li><a href=""><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
                 </ul>
             </div>
             <div class="burger-icon-parent">
@@ -387,15 +387,15 @@
             <div class="nav-sidebar-close-btn">+</div>
         </div>
         <div class="nav-sidebar-login">
-            <a href=""><i class="fa-solid fa-user"></i></a>
+            <a href="login.html"><i class="fa-solid fa-user"></i></a>
         </div>
-        <div class="nav-sidebar-anchors"><a href="">EVERYTHING</a></div>
-        <div class="nav-sidebar-anchors"><a href="">WOMEN</a></div>
-        <div class="nav-sidebar-anchors"><a href="">MEN</a></div>
-        <div class="nav-sidebar-anchors"><a href="">ACCESSORIES</a></div>
+        <div class="nav-sidebar-anchors"><a href="everything-page.html">EVERYTHING</a></div>
+        <div class="nav-sidebar-anchors"><a href="women-page.html">WOMEN</a></div>
+        <div class="nav-sidebar-anchors"><a href="men-page.html">MEN</a></div>
+        <div class="nav-sidebar-anchors"><a href="accessories-page.html">ACCESSORIES</a></div>
         <div class="nav-sidebar-anchors-sepration" style="height: 50px;"></div>
         <div class="nav-sidebar-anchors" style="font-weight: 100;"><a href="about.html">ABOUT</a></div>
-        <div class="nav-sidebar-anchors" style="font-weight: 100;"><a href="">CONTACT US</a></div>
+        <div class="nav-sidebar-anchors" style="font-weight: 100;"><a href="contact-us.html">CONTACT US</a></div>
     </div>
     </div> <!-- nav burger btn side bar end -->
     <!-- section 7 -->
@@ -804,7 +804,15 @@
                 // imgAnchohr.setAttribute("href", "product-page-" + index + ".html");
 
                 // Set href attribute for name anchor
-                nameAnchohr.setAttribute("href", "product-page-" + index + ".html");
+                if(index == 0){
+                    nameAnchohr.setAttribute("href", "product-page-3.html");
+                }
+                if(index == 1){
+                    nameAnchohr.setAttribute("href", "product-page-4.html");
+                }
+                if(index == 2){
+                    nameAnchohr.setAttribute("href", "product-page-5.html");
+                }
 
                 // Add event listener to each card
                 proCard.addEventListener("click", function () {

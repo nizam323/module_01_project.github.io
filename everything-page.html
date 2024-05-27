@@ -900,14 +900,8 @@
 
                     // Add event listener to each card
                     proCard.addEventListener("click", function () {
-                        // Replace location with the URL of the clicked card
                         // window.location.assign("product-page-" + index + ".html");
                     });
-
-                    // no result found msg
-
-                    // let msg = document.querySelector(".msg");
-                    // msg.style.display = "none";
 
 
                     // cards hover addtocart btn
@@ -915,12 +909,14 @@
                     let proImgHoverBtn = document.querySelectorAll(".pro-img");
                     let hoverBtn = document.querySelectorAll(".addtocart-hover");
 
-                    proImgHoverBtn[index].addEventListener("mouseover", () => {
-                        hoverBtn[index].style.display = "block";
+                    proImgHoverBtn.forEach((proImg, index) => {
+                    proImg.addEventListener("mouseover", () => {
+                    hoverBtn[index].style.display = "block";
                     });
 
-                    proImgHoverBtn[index].addEventListener("mouseout", () => {
-                        hoverBtn[index].style.display = "none";
+                    proImg.addEventListener("mouseout", () => {
+                    hoverBtn[index].style.display = "none";
+                    });
                     });
 
                     // addtocart logic
@@ -1058,9 +1054,9 @@
 
                     // addtocart function eventlistner
 
-                    hoverBtn[index].addEventListener("click", () => addtocartfunction(items.proImg, items.proName, items.proPrice))
-
-
+                    hoverAddToCart.addEventListener("click", () => {
+                    addtocartfunction(items.proImg, items.proName, items.proPrice);
+                    });
 
                     let msg = document.querySelector(".msg");
                         
