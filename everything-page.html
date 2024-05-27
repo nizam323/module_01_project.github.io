@@ -329,8 +329,8 @@
         <div class="main-content-con">
             <div class="funs">
                 <div class="funs-1-inp">
-                    <input type="text" placeholder="Search Products...">
-                    <button><svg aria-hidden="true" role="img" focusable="false"
+                    <input type="text" placeholder="Search Products..." id="search-input">
+                    <button id="search-input-btn"><svg aria-hidden="true" role="img" focusable="false"
                             class="dashicon dashicons-arrow-right-alt2" xmlns="http://www.w3.org/2000/svg" width="20"
                             height="20" viewBox="0 0 20 20">
                             <path d="M6 15l5-5-5-5 1-2 7 7-7 7z" fill="white"></path>
@@ -370,10 +370,61 @@
             </div>
         </div>
     </div>
+    <!-- section 7 -->
+    <div class="sec-7" style="border-top: 1.5px solid #dddddd;">
+        <div class="sec7-txt">
+            <a href="">SALE UP TO 70% OFF FOR ALL CLOTHES & FASHION ITEMS, ON ALL BRANDS.</a>
+        </div>
+    </div><!-- sec 7 end -->
+    <!-- section 8 -->
+    <div class="sec-8">
+        <div class="sec8-content">
+            <div class="sec8-con-1">
+                <div class="sec8-con-2"><img src="images/logo-dark.jpg" width="90" height="30" alt=""></div>
+                <div class="sec8-con-3">The best look anytime, anywhere.</div>
+            </div>
+        </div>
+        <div class="sec8-content">
+            <h2>For Her</h2>
+            <a href="">Women Jeans</a>
+            <a href="">Tops and Shirts</a>
+            <a href="">Women Jackets</a>
+            <a href="">Heels and Flats</a>
+            <a href="">Women Accessories</a>
+        </div>
+        <div class="sec8-content">
+            <h2>For Him</h2>
+            <a href="">Men Jeans</a>
+            <a href="">Men Shirts</a>
+            <a href="">Men Shoes</a>
+            <a href="">Men Accessories</a>
+            <a href="">Men Jackets</a>
+        </div>
+        <div class="sec8-content sec8-extra">
+            <h2>Subscribe</h2>
+            <form action="" style="display: contents;">
+                <input type="email" placeholder="Your email address..." id="sec8Email" required>
+                <button id="sec8Btn">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+        <div class="footer-txt">Copyright © 2024 Brandstore. Powered by Brandstore.</div>
+        <div class="footer-icon">
+            <a href="" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-google"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-yelp"></i></a>
+        </div>
+    </div> <!-- footer end -->
 
 
 
     <script>
+
         // price counter prices will store in this array
         let priceTotalArray = [];
 
@@ -502,120 +553,541 @@
                 proRating: pDR10,
             },
             {
-                    proName: "Bright Gold Purse ",
-                    proImg: "images/120.jpg",
-                    proCategory: "Accessories",
-                    proSalePrice: "no",
-                    proPrice: "$120.00",
-                    proColor: "yes",
-                    proRating: pDR6,
-                },
-                {
-                    proName: "Buddha Bracelet",
-                    proImg: "images/120-1.jpg",
-                    proCategory: "Accessories",
-                    proSalePrice: "no",
-                    proPrice: "$120.00",
-                    proColor: "yes",
-                    proRating: pDR5,
-                },
+                proName: "Bright Gold Purse ",
+                proImg: "images/120.jpg",
+                proCategory: "Accessories",
+                proSalePrice: "no",
+                proPrice: "$120.00",
+                proColor: "yes",
+                proRating: pDR6,
+            },
             {
-                    proName: "Black Hoodie",
-                    proImg: "images/100.jpg",
-                    proCategory: "Men",
-                    proSalePrice: "no",
-                    proPrice: "$100.00",
-                    proColor: "yes",
-                    proRating: pDR1,
-                },
-                {
-                    proName: "Dark Gray Jeans",
-                    proImg: "images/130-2.jpg",
-                    proCategory: "Men",
-                    proSalePrice: "no",
-                    proPrice: "$130.00",
-                    proColor: "",
-                    proRating: pDR3,
-                },
-                {
-                    proName: "Flamingo Tshirt",
-                    proImg: "images/130-3.jpg",
-                    proCategory: "Women",
-                    proSalePrice: "no",
-                    proPrice: "$130.00",
-                    proColor: "",
-                    proRating: pDR7,
-                },
-                {
-                    proName: "Black Handbag",
-                    proImg: "images/100-1.jpg",
-                    proCategory: "Accessories",
-                    proSalePrice: "no",
-                    proPrice: "$100.00",
-                    proColor: "yes",
-                    proRating: pDR8,
-                },
-                {
-                    proName: "Slim Fit Blue Jeans",
-                    proImg: "images/200-1.jpg",
-                    proCategory: "Women",
-                    proSalePrice: "no",
-                    proPrice: "$200.00",
-                    proColor: "",
-                    proRating: pDR7,
-                },
-                {
-                    proName: "Blue Tshirt",
-                    proImg: "images/100-2.jpg",
-                    proCategory: "Men",
-                    proSalePrice: "no",
-                    proPrice: "$100.00",
-                    proColor: "yes",
-                    proRating: pDR5,
-                },
-                {
-                    proName: "Brown Hoodie",
-                    proImg: "images/product-12.jpg",
-                    proCategory: "Men",
-                    proSalePrice: "no",
-                    proPrice: "$120.00",
-                    proColor: "yes",
-                    proRating: pDR3,
-                },
-                {
-                    proName: "Blue Jeans",
-                    proImg: "images/130-1.jpg",
-                    proCategory: "Men",
-                    proSalePrice: "no",
-                    proPrice: "$130.00",
-                    proColor: "",
-                    proRating: pDR4,
-                },
-                {
-                    proName: "Faint Denim Blue Jeans",
-                    proImg: "images/200-3.jpg",
-                    proCategory: "Men",
-                    proSalePrice: "no",
-                    proPrice: "$200.00",
-                    proColor: "",
-                    proRating: pDR4,
-                },
-                {
-                    proName: "Green Hoodie",
-                    proImg: "images/200-2.jpg",
-                    proCategory: "Men",
-                    proSalePrice: "no",
-                    proPrice: "$200.00",
-                    proColor: "",
-                    proRating: pDR3,
-                },
+                proName: "Buddha Bracelet",
+                proImg: "images/120-1.jpg",
+                proCategory: "Accessories",
+                proSalePrice: "no",
+                proPrice: "$120.00",
+                proColor: "yes",
+                proRating: pDR5,
+            },
+            {
+                proName: "BLACK HOODIE",
+                proImg: "images/100.jpg",
+                proCategory: "Men",
+                proSalePrice: "no",
+                proPrice: "$100.00",
+                proColor: "yes",
+                proRating: pDR1,
+            },
+            {
+                proName: "Dark Gray Jeans",
+                proImg: "images/130-2.jpg",
+                proCategory: "Men",
+                proSalePrice: "no",
+                proPrice: "$130.00",
+                proColor: "",
+                proRating: pDR3,
+            },
+            {
+                proName: "Flamingo Tshirt",
+                proImg: "images/130-3.jpg",
+                proCategory: "Women",
+                proSalePrice: "no",
+                proPrice: "$130.00",
+                proColor: "",
+                proRating: pDR7,
+            },
+            {
+                proName: "Black Handbag",
+                proImg: "images/100-1.jpg",
+                proCategory: "Accessories",
+                proSalePrice: "no",
+                proPrice: "$100.00",
+                proColor: "yes",
+                proRating: pDR8,
+            },
+            {
+                proName: "Slim Fit Blue Jeans",
+                proImg: "images/200-1.jpg",
+                proCategory: "Women",
+                proSalePrice: "no",
+                proPrice: "$200.00",
+                proColor: "",
+                proRating: pDR7,
+            },
+            {
+                proName: "Blue Tshirt",
+                proImg: "images/100-2.jpg",
+                proCategory: "Men",
+                proSalePrice: "no",
+                proPrice: "$100.00",
+                proColor: "yes",
+                proRating: pDR5,
+            },
+            {
+                proName: "Brown Hoodie",
+                proImg: "images/product-12.jpg",
+                proCategory: "Men",
+                proSalePrice: "no",
+                proPrice: "$120.00",
+                proColor: "yes",
+                proRating: pDR3,
+            },
+            {
+                proName: "Blue Jeans",
+                proImg: "images/130-1.jpg",
+                proCategory: "Men",
+                proSalePrice: "no",
+                proPrice: "$130.00",
+                proColor: "",
+                proRating: pDR4,
+            },
+            {
+                proName: "Faint Denim Blue Jeans",
+                proImg: "images/200-3.jpg",
+                proCategory: "Men",
+                proSalePrice: "no",
+                proPrice: "$200.00",
+                proColor: "",
+                proRating: pDR4,
+            },
+            {
+                proName: "Green Hoodie",
+                proImg: "images/200-2.jpg",
+                proCategory: "Men",
+                proSalePrice: "no",
+                proPrice: "$200.00",
+                proColor: "",
+                proRating: pDR3,
+            },
         ];
+
+        let searchInputBtn = document.querySelector("#search-input-btn");
+
+        // let msg = document.querySelector(".msg");        
+        // msg.style.display = "none";
+
+        searchInputBtn.addEventListener("click", () => {
+
+            let del = document.querySelector(".search-result").children;
+            let delChildrensLength = del.length;
+            for (let i = 0; i < delChildrensLength; i++) {
+                del[0].remove();
+            };
+
+            products.filter((items, index) => {
+
+                let hideCon = document.querySelector(".pro-cards-sec");
+                hideCon.style.display = "none";
+
+                let searchInput = document.querySelector("#search-input").value
+                // .toUpperCase();
+
+                if (searchInput == items.proName || searchInput == items.proName.slice(0, 1)) {
+
+
+                    let container = document.querySelector(".search-result");
+
+                    //  creating cards through javascript
+
+                    let hoverAddToCart = document.createElement("div");
+                    let proCard = document.createElement("div");
+                    let proImg = document.createElement("div");
+                    let img = document.createElement("img");
+                    let proTxtParent = document.createElement("div");
+                    let proName = document.createElement("div");
+                    let proCategory = document.createElement("div");
+                    let proRealPrice = document.createElement("div");
+                    let proPrice = document.createElement("div");
+                    let proColor = document.createElement("div");
+                    let proRating = document.createElement("div");
+                    let imgAnchohr = document.createElement("a");
+                    let nameAnchohr = document.createElement("a");
+
+                    // assigning css class to created elements
+
+                    proCard.classList.add("pro-card");
+                    proImg.classList.add("pro-img");
+                    proTxtParent.classList.add("pro-txt-parent");
+                    proName.classList.add("pro-name");
+                    proCategory.classList.add("pro-category");
+                    proPrice.classList.add("pro-price");
+                    proColor.classList.add("pro-color");
+                    proRating.classList.add("pro-rating");
+                    proRealPrice.style.display = "inline";
+                    nameAnchohr.classList.add("anchor"),
+                        hoverAddToCart.classList.add("addtocart-hover", "fa-solid", "fa-bag-shopping");
+
+                    // assinging text 
+
+                    img.setAttribute("src", items.proImg);
+                    img.setAttribute("width", "100%");
+                    img.setAttribute("height", "100%");
+                    proName.innerText = items.proName;
+                    proCategory.innerText = items.proCategory;
+                    proRealPrice.innerText = items.proPrice;
+                    hoverAddToCart.innerHTML = "<i></i>";
+
+                    // making cards through javascript
+
+                    container.appendChild(proCard);
+                    proCard.appendChild(proImg);
+                    proImg.appendChild(imgAnchohr);
+                    imgAnchohr.appendChild(hoverAddToCart);
+                    imgAnchohr.appendChild(img);
+                    proCard.appendChild(proTxtParent);
+                    proTxtParent.appendChild(nameAnchohr);
+                    nameAnchohr.appendChild(proName);
+                    proTxtParent.appendChild(proCategory);
+                    proTxtParent.appendChild(proPrice);
+                    proPrice.appendChild(proRealPrice)
+                    proTxtParent.appendChild(proColor);
+                    proTxtParent.appendChild(proRating);
+
+                    if (items.proColor == "yes") {
+                        let proColorPicker1 = document.createElement("div");
+                        let proColorPicker2 = document.createElement("div");
+                        let proColorPicker3 = document.createElement("div");
+                        proColorPicker1.classList.add("pro-color-picker");
+                        proColorPicker1.style.backgroundColor = "#f49922";
+                        proColorPicker2.classList.add("pro-color-picker");
+                        proColorPicker2.style.backgroundColor = "#ce25e8";
+                        proColorPicker3.classList.add("pro-color-picker");
+                        proColorPicker3.style.backgroundColor = "#1fb1c1";
+                        proColor.appendChild(proColorPicker1);
+                        proColor.appendChild(proColorPicker2);
+                        proColor.appendChild(proColorPicker3);
+                    }
+
+                    if (items.proSalePrice !== "no") {
+                        let proSalePrice = document.createElement("strike");
+                        proSalePrice.innerText = items.proSalePrice;
+                        proRealPrice.style.paddingLeft = "10px";
+                        proPrice.insertAdjacentElement("afterbegin", proSalePrice)
+                    }
+
+                    // cards rating generator
+
+                    if (items.proRating == 0) {
+
+                        let icon1 = document.createElement("i");
+                        let icon2 = document.createElement("i");
+                        let icon3 = document.createElement("i");
+                        let icon4 = document.createElement("i");
+                        let icon5 = document.createElement("i");
+
+                        icon1.classList.add("fa-regular", "fa-star");
+                        icon2.classList.add("fa-regular", "fa-star");
+                        icon3.classList.add("fa-regular", "fa-star");
+                        icon4.classList.add("fa-regular", "fa-star");
+                        icon5.classList.add("fa-regular", "fa-star");
+
+                        proRating.appendChild(icon1);
+                        proRating.appendChild(icon2);
+                        proRating.appendChild(icon3);
+                        proRating.appendChild(icon4);
+                        proRating.appendChild(icon5);
+
+                    }
+
+                    if (items.proRating == 1) {
+
+                        let icon1 = document.createElement("i");
+                        let icon2 = document.createElement("i");
+                        let icon3 = document.createElement("i");
+                        let icon4 = document.createElement("i");
+                        let icon5 = document.createElement("i");
+
+                        icon1.classList.add("fa-solid", "fa-star");
+                        icon2.classList.add("fa-regular", "fa-star");
+                        icon3.classList.add("fa-regular", "fa-star");
+                        icon4.classList.add("fa-regular", "fa-star");
+                        icon5.classList.add("fa-regular", "fa-star");
+
+                        proRating.appendChild(icon1);
+                        proRating.appendChild(icon2);
+                        proRating.appendChild(icon3);
+                        proRating.appendChild(icon4);
+                        proRating.appendChild(icon5);
+
+                    }
+
+                    if (items.proRating == 2) {
+
+                        let icon1 = document.createElement("i");
+                        let icon2 = document.createElement("i");
+                        let icon3 = document.createElement("i");
+                        let icon4 = document.createElement("i");
+                        let icon5 = document.createElement("i");
+
+                        icon1.classList.add("fa-solid", "fa-star");
+                        icon2.classList.add("fa-solid", "fa-star");
+                        icon3.classList.add("fa-regular", "fa-star");
+                        icon4.classList.add("fa-regular", "fa-star");
+                        icon5.classList.add("fa-regular", "fa-star");
+
+                        proRating.appendChild(icon1);
+                        proRating.appendChild(icon2);
+                        proRating.appendChild(icon3);
+                        proRating.appendChild(icon4);
+                        proRating.appendChild(icon5);
+
+                    }
+
+
+                    if (items.proRating == 3) {
+
+                        let icon1 = document.createElement("i");
+                        let icon2 = document.createElement("i");
+                        let icon3 = document.createElement("i");
+                        let icon4 = document.createElement("i");
+                        let icon5 = document.createElement("i");
+
+                        icon1.classList.add("fa-solid", "fa-star");
+                        icon2.classList.add("fa-solid", "fa-star");
+                        icon3.classList.add("fa-solid", "fa-star");
+                        icon4.classList.add("fa-regular", "fa-star");
+                        icon5.classList.add("fa-regular", "fa-star");
+
+                        proRating.appendChild(icon1);
+                        proRating.appendChild(icon2);
+                        proRating.appendChild(icon3);
+                        proRating.appendChild(icon4);
+                        proRating.appendChild(icon5);
+
+                    }
+
+                    if (items.proRating == 4) {
+
+                        let icon1 = document.createElement("i");
+                        let icon2 = document.createElement("i");
+                        let icon3 = document.createElement("i");
+                        let icon4 = document.createElement("i");
+                        let icon5 = document.createElement("i");
+
+                        icon1.classList.add("fa-solid", "fa-star");
+                        icon2.classList.add("fa-solid", "fa-star");
+                        icon3.classList.add("fa-solid", "fa-star");
+                        icon4.classList.add("fa-solid", "fa-star-half-stroke");
+                        icon5.classList.add("fa-regular", "fa-star");
+
+                        proRating.appendChild(icon1);
+                        proRating.appendChild(icon2);
+                        proRating.appendChild(icon3);
+                        proRating.appendChild(icon4);
+                        proRating.appendChild(icon5);
+
+                    }
+
+                    if (items.proRating == 5) {
+
+                        let icon1 = document.createElement("i");
+                        let icon2 = document.createElement("i");
+                        let icon3 = document.createElement("i");
+                        let icon4 = document.createElement("i");
+                        let icon5 = document.createElement("i");
+
+                        icon1.classList.add("fa-solid", "fa-star");
+                        icon2.classList.add("fa-solid", "fa-star");
+                        icon3.classList.add("fa-solid", "fa-star");
+                        icon4.classList.add("fa-solid", "fa-star");
+                        icon5.classList.add("fa-solid", "fa-star");
+
+                        proRating.appendChild(icon1);
+                        proRating.appendChild(icon2);
+                        proRating.appendChild(icon3);
+                        proRating.appendChild(icon4);
+                        proRating.appendChild(icon5);
+
+                    }
+
+                    nameAnchohr.setAttribute("href", "product-page-" + index + ".html");
+
+                    // Add event listener to each card
+                    proCard.addEventListener("click", function () {
+                        // Replace location with the URL of the clicked card
+                        // window.location.assign("product-page-" + index + ".html");
+                    });
+
+                    // no result found msg
+
+                    // let msg = document.querySelector(".msg");
+                    // msg.style.display = "none";
+
+
+                    // cards hover addtocart btn
+
+                    let proImgHoverBtn = document.querySelectorAll(".pro-img");
+                    let hoverBtn = document.querySelectorAll(".addtocart-hover");
+
+                    proImgHoverBtn[index].addEventListener("mouseover", () => {
+                        hoverBtn[index].style.display = "block";
+                    });
+
+                    proImgHoverBtn[index].addEventListener("mouseout", () => {
+                        hoverBtn[index].style.display = "none";
+                    });
+
+                    // addtocart logic
+
+                    let add = document.querySelector(".addtocart-products-parent");
+
+                    function addtocartfunction(addImg, addName, addPrice) {
+
+                        // alert "Product added to cart"
+
+                        window.alert("Product added to cart");
+
+                        // creating elements
+
+                        let addProductCon = document.createElement("div");
+                        let addProductImgDiv = document.createElement("div");
+                        let addProductImg = document.createElement("img");
+                        let addProductNameDiv = document.createElement("div");
+                        let addProductName = document.createElement("h2");
+                        let addProductPriceDiv = document.createElement("div");
+                        let addProductPrice = document.createElement("h3");
+                        let addProductQuantityDiv = document.createElement("div");
+                        let addProductQuantity = document.createElement("p");
+                        let addProductDeleteBtn = document.createElement("div");
+                        let qua = 1;
+
+                        // adding classes
+
+                        addProductCon.classList.add("addtocart-products");
+                        addProductImgDiv.classList.add("addtocart-products-img");
+                        addProductNameDiv.classList.add("addtocart-products-name");
+                        addProductPrice.classList.add("addtocart-products-price");
+                        addProductQuantity.classList.add("addtocart-products-quantity");
+                        addProductDeleteBtn.classList.add("addtocart-delete-btn");
+
+                        // setting attributes and innertext
+
+                        addProductImg.setAttribute("src", addImg)
+                        addProductImg.setAttribute("width", "100")
+                        addProductName.innerText = addName
+                        addProductPrice.innerText = addPrice
+                        addProductQuantity.innerText = "x" + qua++;
+                        addProductDeleteBtn.innerText = "+";
+
+                        // appending elements
+
+                        add.appendChild(addProductCon);
+                        addProductCon.appendChild(addProductImgDiv);
+                        addProductImgDiv.appendChild(addProductImg);
+                        addProductCon.appendChild(addProductNameDiv);
+                        addProductNameDiv.appendChild(addProductName);
+                        addProductNameDiv.appendChild(addProductPriceDiv);
+                        addProductPriceDiv.appendChild(addProductPrice);
+                        addProductNameDiv.appendChild(addProductQuantityDiv);
+                        addProductQuantityDiv.appendChild(addProductQuantity);
+                        addProductCon.appendChild(addProductDeleteBtn)
+
+                        // product price counter logic
+
+                        let priceCounter = document.querySelector(".nav-2nd-span");
+
+                        priceTotalArray.push(parseInt(addPrice.slice(1, 4)));
+                        let total = priceTotalArray.reduce((accum, curval) => {
+                            return accum + curval
+                        });
+
+                        let priceTotalArraysPrice = priceCounter.innerText = `$${total}.00`;
+                        let subTotalPrice = document.querySelector(".subtotal").children[1];
+                        subTotalPrice.innerText = priceTotalArraysPrice;
+
+                        // product counter logic
+
+                        let hideaddmsg = document.querySelector(".add-to-cart-msg-con");
+                        let asa = document.querySelector(".addtocart-products-parent");
+                        let proCounter = document.querySelector(".product-count");
+                        let asd = asa.children.length;
+                        proCounter.innerText = asd;
+
+                        // addtocart delete btn
+
+                        addProductDeleteBtn.addEventListener("click", () => {
+
+                            // product price minus logic
+
+                            let removedItem = addProductCon;
+                            let removedPriceText = removedItem.querySelector(".addtocart-products-price").innerText;
+                            let removedPrice = parseInt(removedPriceText.slice(1));
+
+                            // minus removedprice from priceTotalArray 
+
+                            let removedPriceIndex = priceTotalArray.indexOf(removedPrice);
+                            if (removedPriceIndex !== -1) {
+                                priceTotalArray.splice(removedPriceIndex, 1);
+                            }
+
+                            let newTotal = priceTotalArray.reduce((accum, curval) => accum + curval, 0);
+                            let newTotalOfArray = priceCounter.innerText = `$${newTotal}.00`;
+                            subTotalPrice.innerText = newTotalOfArray;
+
+                            // delete btn logic
+
+                            addProductCon.remove();
+
+                            //  product counter minus
+
+                            proCounter.innerText--;
+
+                            // unhide empty cart message
+
+                            let asa = document.querySelector(".addtocart-products-parent");
+                            let asd = asa.children.length;
+                            let hideaddmsg = document.querySelector(".add-to-cart-msg-con");
+                            let checkOutBtn = document.querySelector("#checkout");
+                            let subtotalDiv = document.querySelector(".subtotal");
+
+                            if (asd == 0) {
+                                hideaddmsg.style.display = "flex";
+                                asa.style.display = "none";
+                                checkOutBtn.style.display = "none";
+                                subtotalDiv.style.display = "none";
+                            }
+                        });
+
+                        // empty cart msg hide  
+
+                        if (asd != 0) {
+                            let subtotalDiv = document.querySelector(".subtotal");
+                            let checkOutBtn = document.querySelector("#checkout");
+                            checkOutBtn.style.display = "block";
+                            subtotalDiv.style.display = "flex";
+                            hideaddmsg.style.display = "none";
+                            asa.style.display = "block";
+                        }
+                    };
+
+                    // addtocart function eventlistner
+
+                    hoverBtn[index].addEventListener("click", () => addtocartfunction(items.proImg, items.proName, items.proPrice))
+
+
+
+                    let msg = document.querySelector(".msg");
+                        
+                        msg.style.display = "none";
+                    }
+                    if (document.querySelector(".search-result").children.length == 0) {
+    
+                    let msg = document.querySelector(".msg");
+    
+                    msg.style.display = "block";
+
+                    }
+
+            })
+        }); // searchInputBtn end
 
         // making cards section
 
         let container = document.querySelector(".pro-cards-sec");
 
         products.map((items, index) => {
+
 
             //  creating cards through javascript
 
@@ -1826,13 +2298,13 @@
                         nameAnchohr.setAttribute("href", "product-page-9.html");
                     };
                     if (index == 1) {
-                        nameAnchohr.setAttribute("href", "product-page-10.html");
+                        nameAnchohr.setAttribute("href", "product-page-12.html");
                     };
                     if (index == 2) {
-                        nameAnchohr.setAttribute("href", "product-page-11.html");
+                        nameAnchohr.setAttribute("href", "product-page-15.html");
                     };
                     if (index == 3) {
-                        nameAnchohr.setAttribute("href", "product-page-12.html");
+                        nameAnchohr.setAttribute("href", "product-page-17.html");
                     };
                     // Set href attribute for name anchor
                     // nameAnchohr.setAttribute("href", "product-page-" + index + ".html");
@@ -2272,13 +2744,13 @@
                         nameAnchohr.setAttribute("href", "product-page-0.html");
                     };
                     if (index == 1) {
-                        nameAnchohr.setAttribute("href", "product-page-13.html");
+                        nameAnchohr.setAttribute("href", "product-page-18.html");
                     };
                     if (index == 2) {
-                        nameAnchohr.setAttribute("href", "product-page-14.html");
+                        nameAnchohr.setAttribute("href", "product-page-10.html");
                     };
                     if (index == 3) {
-                        nameAnchohr.setAttribute("href", "product-page-15.html");
+                        nameAnchohr.setAttribute("href", "product-page-11.html");
                     };
                     // Set href attribute for name anchor
                     // nameAnchohr.setAttribute("href", "product-page-" + index + ".html");
@@ -2718,13 +3190,13 @@
                         nameAnchohr.setAttribute("href", "product-page-5.html");
                     }
                     if (index == 1) {
-                        nameAnchohr.setAttribute("href", "product-page-16.html");
+                        nameAnchohr.setAttribute("href", "product-page-19.html");
                     };
                     if (index == 2) {
-                        nameAnchohr.setAttribute("href", "product-page-17.html");
+                        nameAnchohr.setAttribute("href", "product-page-13.html");
                     };
                     if (index == 3) {
-                        nameAnchohr.setAttribute("href", "product-page-18.html");
+                        nameAnchohr.setAttribute("href", "product-page-14.html");
                     };
                     // nameAnchohr.setAttribute("href", "product-page-" + index + ".html");
 
@@ -3161,13 +3633,13 @@
                         nameAnchohr.setAttribute("href", "product-page-1.html");
                     }
                     if (index == 1) {
-                        nameAnchohr.setAttribute("href", "product-page-19.html");
-                    };
-                    if (index == 2) {
                         nameAnchohr.setAttribute("href", "product-page-20.html");
                     };
-                    if (index == 3) {
+                    if (index == 2) {
                         nameAnchohr.setAttribute("href", "product-page-21.html");
+                    };
+                    if (index == 3) {
+                        nameAnchohr.setAttribute("href", "product-page-16.html");
                     };
                     // nameAnchohr.setAttribute("href", "product-page-" + index + ".html");
 
