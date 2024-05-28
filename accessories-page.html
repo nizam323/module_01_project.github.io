@@ -242,16 +242,16 @@
             <div class="anchors">
                 <ul>
                     <li><a href="everything-page.html">EVERYTHING</a></li>
-                    <li><a href="">WOMEN</a></li>
-                    <li><a href="">MEN</a></li>
-                    <li><a href="" style="color: #0075be;">ACCESSORIES</a></li>
+                    <li><a href="women-page.html">WOMEN</a></li>
+                    <li><a href="men-page.html">MEN</a></li>
+                    <li><a href="accessories-page.html" style="color: #0075be;">ACCESSORIES</a></li>
                 </ul>
             </div>
         </div>
         <div class="nav-2nd">
             <ul class="abo-con">
                 <li><a href="about.html">ABOUT</a></li>
-                <li><a href="">CONTACT US</a></li>
+                <li><a href="contact-us.html">CONTACT US</a></li>
             </ul>
             <div class="amount-cart" style="cursor: pointer;">
                 <ul>
@@ -263,7 +263,7 @@
             </div>
             <div class="login">
                 <ul>
-                    <li><a href=""><i class="fa-solid fa-user"></i></a></li>
+                    <li><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
                 </ul>
             </div>
             <div class="burger-icon-parent">
@@ -1075,6 +1075,7 @@
 
         products.map((items, index) => {
 
+            if (items.proCategory == "Accessories") {
 
             //  creating cards through javascript
 
@@ -1451,7 +1452,7 @@
             // addtocart function eventlistner
 
             hoverBtn[index].addEventListener("click", () => addtocartfunction(items.proImg, items.proName, items.proPrice))
-
+        }
         });
 
         // amount cart side bar 
