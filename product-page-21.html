@@ -138,6 +138,20 @@
             text-align: justify;
         }
 
+        
+        @media only screen and (min-width:0px) and (max-width:510px) {
+            .show-img {
+                background-size: 100% 100%;
+            }
+        }
+        @media only screen and (min-width:511px) and (max-width:921px) {
+            .show-img {
+                width: 100%;
+                background-size: 100% 142%;
+                background-position-y: center;
+            }
+        }
+
         @media only screen and (min-width:0px) and (max-width:767px) {
             .product-desc-content-con-2 {
                 flex-direction: column;
@@ -187,12 +201,6 @@
                 width: 100%;
             }
 
-            .show-img {
-                width: 100%;
-                background-size: 100% 142%;
-                background-position-y: center;
-            }
-
             .show-txt {
                 margin: 50px 0 0;
             }
@@ -207,6 +215,7 @@
                 margin: 0;
             }
         }
+    
     </style>
 </head>
 
