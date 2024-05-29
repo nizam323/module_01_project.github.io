@@ -342,9 +342,9 @@
                         <option value=""></option>
                         <option value="100">$100.00</option>
                         <option value="120">$120.00</option>
-                        <option value="130">$130.00</option>
+                        <!-- <option value="130">$130.00</option> -->
                         <option value="150">$150.00</option>
-                        <option value="200">$200.00</option>
+                        <!-- <option value="200">$200.00</option> -->
                     </select>
                     <br>
                     <button type="button" onclick="filter()">FILTER</button>
@@ -679,7 +679,7 @@
 
                 let searchInput = document.querySelector("#search-input").value.toUpperCase();
 
-                if (items.proName.includes(searchInput)){
+                if (items.proName.includes(searchInput) && items.proCategory == "Accessories"){
 
                     let container = document.querySelector(".search-result");
 
@@ -1075,8 +1075,7 @@
 
         products.map((items, index) => {
 
-            if (items.proCategory == "Accessories") {
-
+            if(items.proCategory == "Accessories"){
             //  creating cards through javascript
 
             let hoverAddToCart = document.createElement("div");
@@ -1289,10 +1288,9 @@
                 proRating.appendChild(icon5);
 
             }
-
             // Set href attribute for image anchor
             // imgAnchohr.setAttribute("href", "product-page-" + index + ".html");
-
+            
             // Set href attribute for name anchor
             nameAnchohr.setAttribute("href", "product-page-" + index + ".html");
 
@@ -1301,33 +1299,41 @@
                 // Replace location with the URL of the clicked card
                 // window.location.assign("product-page-" + index + ".html");
             });
-
-
+            
+            
             // cards hover addtocart btn
-
+            
             let proImgHoverBtn = document.querySelectorAll(".pro-img");
             let hoverBtn = document.querySelectorAll(".addtocart-hover");
 
-            proImgHoverBtn[index].addEventListener("mouseover", () => {
-                hoverBtn[index].style.display = "block";
-            });
+            proImgHoverBtn.forEach((proImg, index) => {
+                    proImg.addEventListener("mouseover", () => {
+                    hoverBtn[index].style.display = "block";
+                    });
 
-            proImgHoverBtn[index].addEventListener("mouseout", () => {
-                hoverBtn[index].style.display = "none";
-            });
+                    proImg.addEventListener("mouseout", () => {
+                    hoverBtn[index].style.display = "none";
+                    });
+                    });
 
+            // proImgHoverBtn[index].addEventListener("mouseover", () => {
+            //     hoverBtn[index].style.display = "block";
+            // });
+            // proImgHoverBtn[index].addEventListener("mouseout", () => {
+            //     hoverBtn[index].style.display = "none";
+            // });
             // addtocart logic
-
+            
             let add = document.querySelector(".addtocart-products-parent");
-
+            
             function addtocartfunction(addImg, addName, addPrice) {
-
+                
                 // alert "Product added to cart"
-
+                
                 window.alert("Product added to cart");
-
+                
                 // creating elements
-
+                
                 let addProductCon = document.createElement("div");
                 let addProductImgDiv = document.createElement("div");
                 let addProductImg = document.createElement("img");
@@ -1357,7 +1363,7 @@
                 addProductPrice.innerText = addPrice
                 addProductQuantity.innerText = "x" + qua++;
                 addProductDeleteBtn.innerText = "+";
-
+                
                 // appending elements
 
                 add.appendChild(addProductCon);
@@ -1393,9 +1399,9 @@
                 proCounter.innerText = asd;
 
                 // addtocart delete btn
-
+                
                 addProductDeleteBtn.addEventListener("click", () => {
-
+                    
                     // product price minus logic
 
                     let removedItem = addProductCon;
@@ -1412,17 +1418,17 @@
                     let newTotal = priceTotalArray.reduce((accum, curval) => accum + curval, 0);
                     let newTotalOfArray = priceCounter.innerText = `$${newTotal}.00`;
                     subTotalPrice.innerText = newTotalOfArray;
-
+                    
                     // delete btn logic
-
+                    
                     addProductCon.remove();
-
+                    
                     //  product counter minus
-
+                    
                     proCounter.innerText--;
-
+                    
                     // unhide empty cart message
-
+                    
                     let asa = document.querySelector(".addtocart-products-parent");
                     let asd = asa.children.length;
                     let hideaddmsg = document.querySelector(".add-to-cart-msg-con");
@@ -1436,9 +1442,9 @@
                         subtotalDiv.style.display = "none";
                     }
                 });
-
+                
                 // empty cart msg hide  
-
+                
                 if (asd != 0) {
                     let subtotalDiv = document.querySelector(".subtotal");
                     let checkOutBtn = document.querySelector("#checkout");
@@ -1448,16 +1454,23 @@
                     asa.style.display = "block";
                 }
             };
-
+            
             // addtocart function eventlistner
 
-            hoverBtn[index].addEventListener("click", () => addtocartfunction(items.proImg, items.proName, items.proPrice))
+            
+            hoverAddToCart.addEventListener("click", () => {
+                    addtocartfunction(items.proImg, items.proName, items.proPrice);
+                    });
+            // hoverBtn[index].addEventListener("click", () => addtocartfunction(items.proImg, items.proName, items.proPrice))
+            
         }
         });
 
         // amount cart side bar 
 
+
         let addToCart = document.querySelector(".amount-cart");
+
         let cartSideBar = document.querySelector(".cart-sidebar");
         let addToCartCloseBtn = document.querySelector(".add-to-cart-btn");
 
@@ -1605,7 +1618,7 @@
 
             products150.map((items, index) => {
 
-                if (selectElement == "150") {
+                if (selectElement == "150" && items.proCategory == "Accessories") {
 
 
                     //  creating cards through javascript
@@ -1862,13 +1875,16 @@
                     let proImgHoverBtn = document.querySelectorAll(".pro-img");
                     let hoverBtn = document.querySelectorAll(".addtocart-hover");
 
-                    proImgHoverBtn[index].addEventListener("mouseover", () => {
-                        hoverBtn[index].style.display = "block";
+                    proImgHoverBtn.forEach((proImg, index) => {
+                    proImg.addEventListener("mouseover", () => {
+                    hoverBtn[index].style.display = "block";
                     });
 
-                    proImgHoverBtn[index].addEventListener("mouseout", () => {
-                        hoverBtn[index].style.display = "none";
+                    proImg.addEventListener("mouseout", () => {
+                    hoverBtn[index].style.display = "none";
                     });
+                    });
+ 
 
                     // addtocart logic
 
@@ -2004,9 +2020,10 @@
                     };
 
                     // addtocart function eventlistner
-
-                    hoverBtn[index].addEventListener("click", () => addtocartfunction(items.proImg, items.proName, items.proPrice))
-
+                    
+                    hoverAddToCart.addEventListener("click", () => {
+                    addtocartfunction(items.proImg, items.proName, items.proPrice);
+                    });
 
                 }
                 else if (selectElement == "") {
@@ -2059,7 +2076,7 @@
 
             products100.map((items, index) => {
 
-                if (selectElement == "100") {
+                if (selectElement == "100" && items.proCategory == "Accessories") {
 
 
 
@@ -2314,12 +2331,14 @@
                     let proImgHoverBtn = document.querySelectorAll(".pro-img");
                     let hoverBtn = document.querySelectorAll(".addtocart-hover");
 
-                    proImgHoverBtn[index].addEventListener("mouseover", () => {
-                        hoverBtn[index].style.display = "block";
+                    proImgHoverBtn.forEach((proImg, index) => {
+                    proImg.addEventListener("mouseover", () => {
+                    hoverBtn[index].style.display = "block";
                     });
 
-                    proImgHoverBtn[index].addEventListener("mouseout", () => {
-                        hoverBtn[index].style.display = "none";
+                    proImg.addEventListener("mouseout", () => {
+                    hoverBtn[index].style.display = "none";
+                    });
                     });
 
                     // addtocart logic
@@ -2457,8 +2476,9 @@
 
                     // addtocart function eventlistner
 
-                    hoverBtn[index].addEventListener("click", () => addtocartfunction(items.proImg, items.proName, items.proPrice))
-
+            hoverAddToCart.addEventListener("click", () => {
+                    addtocartfunction(items.proImg, items.proName, items.proPrice);
+                    });
                 }
             }) // product00 array end
 
@@ -2505,7 +2525,7 @@
 
             products120.map((items, index) => {
 
-                if (selectElement == "120") {
+                if (selectElement == "120" && items.proCategory == "Accessories") {
 
 
 
@@ -2760,14 +2780,17 @@
                     let proImgHoverBtn = document.querySelectorAll(".pro-img");
                     let hoverBtn = document.querySelectorAll(".addtocart-hover");
 
-                    proImgHoverBtn[index].addEventListener("mouseover", () => {
-                        hoverBtn[index].style.display = "block";
+
+                    proImgHoverBtn.forEach((proImg, index) => {
+                    proImg.addEventListener("mouseover", () => {
+                    hoverBtn[index].style.display = "block";
                     });
 
-                    proImgHoverBtn[index].addEventListener("mouseout", () => {
-                        hoverBtn[index].style.display = "none";
+                    proImg.addEventListener("mouseout", () => {
+                    hoverBtn[index].style.display = "none";
                     });
-
+                    });
+                    
                     // addtocart logic
 
                     let add = document.querySelector(".addtocart-products-parent");
@@ -2903,7 +2926,9 @@
 
                     // addtocart function eventlistner
 
-                    hoverBtn[index].addEventListener("click", () => addtocartfunction(items.proImg, items.proName, items.proPrice))
+            hoverAddToCart.addEventListener("click", () => {
+                    addtocartfunction(items.proImg, items.proName, items.proPrice);
+                    });
 
                 }
             }) // product120 array end
