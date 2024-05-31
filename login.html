@@ -86,6 +86,12 @@
         font-size: 15px;
         border-radius: 4px;
         cursor: pointer;
+        transition-property: background-color;
+        transition-duration: 0.5s;
+    }
+
+    button:hover {
+        background-color: #135e96;
     }
 
     a {
@@ -100,6 +106,12 @@
         flex-direction: column;
         width: 80%;
     }
+
+    @media only screen and (min-width:0px) and (max-width:600px) {
+    .form-con {
+        margin-top: 15px;
+    }
+    }
 </style>
 
 <body>
@@ -107,6 +119,7 @@
         <div class="img"></div>
         <div class="login-con">
             <div class="u-name-email">
+                <form action="">
                 <label for="u-name" style="color: #3c434a;">Username or Email Address</label>
                 <input type="text" id="u-name" required>
                 <br>
@@ -120,7 +133,7 @@
                     <p style="color: #3c434a;">Remember Me</p>
                 </div>
                 <button type="submit">Log In</button>
-            </div>
+            </div></form>
         </div>
         <div class="a-con">
             <a href="">Lost your password?</a>
