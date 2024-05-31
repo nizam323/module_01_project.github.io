@@ -8,8 +8,10 @@
 </head>
 <style>
     * {
-        margin: 0; padding: 0;
+        margin: 0;
+        padding: 0;
     }
+
     body {
         background-color: #f0f0f1;
         display: flex;
@@ -45,14 +47,14 @@
         margin-bottom: 20px;
     }
 
-    
+
     .form-con {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-top: 75px;
     }
-    
+
     .u-name-email input {
         width: 95.9%;
         height: 28px;
@@ -60,11 +62,43 @@
         border-radius: 5px;
         border: 1px solid #8c8f94;
         padding: 2%;
-        margin-top: 15px;
+        margin-top: 12px;
     }
-    
+
     .u-name-email input:focus {
         outline: 1.5px solid #2271b1;
+    }
+
+    .check-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    button {
+        background-color: #2271b1;
+        color: #fff;
+        height: 32px;
+        border: 1px solid #2271b1;
+        padding: 0 12px;
+        font-size: 15px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    a {
+        font-size: 13px;
+        color: #50575e;
+        text-decoration: none;
+        margin-top: 15px;
+    }
+
+    .a-con {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
     }
 </style>
 
@@ -73,13 +107,24 @@
         <div class="img"></div>
         <div class="login-con">
             <div class="u-name-email">
-                <label for="u-name">Username or Email Address</label>
+                <label for="u-name" style="color: #3c434a;">Username or Email Address</label>
                 <input type="text" id="u-name" required>
                 <br>
                 <br>
-                <label for="u">Password</label>
-                <input type="text" id="u" required>
+                <label for="pswd" style="color: #3c434a;">Password</label>
+                <input type="password" id="pswd" required>
             </div>
+            <div class="check-btn">
+                <div style="display: flex;align-items: center;">
+                    <input type="checkbox" name="" id="" style="width: 17px;height: 17px;margin-right: 7px;">
+                    <p style="color: #3c434a;">Remember Me</p>
+                </div>
+                <button type="submit">Log In</button>
+            </div>
+        </div>
+        <div class="a-con">
+            <a href="">Lost your password?</a>
+            <a href="index.html">← Go to Brandstore</a>
         </div>
     </div>
 
