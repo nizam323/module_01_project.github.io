@@ -138,7 +138,7 @@
             justify-content: center;
             font-size: 22px;
             border-radius: 8px;
-
+            display: none;
         }
 
         @media only screen and (min-width:0px) and (max-width:510px) {
@@ -251,7 +251,7 @@
     </div>
 
 
-    <div class="alert">order placed</div>
+    <div class="alert">Order confirmed <pre>  </pre><h3>!</h3></div>
 
     <!-- amount cart side bar -->
     <div class="cart-sidebar">
@@ -366,8 +366,12 @@
 
             if (r1 && r2 && r3 && r4 && r5) {
                 e.preventDefault();
-                alert("Order Placed")
-                window.location.replace("index.html")
+       
+                let alert = document.querySelector(".alert");
+                alert.style.display = "flex";
+                setTimeout(() => {
+                    window.location.replace("index.html")
+                }, 2000);
             }
 
         });
