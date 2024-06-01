@@ -542,4 +542,11 @@ navSideBarCloseBtn.addEventListener("click", () => {
 let homePageBtn = document.querySelector(".logo");
 homePageBtn.addEventListener("click", () => {
     location.assign("index.html")
-}) 
+});
+
+// checkout page btn
+
+let checkOut = document.querySelector("#checkout");
+checkOut.addEventListener("click",()=>{
+    location.assign("checkout.html")
+})
