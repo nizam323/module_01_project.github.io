@@ -134,11 +134,18 @@
             width: 300px;
             height: 120px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-size: 22px;
+            font-size: 25px;
+            letter-spacing: 2.5px;
             border-radius: 8px;
             display: none;
+        }
+
+        .order-icon {
+            margin: -10px 0 10px;
+            font-size: 37px;
         }
 
         @media only screen and (min-width:0px) and (max-width:510px) {
@@ -251,7 +258,10 @@
     </div>
 
 
-    <div class="alert">Order confirmed <pre>  </pre><h3>!</h3></div>
+    <div class="alert">
+        <div class="order-icon"><i class="fa-regular fa-circle-check"></i></div>
+        <div class="order-txt"> Order confirmed !</div>
+    </div>
 
     <!-- amount cart side bar -->
     <div class="cart-sidebar">
@@ -366,7 +376,7 @@
 
             if (r1 && r2 && r3 && r4 && r5) {
                 e.preventDefault();
-       
+
                 let alert = document.querySelector(".alert");
                 alert.style.display = "flex";
                 setTimeout(() => {
