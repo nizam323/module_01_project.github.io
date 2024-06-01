@@ -119,7 +119,7 @@
             cursor: pointer;
             transition: background-color 0.5s ease-in-out;
         }
-        
+
         #place-order:hover {
             background-color: #0075be;
         }
@@ -142,12 +142,12 @@
                 height: 87px;
             }
         }
+
         @media only screen and (min-width:511px) and (max-width:1024px) {
             form {
                 width: 79%;
             }
         }
-
     </style>
 </head>
 
@@ -221,7 +221,7 @@
                 <input type="number" name="" id="phone" required>
 
                 <label for="email">Email address</label>
-                <input type="email" name="" id="email" required>
+                <input type="text" name="" id="email" required>
 
                 <label for="add-info" style="margin: 0;">
                     <h1 style="font-size: 20px;margin-bottom: 13px;">Additional information</h1>
@@ -338,12 +338,21 @@
 
         // checkout btn 
         let checkoutBtn = document.getElementById("place-order");
-        checkoutBtn.addEventListener("click",()=>{
-      
-            console.log(document.querySelector("input[required]"))
-            // location.assign("index.html")
-            
-        })
+        checkoutBtn.addEventListener("click", (e) => {
+
+            let r1 = document.querySelector("#f-name").value;
+            let r2 = document.querySelector("#l-name").value;
+            let r3 = document.querySelector("#address").value;
+            let r4 = document.querySelector("#phone").value;
+            let r5 = document.querySelector("#email").value;
+
+            if (r1 && r2 && r3 && r4 && r5) {
+                e.preventDefault();
+                alert("Order Placed")
+                window.location.replace("index.html")
+            }
+
+        });
 
         // home page btn 
 
