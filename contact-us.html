@@ -164,7 +164,7 @@
         }
 
         .con-us-txt-1 h5 {
-            font-size: 22px;
+            font-size: 27px;
         }
 
         .con-us-txt-1 h2 {
@@ -173,7 +173,7 @@
         }
 
         .con-us-con {
-            padding: 100px 0;
+            padding: 80px 0;
             margin: 0 100px;
         }
 
@@ -192,6 +192,30 @@
             box-shadow: 0 10px 10px -5px rgba(0, 0, 0, .05);
             border-radius: 10px;
             border: 1px solid #00000012;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .con-us-cards:hover {
+            box-shadow: 0 10px 10px -5px rgba(0, 0, 0, .50);
+        }
+
+        .con-us-cards h3 {
+            font-size: 30px;
+        }
+
+        .con-us-cards p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin: 17px 0;
+        }
+
+        .con-us-cards h5 {
+            color: #0084d6;
+            font-size: 18px;
         }
 
         @media only screen and (min-width: 0px) and (max-width: 766px) {
@@ -274,6 +298,27 @@
                 font-size: 22px;
                 padding: 0px 9px;
             }
+
+            .con-us-cards-con {
+                width: 90%;
+                flex-direction: column;
+                height: 800px;
+                margin: auto;
+            }
+
+            .con-us-line {
+                margin-bottom: 15px;
+            }
+
+            .con-us-cards {
+                margin: 15px;
+            }
+
+            .con-us-con {
+                margin: 0;
+                padding: 0;
+            }
+
         }
 
         @media only screen and (min-width: 767px) and (max-width: 921px) {
@@ -423,10 +468,26 @@
             </div>
 
             <div class="con-us-cards-con">
-                <div class="con-us-cards"></div>
-                <div class="con-us-cards"></div>
-                <div class="con-us-cards"></div>
-                <div class="con-us-cards"></div>
+                <div class="con-us-cards">
+                    <h3>Sales</h3>
+                    <p>Vestibulum ante ipsum primis in faucibus orci luctus.</p>
+                    <h5>1800 123 4567</h5>
+                </div>
+                <div class="con-us-cards">
+                    <h3>Complaints</h3>
+                    <p>Vestibulum ante ipsum primis in faucibus orci luctus.</p>
+                    <h5>1900 223 8899</h5>
+                </div>
+                <div class="con-us-cards">
+                    <h3>Returns</h3>
+                    <p>Vestibulum ante ipsum primis in faucibus orci luctus.</p>
+                    <h5>returns@mail.com</h5>
+                </div>
+                <div class="con-us-cards">
+                    <h3>Marketing</h3>
+                    <p>Vestibulum ante ipsum primis in faucibus orci luctus.</p>
+                    <h5>1700 444 5578</h5>
+                </div>
             </div>
         </div>
     </div>
