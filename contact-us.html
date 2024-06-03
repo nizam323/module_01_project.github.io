@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1cb608260b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <title>Document</title>
+    <style>
+        .bg-container::before {
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-image: url(images/contactus-1.jpg);
+        }
+
+        .about-sec-2-container {
+            background-color: #f5f7f9;
+            padding: 60px;
+            display: flex;
+        }
+
+        .ab-sec-2-first-parent {
+            display: flex;
+            background-color: white;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 50%;
+            padding: 65px 55px;
+        }
+
+        .about-bg-con {
+            height: 60vh;
+            background: linear-gradient(180deg, #0084d6 -50%, #000000 100%);
+        }
+
+        .ab-sec-2-txt h1 {
+            margin: 25px 0;
+            font-size: 42px;
+        }
+
+        .ab-sec-2-line {
+            background-color: #0084d6;
+            height: 5px;
+            width: 18%;
+            border-radius: 5px;
+        }
+
+        .ab-sec-3 {
+            padding: 100px 0;
+            margin: 0 120px;
+        }
+
+        .sec-3-content-parent {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .ab-sec-3-txt1 {
+            font-size: 20px;
+        }
+
+        .ab-sec-3-txt2 {
+            font-size: 25px;
+            margin: 25px 0px;
+        }
+
+        .ab-sec-3-txt3 {
+            line-height: 1.8;
+            width: 60%;
+            text-align: center;
+        }
+
+        .ot-profiles-con {
+            margin-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .ot-pro {
+            background: #f5f7f9;
+            height: 250px;
+            width: 30%;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ot-pro-name {
+            margin: 20px 0px 12px;
+            font-size: 20px;
+        }
+
+        .ot-pro-profession {
+            font-size: 16px;
+            color: #0c01018c;
+        }
+
+        .ot-pro-img img {
+            width: 100px;
+        }
+
+        .followus-parent {
+            height: 450px;
+            position: relative;
+            background: linear-gradient(#0a0a0a75, #090909ab);
+        }
+
+        .followus-parent::before {
+            content: "";
+            z-index: -1;
+            height: 100%;
+            width: 100%;
+            background-attachment: fixed;
+            position: absolute;
+            background-image: url(images/about-sec-last.jpg);
+            background-size: 100% 114%;
+            background-position-y: top;
+        }
+
+        .followus-content-con {
+            height: 100%;
+            width: 40%;
+            background-color: #f5f7f9;
+            margin: 0px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .followus-con-1 {
+            height: 5px;
+            width: 80px;
+            background-color: #0084d6;
+        }
+
+        .followus-con-2 {
+            margin: 50px 0 70px;
+            font-size: 30px;
+        }
+
+        .followus-con-3 i {
+            color: black;
+            font-size: 30px;
+            padding: 0 20px;
+        }
+
+        .followus-con-3 i:hover {
+            color: #1882c4;
+        }
+
+        @media only screen and (min-width: 0px) and (max-width: 766px) {
+            .about-bg-con {
+                height: 60vh;
+            }
+
+            .about-sec-2-container {
+                padding: 30px 20px;
+            }
+
+            .bg-container::before {
+                background-attachment: unset;
+                background-size: 137% 90%;
+                background-position: bottom;
+            }
+
+            .about-sec-2-container {
+                flex-direction: column;
+            }
+
+            .ab-sec-2-first-parent {
+                width: 100%;
+                align-items: center;
+                text-align: center;
+                padding: 30px 20px;
+            }
+
+            .ab-sec-2-first-parent-img {
+                height: 50vmin;
+            }
+
+            .ab-sec-2-txt h1 {
+                font-size: 30px;
+            }
+
+            .ab-sec-2-line {
+                width: 90px;
+            }
+
+            .ab-sec-3-txt1 {
+                font-size: 16px;
+            }
+
+            .ab-sec-3-txt2 {
+                font-size: 20px;
+            }
+
+            .ab-sec-3-txt3 {
+                text-align: justify;
+                line-height: 1.7;
+            }
+
+            .ab-sec-3 {
+                margin: 0;
+                padding: 60px 0;
+            }
+
+            .ot-pro {
+                width: 85%;
+            }
+
+            .followus-parent {
+                height: 400px;
+                display: flex;
+                align-items: center;
+            }
+
+            .followus-content-con {
+                height: 70%;
+                width: 80%;
+            }
+
+            .followus-con-2 {
+                margin: 25px 0 35px;
+                font-size: 18px;
+            }
+
+            .followus-con-3 i {
+                font-size: 22px;
+                padding: 0px 9px;
+            }
+        }
+
+        @media only screen and (min-width: 767px) and (max-width: 921px) {
+            .bg-con-1 {
+                width: 100%;
+            }
+
+            .about-sec-2-container {
+                flex-direction: column;
+            }
+
+
+            .ab-sec-2-first-parent {
+                width: 100%;
+            }
+
+            .ab-sec-2-first-parent-img {
+                height: 341px;
+            }
+
+            .ab-sec-3-txt1 {
+                font-size: 16px;
+            }
+
+            .ab-sec-3-txt2 {
+                font-size: 20px;
+            }
+
+            .ab-sec-3-txt3 {
+                text-align: justify;
+                line-height: 1.7;
+            }
+
+            .ab-sec-3 {
+                margin: 0;
+                padding: 60px 0;
+            }
+
+        }
+
+        @media only screen and (min-width:922px) and (max-width:1024px) {
+            .about-sec-2-container {
+                flex-direction: column;
+            }
+
+            .ab-sec-2-first-parent {
+                width: 100%;
+            }
+
+            .ab-sec-2-first-parent-img {
+                height: 341px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nav and bg container -->
+    <div class="bg-container about-bg-con">
+        <nav class="nav">
+            <div class="nav-1st">
+                <div class="logo"> </div>
+                <div class="anchors">
+                    <ul>
+                        <li><a href="everything-page.html">EVERYTHING</a></li>
+                        <li><a href="women-page.html">WOMEN</a></li>
+                        <li><a href="men-page.html">MEN</a></li>
+                        <li><a href="accessories-page.html">ACCESSORIES</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-2nd">
+                <ul class="abo-con">
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact-us.html">CONTACT US</a></li>
+                </ul>
+                <div class="amount-cart" style="cursor: pointer;">
+                    <ul>
+                        <li><a><span class="nav-2nd-span"><span>$</span>0.00</span></a></li>
+                        <li><a><i class="fa-solid fa-bag-shopping">
+                                    <div class="product-count">0</div>
+                                </i></a></li>
+                    </ul>
+                </div>
+                <div class="login">
+                    <ul>
+                        <li><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
+                    </ul>
+                </div>
+                <div class="burger-icon-parent">
+                    <div class="burger-icon">
+                        <div class="b-i-1"></div>
+                        <div class="b-i-1"></div>
+                        <div class="b-i-1"></div>
+                    </div>
+                </div>
+            </div>
+        </nav> <!--nav end -->
+        <!-- bg container content -->
+        <div class="bg-content" style="justify-content: center;align-items: center;">
+            <div class="bg-content-container" style="margin: 0;">
+                <div class="bg-con-1"
+                    style="color: white;font-weight: 600;height: 253px;display: flex;align-items: center;text-align: center;justify-content: center;">
+                    Contact Us</div>
+            </div>
+        </div> <!-- bg content end -->
+    </div> <!-- bg container end -->
+
+    <!-- amount cart side bar -->
+    <div class="cart-sidebar">
+        <div class="cart-sidebar-head">
+            <div class="add-to-cart-txt">Shopping Cart</div>
+            <div class="add-to-cart-btn">+</div>
+        </div>
+        <div class="add-to-cart-msg-con">
+            <div>No products in the cart.</div>
+        </div>
+        <div class="add-to-cart-shopbtn"><button>Continue Shopping</button></div>
+    </div><!-- amount cart end -->
+    <!-- navbar burger btn side bar -->
+    <div class="nav-sidebar">
+        <div style="height: 50px;">
+            <div class="nav-sidebar-close-btn">+</div>
+        </div>
+        <div class="nav-sidebar-login">
+            <a href="login.html"><i class="fa-solid fa-user"></i></a>
+        </div>
+        <div class="nav-sidebar-anchors"><a href="everything-page.html">EVERYTHING</a></div>
+        <div class="nav-sidebar-anchors"><a href="women-page.html">WOMEN</a></div>
+        <div class="nav-sidebar-anchors"><a href="men-page.html">MEN</a></div>
+        <div class="nav-sidebar-anchors"><a href="accessories-page.html">ACCESSORIES</a></div>
+        <div class="nav-sidebar-anchors-sepration" style="height: 50px;"></div>
+        <div class="nav-sidebar-anchors" style="font-weight: 100;"><a href="about.html">ABOUT</a></div>
+        <div class="nav-sidebar-anchors" style="font-weight: 100;"><a href="contact-us.html">CONTACT US</a></div>
+    </div>
+    </div> <!-- nav burger btn side bar end -->
+
+
+    <!-- section 7 -->
+    <div class="sec-7">
+        <div class="sec7-txt">
+            <a href="">SALE UP TO 70% OFF FOR ALL CLOTHES & FASHION ITEMS, ON ALL BRANDS.</a>
+        </div>
+    </div><!-- sec 7 end -->
+    <!-- section 8 -->
+    <div class="sec-8">
+        <div class="sec8-content">
+            <div class="sec8-con-1">
+                <div class="sec8-con-2"><img src="images/logo-dark.jpg" width="90" height="30" alt=""></div>
+                <div class="sec8-con-3">The best look anytime, anywhere.</div>
+            </div>
+        </div>
+        <div class="sec8-content">
+            <h2>For Her</h2>
+            <a href="">Women Jeans</a>
+            <a href="">Tops and Shirts</a>
+            <a href="">Women Jackets</a>
+            <a href="">Heels and Flats</a>
+            <a href="">Women Accessories</a>
+        </div>
+        <div class="sec8-content">
+            <h2>For Him</h2>
+            <a href="">Men Jeans</a>
+            <a href="">Men Shirts</a>
+            <a href="">Men Shoes</a>
+            <a href="">Men Accessories</a>
+            <a href="">Men Jackets</a>
+        </div>
+        <div class="sec8-content sec8-extra">
+            <h2>Subscribe</h2>
+            <form action="" style="display: contents;">
+                <input type="email" placeholder="Your email address..." id="sec8Email" required>
+                <button id="sec8Btn">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+        <div class="footer-txt">Copyright © 2024 Brandstore. Powered by Brandstore.</div>
+        <div class="footer-icon">
+            <a href="" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-google"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-yelp"></i></a>
+        </div>
+    </div> <!-- footer end -->
+
+
+    <script>
+        // amount cart side bar 
+
+        let addToCart = document.querySelector(".amount-cart");
+        let cartSideBar = document.querySelector(".cart-sidebar");
+        let addToCartCloseBtn = document.querySelector(".add-to-cart-btn");
+
+        addToCart.addEventListener("click", () => {
+            cartSideBar.classList.toggle("cart-sidebar-toggle")
+        });
+        addToCartCloseBtn.addEventListener("click", () => {
+            cartSideBar.classList.remove("cart-sidebar-toggle")
+        });
+
+        // nav burger btn side bar 
+
+        let navSideBarBtn = document.querySelector(".burger-icon-parent");
+        let navSideBar = document.querySelector(".nav-sidebar");
+        let navSideBarCloseBtn = document.querySelector(".nav-sidebar-close-btn");
+
+        navSideBarBtn.addEventListener("click", () => {
+            navSideBar.classList.toggle("nav-sidebar-toggle")
+        });
+        navSideBarCloseBtn.addEventListener("click", () => {
+            navSideBar.classList.remove("nav-sidebar-toggle")
+        });
+
+        // home page btn 
+
+        let homePageBtn = document.querySelector(".logo");
+        homePageBtn.addEventListener("click", () => {
+            location.assign("index.html")
+        })
+
+    </script>
+</body>
+
+</html>
