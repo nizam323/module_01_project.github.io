@@ -219,6 +219,7 @@
         }
 
         .con-us-form-con {
+            display: flex;
             margin-top: 150px;
         }
 
@@ -239,6 +240,34 @@
 
         .form-1 h6 {
             font-size: 20px;
+        }
+
+        .form-2 {
+            width: 50%;
+            padding-left: 50px;
+        }
+
+        form {
+            box-shadow: 0 30px 30px -10px rgb(202 200 200 / 50%);
+            border-radius: 5px;
+            background-color: white;
+            display: flex;
+            padding: 30px;
+            flex-direction: column;
+        }
+
+        textarea {
+            resize: vertical;
+            padding: 20px 10px;
+            outline: none;
+        }
+
+        input {
+            border: 1px solid #ededed;
+            margin-bottom: 16px;
+            height: 35px;
+            padding: 3px 10px;
+            outline: none;
         }
 
         @media only screen and (min-width: 0px) and (max-width: 766px) {
@@ -541,7 +570,14 @@
                     <p>Cras elementum finibus lacus nec lacinia. Quisque non convallis nisl, eu condimentum sem. Proin
                         dignissim libero lacus, ut eleifend magna vehicula et. Nam mattis est sed tellus.</p>
                 </div>
-                <div class="form-2"></div>
+                <div class="form-2">
+                    <form action="">
+                        <input type="text" placeholder="NAME">
+                        <input type="text" placeholder="SUBJECT">
+                        <input type="text" placeholder="EMAIL">
+                        <textarea name="" id="" rows="10" placeholder="MESSAGE"></textarea>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
