@@ -259,6 +259,7 @@
         textarea {
             resize: vertical;
             padding: 20px 10px;
+            border: 1px solid #ededed;
             outline: none;
         }
 
@@ -268,6 +269,21 @@
             height: 35px;
             padding: 3px 10px;
             outline: none;
+        }
+
+        .send-msg {
+            margin-top: 15px;
+            width: 50%;
+            border: none;
+            background-color: #0084d6;
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            transition: background-color .5s ease-in-out;
+        }
+
+        .send-msg:hover {
+            background-color: #0075be;
         }
 
         @media only screen and (min-width: 0px) and (max-width: 766px) {
@@ -379,6 +395,33 @@
                 font-size: 33px;
             }
 
+            .con-us-form-con {
+                flex-direction: column;
+                margin-top: 30px;
+            }
+
+            .send-msg {
+                padding: 15px 10px;
+            }
+
+            .form-1 {
+                width: 100%;
+                text-align: center;
+                padding: 0 21px;
+            }
+
+            .form-1 p {
+                margin-bottom: 15px;
+            }
+            .form-1 h2 {
+                font-size: 27px;
+            }
+
+            .form-2 {
+                padding: 0;
+                width: 100%;
+            }
+
         }
 
         @media only screen and (min-width: 767px) and (max-width: 1135px) {
@@ -392,6 +435,14 @@
 
             .con-us-cards {
                 margin: 100px 5px 0;
+            }
+
+            .con-us-form-con {
+                padding: 0 20px;
+            }
+
+            .send-msg {
+                padding: 15px 10px;
             }
         }
 
@@ -572,10 +623,11 @@
                 </div>
                 <div class="form-2">
                     <form action="">
-                        <input type="text" placeholder="NAME">
+                        <input type="text" required placeholder="NAME">
                         <input type="text" placeholder="SUBJECT">
-                        <input type="text" placeholder="EMAIL">
-                        <textarea name="" id="" rows="10" placeholder="MESSAGE"></textarea>
+                        <input type="text" required placeholder="EMAIL">
+                        <textarea name="" id="" rows="10" required placeholder="MESSAGE"></textarea>
+                        <button class="send-msg">SEND MESSAGE</button>
                     </form>
                 </div>
             </div>
