@@ -550,3 +550,10 @@ let checkOut = document.querySelector("#checkout");
 checkOut.addEventListener("click",()=>{
     location.assign("checkout.html")
 })
+
+// continue shopping
+
+let conShopBtn = document.querySelector("#checkout").nextElementSibling;
+conShopBtn.addEventListener("click",()=>{
+    location.assign("everything-page.html")
+});
